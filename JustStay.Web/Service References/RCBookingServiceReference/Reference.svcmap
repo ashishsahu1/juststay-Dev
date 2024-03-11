@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="65a390d5-fb21-491a-a42e-934ea524d1df" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56178/RestChairBookingService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RestChairBookingService.xsd" MetadataType="Schema" ID="ccc75fe3-7b2a-4349-b08d-a6ead0ae1d2a" SourceId="1" SourceUrl="http://localhost:56178/RestChairBookingService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RestChairBookingService1.xsd" MetadataType="Schema" ID="a202fd99-0b13-4da3-b69a-c836637d23c5" SourceId="1" SourceUrl="http://localhost:56178/RestChairBookingService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RestChairBookingService2.xsd" MetadataType="Schema" ID="f3bb427b-7ff9-4159-b94e-e7b4dfd1484f" SourceId="1" SourceUrl="http://localhost:56178/RestChairBookingService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RestChairBookingService.disco" MetadataType="Disco" ID="9988b160-bac5-486a-ab48-2b7b82347b8a" SourceId="1" SourceUrl="http://localhost:56178/RestChairBookingService.svc?disco" />
+    <MetadataFile FileName="RestChairBookingService.wsdl" MetadataType="Wsdl" ID="c0a66bf6-5ce1-40ee-af63-1bc5b7c0d545" SourceId="1" SourceUrl="http://localhost:56178/RestChairBookingService.svc?wsdl" />
+    <MetadataFile FileName="RestChairBookingService3.xsd" MetadataType="Schema" ID="ac23b77a-c2b5-4ee8-8050-cacb7822c0f8" SourceId="1" SourceUrl="http://localhost:56178/RestChairBookingService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

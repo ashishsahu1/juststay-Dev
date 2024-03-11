@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="ATRCDashboard.aspx" title="ATRC Dashboard">
+    <siteMapNode url="MyProfile.aspx" title="Profile"></siteMapNode>
+    <siteMapNode url="Inbox.aspx" title="Inbox"/>
+    <siteMapNode url="Compose.aspx" title="Compose Message" />
+    <siteMapNode url="Inbox.aspx?Sent=1" title="Sent Mail"></siteMapNode>
+    <siteMapNode url="ViewMail.aspx" title="View Message"></siteMapNode>
+    <siteMapNode url="ManageSupport.aspx" title="Support"/>
+    <siteMapNode url="Customer.aspx" title="Customers">
+      <siteMapNode url="RestChairCustomerBookings.aspx" title="Bookings">
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="RestChairBooking.aspx" title="Rest Chair Bookings"/>
+      <siteMapNode url="billstojuststay.aspx" title="JS Bills list">
+      <siteMapNode url="addnewjsbill.aspx" title="Add New JS Bill">
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>   
+</siteMap>

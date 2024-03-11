@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="JustStay.Services.CancellationPolicyService" CodeBehind="CancellationPolicyService.svc.cs" %>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="atrcbillDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCBillId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="BillDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPaid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PaidAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaidDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="atrcbillDto" nillable="true" type="tns:atrcbillDto" />
+  <xs:complexType name="jsbillDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="BillDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPaid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JSBillId" type="xs:int" />
+      <xs:element minOccurs="0" name="PaidAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaidDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="jsbillDto" nillable="true" type="tns:jsbillDto" />
+</xs:schema>

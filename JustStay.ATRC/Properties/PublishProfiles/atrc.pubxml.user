@@ -1,0 +1,1081 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Data\E\Juststay-Latest\Publish\02-12-2020\atrc</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="addnewjsbill.aspx">
+      <publishTime>08/04/2020 16:15:41</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCDashboard.aspx">
+      <publishTime>09/21/2020 13:09:42</publishTime>
+    </File>
+    <File Include="ATRCImages/1_imgTrupti1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCImages/1_imgTrupti2.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCImages/1_imgTrupti3.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCImages/1_imgTrupti4.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCImages/1_imgTrupti5.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCRegistration.aspx">
+      <publishTime>08/14/2020 16:26:09</publishTime>
+    </File>
+    <File Include="billsfromjuststay.aspx">
+      <publishTime>08/04/2020 19:13:41</publishTime>
+    </File>
+    <File Include="billstojuststay.aspx">
+      <publishTime>10/03/2020 18:13:18</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/EPPlus.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/itextsharp.pdfa.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/itextsharp.xtra.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/JustStay.ATRC.dll">
+      <publishTime>12/02/2020 19:23:59</publishTime>
+    </File>
+    <File Include="bin/JustStay.ATRC.pdb">
+      <publishTime>12/02/2020 19:23:59</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.dll">
+      <publishTime>10/06/2020 17:42:30</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.dll.config">
+      <publishTime>02/17/2020 15:28:00</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.pdb">
+      <publishTime>10/06/2020 17:42:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/28/2016 14:22:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="Compose.aspx">
+      <publishTime>09/23/2020 12:55:30</publishTime>
+    </File>
+    <File Include="css/accordions.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/alerts.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/animate.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css.map">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/buttons.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/c3/c3.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/calendar/fullcalendar.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/calendar/fullcalendar.print.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/chosen/bootstrap-chosen.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/chosen/chosen-sprite.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/code-editor/ambiance.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/code-editor/codemirror.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/colorpicker/colorpicker.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/Common.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/cropper/cropper.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/data-table/bootstrap-editable.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/data-table/bootstrap-table.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/datapicker/colorpicker.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/datapicker/datepicker3.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/dropzone/dropzone.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/duallistbox/bootstrap-duallistbox.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/editor/bootstrap-editable.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/editor/datetimepicker.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/editor/select2.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/editor/x-editor-style.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/educate-custon-icon.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/form.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/form/all-type-forms.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/form/themesaller-forms.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/ionRangeSlider/ion.rangeSlider.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/ionRangeSlider/ion.rangeSlider.skinFlat.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/ionRangeSlider/sprite-skin-flat.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/jquery-ui.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/main.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/meanmenu.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/metisMenu/metisMenu-vertical.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/metisMenu/metisMenu.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/metisMenu/metisMenu.min.css.map">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/modals.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/morrisjs/morris.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/normalize.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/notifications/Lobibox.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/notifications/notifications.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/owl.carousel.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/owl.theme.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/owl.transitions.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/preloader/preloader-style.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/responsive.css">
+      <publishTime>01/27/2020 15:58:10</publishTime>
+    </File>
+    <File Include="css/scrollbar/jquery.mCustomScrollbar.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/select2/select2.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/summernote/fonts/summernote.eot">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/summernote/fonts/summernote.ttf">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/summernote/fonts/summernote.woff">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/summernote/summernote.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/tabs.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/touchspin/jquery.bootstrap-touchspin.min.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/tree-viewer/32px.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/tree-viewer/throbber.gif">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="css/tree-viewer/tree-viewer.css">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="Customer.aspx">
+      <publishTime>10/03/2020 17:48:00</publishTime>
+    </File>
+    <File Include="faq.aspx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/educate-icon.svg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/educate-icon.ttf">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/educate-icon.woff">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="forgotpassword.aspx">
+      <publishTime>08/01/2020 12:39:22</publishTime>
+    </File>
+    <File Include="img/addnew.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/approve.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/arrow_large_down.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/arrow_large_up.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/blog-details/1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/calender.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/cancel.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/contact/1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/contact/2.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/contact/3.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/contact/4.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/correct.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/courses/1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/courses/2.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/courses/3.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/cropper/1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/delete-disabled.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/delete.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/edit.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/favicon.ico">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/green1.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/logo/logo.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/logo/logosn.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/manface.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/notification/1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/notification/2.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/notification/3.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/notification/4.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/notification/5.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/notification/6.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/product/book-1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/product/book-2.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/product/book-3.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/product/book-4.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/product/pro4.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/product/profile-bg.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/profile/1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/refresh.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/reject.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/save.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/student/1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/student/2.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/student/3.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/student/4.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="img/update.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="img/view.png">
+      <publishTime>03/25/2020 16:05:29</publishTime>
+    </File>
+    <File Include="Inbox.aspx">
+      <publishTime>10/01/2020 18:45:01</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/c3-charts/c3-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/c3-charts/c3.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/c3-charts/d3.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/calendar/fullcalendar-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/calendar/fullcalendar.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/calendar/moment.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/card.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/chart/jquery.peity.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/chart/peity-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/charts/area-chart.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/charts/bar-chart.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/charts/Chart.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/charts/line-chart.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/charts/rounded-chart.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/chosen/chosen-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/chosen/chosen.jquery.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/chosen/chosen.jquery.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/code-editor/code-editor-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/code-editor/code-editor.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/code-editor/codemirror.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/colorpicker/color-picker-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/colorpicker/jquery.spectrum.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/Common.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/counterup/counterup-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/counterup/jquery.counterup.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/counterup/waypoints.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/cropper/cropper-actice.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/cropper/cropper.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-map/d3.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-map/data-maps-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-map/datamaps.all.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-map/topojson.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-table/bootstrap-editable.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-table/bootstrap-table-editable.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-table/bootstrap-table-export.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-table/bootstrap-table-resizable.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-table/bootstrap-table.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-table/colResizable-1.5.source.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-table/data-table-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/data-table/tableExport.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/datapicker/bootstrap-datepicker.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/datapicker/bootstrap-datepicker.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/datapicker/datepicker-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/datepicker/datepicker-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/datepicker/jquery-ui.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/dropzone/dropzone.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/duallistbox/duallistbox.active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/duallistbox/jquery.bootstrap-duallistbox.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/e-payment.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/editable/bootstrap-datetimepicker.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/editable/bootstrap-editable.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/editable/jquery.mockjax.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/editable/mock-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/editable/moment.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/editable/select2.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/editable/xediable-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/form-validation/form-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/form-validation/jquery.form.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/form-validation/jquery.validate.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/google.maps/google.maps-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/icheck/icheck-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/icheck/icheck.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/input-mask/jasny-bootstrap.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/ionRangeSlider/ion.rangeSlider.active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/ionRangeSlider/ion.rangeSlider.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/jquery-price-slider.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/jquery-ui.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/jquery.maskedinput.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/jquery.meanmenu.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/jquery.payform.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/jquery.scrollUp.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/jquery.sticky.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/knob/jquery.knob.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/knob/knob-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/main.js">
+      <publishTime>09/21/2020 16:50:54</publishTime>
+    </File>
+    <File Include="js/masking-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/metisMenu/metisMenu-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/metisMenu/metisMenu.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/metisMenu/metisMenu.min.js.map">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/morrisjs/home3-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/morrisjs/morris-active-pro.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/morrisjs/morris-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/morrisjs/morris.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/morrisjs/raphael-min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/multiple-email/multiple-email-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/notifications/Lobibox.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/notifications/notification-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/owl.carousel.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/password-meter/password-meter-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/password-meter/pwstrength-bootstrap.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/password-meter/zxcvbn.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/pdf/jquery.media.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/pdf/pdf-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/peity/jquery.peity.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/peity/peity-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/plugins.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/rangle-slider/jquery-ui-1.10.4.custom.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/rangle-slider/jquery-ui-touch-punch.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/rangle-slider/rangle-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/scrollbar/jquery.mCustomScrollbar.concat.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/scrollbar/mCustomScrollbar-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/select2/select2-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/select2/select2.full.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/sparkline/jquery.charts-sparkline.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/sparkline/jquery.sparkline.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/sparkline/sparkline-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/summernote/summernote-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/summernote/summernote.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/tab.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/tawk-chat.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/touchspin/jquery.bootstrap-touchspin.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/touchspin/touchspin-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/tree-line/jstree.active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/tree-line/jstree.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/vendor/jquery-1.12.4.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/vendor/modernizr-2.8.3.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/vendor/modernizr-custom.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/wizard/jquery.steps.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/wizard/steps-active.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="js/wow.min.js">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="login.aspx">
+      <publishTime>08/02/2020 14:57:47</publishTime>
+    </File>
+    <File Include="ManageSupport.aspx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="MyProfile.aspx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="offlinetrasction.aspx">
+      <publishTime>08/04/2020 16:38:14</publishTime>
+    </File>
+    <File Include="onlinepayment.aspx">
+      <publishTime>10/03/2020 18:02:29</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="policies.aspx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>12/02/2020 19:24:00</publishTime>
+    </File>
+    <File Include="refundtrasaction.aspx">
+      <publishTime>10/03/2020 18:11:01</publishTime>
+    </File>
+    <File Include="RestChairBooking.aspx">
+      <publishTime>10/03/2020 17:53:04</publishTime>
+    </File>
+    <File Include="RestChairCustomerBookings.aspx">
+      <publishTime>08/01/2020 13:18:03</publishTime>
+    </File>
+    <File Include="Service References/ATRCBookingServiceReference/JustStay.ATRC.ATRCBookingServiceReference.CustBooking.datasource">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="Service References/ATRCBookingServiceReference/JustStay.ATRC.ATRCBookingServiceReference.Cust_ATRCBooking.datasource">
+      <publishTime>08/31/2020 19:17:44</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.ATRC.ATRCServiceReference.ATRCCenter.datasource">
+      <publishTime>08/31/2020 19:18:20</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.ATRC.ATRCServiceReference.ATRCDto.datasource">
+      <publishTime>08/31/2020 19:18:20</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.ATRC.ATRCServiceReference.ATRCImageDto.datasource">
+      <publishTime>08/31/2020 19:18:20</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.ATRC.ATRCServiceReference.ATRCProfile.datasource">
+      <publishTime>08/31/2020 19:18:20</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.ATRC.ATRCServiceReference.GetRestChairByAtrcId.datasource">
+      <publishTime>08/31/2020 19:18:20</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.ATRC.ATRCServiceReference.GetRestChairbyId.datasource">
+      <publishTime>08/31/2020 19:18:20</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.ATRCCategory.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.ATRCSubCategory.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.ATRCType.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.AttachmentDto.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.City.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.Localities.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.Location.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.RatingDto.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.SettingDto.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.SMSTemplateDto.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.ATRC.CommonServiceReference.State.datasource">
+      <publishTime>08/31/2020 19:18:31</publishTime>
+    </File>
+    <File Include="Service References/CompanyServiceReference/JustStay.ATRC.CompanyServiceReference.CompanyDto.datasource">
+      <publishTime>08/31/2020 19:18:44</publishTime>
+    </File>
+    <File Include="Service References/DashboardServiceReference/JustStay.ATRC.DashboardServiceReference.GetAdminDashboardDetails.datasource">
+      <publishTime>09/19/2020 18:18:35</publishTime>
+    </File>
+    <File Include="Service References/DashboardServiceReference/JustStay.ATRC.DashboardServiceReference.GetATRCDashboardDetails.datasource">
+      <publishTime>09/19/2020 18:18:35</publishTime>
+    </File>
+    <File Include="Service References/DashboardServiceReference/JustStay.ATRC.DashboardServiceReference.GetATRCTodaysBooking.datasource">
+      <publishTime>09/19/2020 18:18:38</publishTime>
+    </File>
+    <File Include="Service References/DashboardServiceReference/JustStay.ATRC.DashboardServiceReference.GetTodaysBooking.datasource">
+      <publishTime>09/19/2020 18:18:35</publishTime>
+    </File>
+    <File Include="Service References/MessageServiceReference/JustStay.ATRC.MessageServiceReference.InboxMail.datasource">
+      <publishTime>08/31/2020 19:19:08</publishTime>
+    </File>
+    <File Include="Service References/MessageServiceReference/JustStay.ATRC.MessageServiceReference.MessgeInfo.datasource">
+      <publishTime>08/31/2020 19:19:08</publishTime>
+    </File>
+    <File Include="Service References/MessageServiceReference/JustStay.ATRC.MessageServiceReference.SupportRequestDetail.datasource">
+      <publishTime>08/31/2020 19:19:08</publishTime>
+    </File>
+    <File Include="Service References/RCBServiceReference/JustStay.ATRC.RCBServiceReference.GetAllBooking.datasource">
+      <publishTime>08/31/2020 19:19:20</publishTime>
+    </File>
+    <File Include="Service References/RCBServiceReference/JustStay.ATRC.RCBServiceReference.GetAllBookingByCustomerId.datasource">
+      <publishTime>08/31/2020 19:19:20</publishTime>
+    </File>
+    <File Include="Service References/RCBServiceReference/JustStay.ATRC.RCBServiceReference.GetAllCustomerByATRC.datasource">
+      <publishTime>08/31/2020 19:19:20</publishTime>
+    </File>
+    <File Include="Service References/RCBServiceReference/JustStay.ATRC.RCBServiceReference.GetAllPaymentByCustomerId.datasource">
+      <publishTime>08/31/2020 19:19:20</publishTime>
+    </File>
+    <File Include="Service References/RCBServiceReference/JustStay.ATRC.RCBServiceReference.GetBookingDetailsByBookingId.datasource">
+      <publishTime>08/31/2020 19:19:19</publishTime>
+    </File>
+    <File Include="Service References/RCBServiceReference/JustStay.ATRC.RCBServiceReference.GetBookingForCancelByCustomerId.datasource">
+      <publishTime>08/31/2020 19:19:20</publishTime>
+    </File>
+    <File Include="Service References/RCBServiceReference/JustStay.ATRC.RCBServiceReference.GetCustomerBookingsByATRC.datasource">
+      <publishTime>08/31/2020 19:19:20</publishTime>
+    </File>
+    <File Include="Service References/RCBServiceReference/JustStay.ATRC.RCBServiceReference.GetRestChairBookingByATRC.datasource">
+      <publishTime>08/31/2020 19:19:20</publishTime>
+    </File>
+    <File Include="Service References/RCPaymentServiceReference/JustStay.ATRC.RCPaymentServiceReference.ATRCOnlineBillingFromJuststay.datasource">
+      <publishTime>08/31/2020 19:19:31</publishTime>
+    </File>
+    <File Include="Service References/RCPaymentServiceReference/JustStay.ATRC.RCPaymentServiceReference.GetAllATRCBills.datasource">
+      <publishTime>08/31/2020 19:19:31</publishTime>
+    </File>
+    <File Include="Service References/RCPaymentServiceReference/JustStay.ATRC.RCPaymentServiceReference.GetAllJSBills.datasource">
+      <publishTime>08/31/2020 19:19:31</publishTime>
+    </File>
+    <File Include="Service References/RCPaymentServiceReference/JustStay.ATRC.RCPaymentServiceReference.GetAllOfflinePayment.datasource">
+      <publishTime>08/31/2020 19:19:31</publishTime>
+    </File>
+    <File Include="Service References/RCPaymentServiceReference/JustStay.ATRC.RCPaymentServiceReference.GetAllOnlinePayment.datasource">
+      <publishTime>08/31/2020 19:19:31</publishTime>
+    </File>
+    <File Include="Service References/RCPaymentServiceReference/JustStay.ATRC.RCPaymentServiceReference.GetATRCBillById.datasource">
+      <publishTime>08/31/2020 19:19:31</publishTime>
+    </File>
+    <File Include="Service References/RCPaymentServiceReference/JustStay.ATRC.RCPaymentServiceReference.GetJSBillById.datasource">
+      <publishTime>08/31/2020 19:19:31</publishTime>
+    </File>
+    <File Include="Service References/RCPaymentServiceReference/JustStay.ATRC.RCPaymentServiceReference.PayAtATRCBillingToJuststay.datasource">
+      <publishTime>08/31/2020 19:19:31</publishTime>
+    </File>
+    <File Include="Service References/RCRefundServiceReference/JustStay.ATRC.RCRefundServiceReference.GetAllCancelledBooking.datasource">
+      <publishTime>08/31/2020 19:19:43</publishTime>
+    </File>
+    <File Include="Service References/RCRefundServiceReference/JustStay.ATRC.RCRefundServiceReference.GetAllRefunds.datasource">
+      <publishTime>08/31/2020 19:19:43</publishTime>
+    </File>
+    <File Include="Service References/UserServiceReference/JustStay.ATRC.UserServiceReference.UserDto.datasource">
+      <publishTime>08/31/2020 19:19:54</publishTime>
+    </File>
+    <File Include="Site1.Master">
+      <publishTime>11/28/2020 17:51:22</publishTime>
+    </File>
+    <File Include="style.css">
+      <publishTime>08/02/2020 14:07:50</publishTime>
+    </File>
+    <File Include="termsconditions.aspx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="Utility/DownloadAttachment.aspx">
+      <publishTime>09/23/2020 17:09:15</publishTime>
+    </File>
+    <File Include="viewatrcbill.aspx">
+      <publishTime>08/06/2020 11:58:30</publishTime>
+    </File>
+    <File Include="viewbooking.aspx">
+      <publishTime>09/21/2020 12:52:16</publishTime>
+    </File>
+    <File Include="viewJSbill.aspx">
+      <publishTime>08/04/2020 18:14:08</publishTime>
+    </File>
+    <File Include="ViewMail.aspx">
+      <publishTime>10/13/2020 16:35:19</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/02/2020 19:23:59</publishTime>
+    </File>
+    <File Include="Web.sitemap">
+      <publishTime>09/21/2020 16:52:44</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

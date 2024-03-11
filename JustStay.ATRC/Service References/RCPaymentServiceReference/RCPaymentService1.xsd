@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/RCPaymentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+  <xs:import schemaLocation="http://localhost:56178/RCPaymentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+  <xs:element name="GetOnlinePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlinePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetOnlinePaymentResult" nillable="true" type="q1:ArrayOfGetAllOnlinePayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOfflinePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOfflinePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetOfflinePaymentResult" nillable="true" type="q2:ArrayOfGetAllOfflinePayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ATRCOnlineBillingFromJuststay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ATRCOnlineBillingFromJuststayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="ATRCOnlineBillingFromJuststayResult" nillable="true" type="q3:ArrayOfATRCOnlineBillingFromJuststay" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertATRCBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="billdto" nillable="true" type="q4:atrcbillDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertATRCBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertATRCBillResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="atrcbilldto" nillable="true" type="q5:atrcbillDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCBillResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllATRCBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ispaid" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllATRCBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllATRCBillResult" nillable="true" type="q6:ArrayOfGetAllATRCBills" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteATRCBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="billid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteATRCBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteATRCBillResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCDetailsById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCDetailsByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetATRCDetailsByIdResult" nillable="true" type="q7:GetATRCBillById" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertJSBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="jsbilldto" nillable="true" type="q8:jsbillDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertJSBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertJSBillResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="billdto" nillable="true" type="q9:jsbillDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSBillResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJSBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ispaid" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJSBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllJSBillResult" nillable="true" type="q10:ArrayOfGetAllJSBills" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJSBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="billid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJSBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteJSBillResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSBillById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSBillByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetJSBillByIdResult" nillable="true" type="q11:GetJSBillById" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PayAtATRCBillingToJuststay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PayAtATRCBillingToJuststayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="PayAtATRCBillingToJuststayResult" nillable="true" type="q12:ArrayOfPayAtATRCBillingToJuststay" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cc672aea-cd63-4394-94e9-3c7104379485" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56178/MastersService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MastersService.xsd" MetadataType="Schema" ID="f9130b19-dada-4bc0-a95b-890f16b09497" SourceId="1" SourceUrl="http://localhost:56178/MastersService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MastersService1.xsd" MetadataType="Schema" ID="8a8489ab-1b17-42f7-b954-2a5de5d9fca1" SourceId="1" SourceUrl="http://localhost:56178/MastersService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MastersService.disco" MetadataType="Disco" ID="cf029d32-485f-4a4e-91c0-7ffa686d8721" SourceId="1" SourceUrl="http://localhost:56178/MastersService.svc?disco" />
+    <MetadataFile FileName="MastersService2.xsd" MetadataType="Schema" ID="f8c526a4-b5cb-4ea7-b626-cbe70cb161de" SourceId="1" SourceUrl="http://localhost:56178/MastersService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MastersService.wsdl" MetadataType="Wsdl" ID="01cda105-d00f-4baf-849b-bcb0052dba31" SourceId="1" SourceUrl="http://localhost:56178/MastersService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

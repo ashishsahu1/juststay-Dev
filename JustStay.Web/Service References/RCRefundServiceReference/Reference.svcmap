@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fb2895c3-74b2-49c9-b203-caa314ee858b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56178/RCRefundService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RCRefundService3.xsd" MetadataType="Schema" ID="948f2aff-959f-4a75-acce-4b8f40ace0fb" SourceId="1" SourceUrl="http://localhost:56178/RCRefundService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RCRefundService.disco" MetadataType="Disco" ID="f7724010-4ce1-4756-b6e9-6d89ded251c0" SourceId="1" SourceUrl="http://localhost:56178/RCRefundService.svc?disco" />
+    <MetadataFile FileName="RCRefundService2.xsd" MetadataType="Schema" ID="400e8ee7-d5e3-4a91-9e49-a3c9d2cfbda7" SourceId="1" SourceUrl="http://localhost:56178/RCRefundService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RCRefundService1.xsd" MetadataType="Schema" ID="b8bba951-c48f-4be8-9b67-28ad751ab404" SourceId="1" SourceUrl="http://localhost:56178/RCRefundService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RCRefundService.xsd" MetadataType="Schema" ID="fd163919-58bc-4217-af99-e6296ecbe9a0" SourceId="1" SourceUrl="http://localhost:56178/RCRefundService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RCRefundService.wsdl" MetadataType="Wsdl" ID="91f74f23-1e00-42e2-afe1-9f312df29c90" SourceId="1" SourceUrl="http://localhost:56178/RCRefundService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

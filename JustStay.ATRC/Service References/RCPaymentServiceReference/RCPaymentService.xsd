@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Repo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfGetAllOnlinePayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAllOnlinePayment" nillable="true" type="tns:GetAllOnlinePayment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAllOnlinePayment" nillable="true" type="tns:ArrayOfGetAllOnlinePayment" />
+  <xs:complexType name="GetAllOnlinePayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCCommission" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookingDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BookingNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JustStayCommission" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NetAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaidAmtfromRazor" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RCPaymentId" type="xs:int" />
+      <xs:element minOccurs="0" name="Razor_Fess" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RestChairBookingId" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalRazorFees" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="orderid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="razor_gst" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="razorpay_payment_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAllOnlinePayment" nillable="true" type="tns:GetAllOnlinePayment" />
+  <xs:complexType name="ArrayOfGetAllOfflinePayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAllOfflinePayment" nillable="true" type="tns:GetAllOfflinePayment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAllOfflinePayment" nillable="true" type="tns:ArrayOfGetAllOfflinePayment" />
+  <xs:complexType name="GetAllOfflinePayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCCommission" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookingDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BookingNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JustStayCommission" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NetAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RCPaymentId" type="xs:int" />
+      <xs:element minOccurs="0" name="RestChairBookingId" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAllOfflinePayment" nillable="true" type="tns:GetAllOfflinePayment" />
+  <xs:complexType name="ArrayOfATRCOnlineBillingFromJuststay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATRCOnlineBillingFromJuststay" nillable="true" type="tns:ATRCOnlineBillingFromJuststay" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATRCOnlineBillingFromJuststay" nillable="true" type="tns:ArrayOfATRCOnlineBillingFromJuststay" />
+  <xs:complexType name="ATRCOnlineBillingFromJuststay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCCommission" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GST" type="xs:int" />
+      <xs:element minOccurs="0" name="NetAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Perticulars" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRCOnlineBillingFromJuststay" nillable="true" type="tns:ATRCOnlineBillingFromJuststay" />
+  <xs:complexType name="ArrayOfGetAllATRCBills">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAllATRCBills" nillable="true" type="tns:GetAllATRCBills" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAllATRCBills" nillable="true" type="tns:ArrayOfGetAllATRCBills" />
+  <xs:complexType name="GetAllATRCBills">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCBillId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPaid" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PaidAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaidDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAllATRCBills" nillable="true" type="tns:GetAllATRCBills" />
+  <xs:complexType name="GetATRCBillById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCBillId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BalanceAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BillDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPaid" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PaidAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaidDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetATRCBillById" nillable="true" type="tns:GetATRCBillById" />
+  <xs:complexType name="ArrayOfGetAllJSBills">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAllJSBills" nillable="true" type="tns:GetAllJSBills" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAllJSBills" nillable="true" type="tns:ArrayOfGetAllJSBills" />
+  <xs:complexType name="GetAllJSBills">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPaid" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JSBillId" type="xs:int" />
+      <xs:element minOccurs="0" name="PaidAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaidDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAllJSBills" nillable="true" type="tns:GetAllJSBills" />
+  <xs:complexType name="GetJSBillById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BalanceAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BillDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPaid" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JSBillId" type="xs:int" />
+      <xs:element minOccurs="0" name="PaidAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaidDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetJSBillById" nillable="true" type="tns:GetJSBillById" />
+  <xs:complexType name="ArrayOfPayAtATRCBillingToJuststay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PayAtATRCBillingToJuststay" nillable="true" type="tns:PayAtATRCBillingToJuststay" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayAtATRCBillingToJuststay" nillable="true" type="tns:ArrayOfPayAtATRCBillingToJuststay" />
+  <xs:complexType name="PayAtATRCBillingToJuststay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GST" type="xs:int" />
+      <xs:element minOccurs="0" name="JSCommission" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NetAmount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Perticulars" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayAtATRCBillingToJuststay" nillable="true" type="tns:PayAtATRCBillingToJuststay" />
+</xs:schema>

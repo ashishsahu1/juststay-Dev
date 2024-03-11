@@ -1,0 +1,1922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="juststayDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NameWithCode" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="juststayDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="States" EntityType="Self.State" />
+    <EntitySet Name="UserTypes" EntityType="juststayDbModel.UserType" />
+    <EntitySet Name="ATRCCategories" EntityType="juststayDbModel.ATRCCategory" />
+    <EntitySet Name="ATRCSubCategories" EntityType="juststayDbModel.ATRCSubCategory" />
+    <EntitySet Name="Roles" EntityType="juststayDbModel.Role" />
+    <EntitySet Name="Users" EntityType="juststayDbModel.User" />
+    <FunctionImport Name="GetAllATRCRegistarions" ReturnType="Collection(juststayDbModel.ATRCDetail)">
+      <Parameter Name="Status" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="ATRCAmenities" EntityType="juststayDbModel.ATRCAmenity" />
+    <EntitySet Name="Cities" EntityType="juststayDbModel.City" />
+    <EntitySet Name="FAQs" EntityType="juststayDbModel.FAQ" />
+    <FunctionImport Name="GetUserDetail" ReturnType="Collection(juststayDbModel.UserDetail)" />
+    <EntitySet Name="Locations" EntityType="juststayDbModel.Location" />
+    <FunctionImport Name="GetLocation" ReturnType="Collection(juststayDbModel.GetLocationDetails)">
+      <Parameter Name="CityId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Customers" EntityType="juststayDbModel.Customer" />
+    <EntitySet Name="SMSTemplates" EntityType="juststayDbModel.SMSTemplate" />
+    <EntitySet Name="Messages" EntityType="juststayDbModel.Message" />
+    <EntitySet Name="MessageRecipients" EntityType="juststayDbModel.MessageRecipient" />
+    <FunctionImport Name="GetEmailsList" ReturnType="Collection(juststayDbModel.EmailInfo)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Mode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetInboxMails" ReturnType="Collection(juststayDbModel.InboxMail)">
+      <Parameter Name="Search" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+      <Parameter Name="Mode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetMessgeById" ReturnType="Collection(juststayDbModel.MessgeInfo)">
+      <Parameter Name="MessageId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Blogs" EntityType="juststayDbModel.Blog" />
+    <EntitySet Name="BlogCategories" EntityType="juststayDbModel.BlogCategory" />
+    <FunctionImport Name="GetAdminSupportRequests" ReturnType="Collection(juststayDbModel.SupportRequestDetail)" />
+    <EntitySet Name="Banners" EntityType="juststayDbModel.Banner" />
+    <FunctionImport Name="GetAutocompleteLocalities" ReturnType="Collection(juststayDbModel.Localities)">
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetATRCCenters">
+      <Parameter Name="TypeId" Mode="In" Type="Int32" />
+      <Parameter Name="Mode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetBlogWithDetail" ReturnType="Collection(juststayDbModel.BlogWithDetail)">
+      <Parameter Name="BlogId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CheckRestChairAvailability">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="Persons" Mode="In" Type="Int32" />
+      <Parameter Name="BookingFrom" Mode="In" Type="String" />
+      <Parameter Name="Hours" Mode="In" Type="Int32" />
+      <Parameter Name="Status" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetATRCBookingsByCustomer" ReturnType="Collection(juststayDbModel.Cust_ATRCBooking)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Highlights" EntityType="juststayDbModel.Highlight" />
+    <EntitySet Name="Cuisines" EntityType="juststayDbModel.Cuisine" />
+    <EntitySet Name="Amenities" EntityType="juststayDbModel.Amenity" />
+    <EntitySet Name="Offers" EntityType="juststayDbModel.Offer" />
+    <FunctionImport Name="GetCustomerDetail" ReturnType="Collection(juststayDbModel.CustomerDetail)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="CustomerRequests" EntityType="juststayDbModel.CustomerRequest" />
+    <FunctionImport Name="GetAllCustomerRequests" ReturnType="Collection(juststayDbModel.CustomerRequestDetail)" />
+    <EntitySet Name="ATRCTypes" EntityType="juststayDbModel.ATRCType" />
+    <EntitySet Name="RestChairTypes" EntityType="juststayDbModel.RestChairType" />
+    <EntitySet Name="RestChairProfiles" EntityType="juststayDbModel.RestChairProfile" />
+    <EntitySet Name="RoomTypes" EntityType="juststayDbModel.RoomType" />
+    <EntitySet Name="RoomLabels" EntityType="juststayDbModel.RoomLabel" />
+    <EntitySet Name="Attachments" EntityType="juststayDbModel.Attachment" />
+    <EntitySet Name="CancellationPolicies" EntityType="juststayDbModel.CancellationPolicy" />
+    <EntitySet Name="ATRCRestChairs" EntityType="juststayDbModel.ATRCRestChair" />
+    <EntitySet Name="ATRCChairs" EntityType="juststayDbModel.ATRCChair" />
+    <EntitySet Name="ATRCs" EntityType="juststayDbModel.ATRC" />
+    <FunctionImport Name="GetAllRestChairsByATRCProfile" ReturnType="Collection(juststayDbModel.GetAllRestChairsByATRCProfile)">
+      <Parameter Name="ProfileId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetRestChairbyId" ReturnType="Collection(juststayDbModel.GetRestChairbyId)">
+      <Parameter Name="ATRCRestChairId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="RCBookingDetails" EntityType="juststayDbModel.RCBookingDetail" />
+    <FunctionImport Name="SearchATRCCenters" ReturnType="Collection(juststayDbModel.ATRCCenter)">
+      <Parameter Name="minlat" Mode="In" Type="Decimal" />
+      <Parameter Name="maxlat" Mode="In" Type="Decimal" />
+      <Parameter Name="minLng" Mode="In" Type="Decimal" />
+      <Parameter Name="maxLng" Mode="In" Type="Decimal" />
+      <Parameter Name="CityId" Mode="In" Type="Int32" />
+      <Parameter Name="Mode" Mode="In" Type="String" />
+      <Parameter Name="search" Mode="In" Type="String" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="hour" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetBookingDetailsByBookingId" ReturnType="Collection(juststayDbModel.GetBookingDetailsByBookingId)">
+      <Parameter Name="RestChairBookingId" Mode="In" Type="Int32" />
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetRestChairByAtrcId" ReturnType="Collection(juststayDbModel.GetRestChairByAtrcId)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="Hour" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="ErrorLogs" EntityType="juststayDbModel.ErrorLog" />
+    <FunctionImport Name="GetRestChairBookingByATRC" ReturnType="Collection(juststayDbModel.GetRestChairBookingByATRC)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="PaymentMode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllCustomerByATRC" ReturnType="Collection(juststayDbModel.GetAllCustomerByATRC)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetCustomerBookingsByATRC" ReturnType="Collection(juststayDbModel.GetCustomerBookingsByATRC)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllPaymentByCustomerId" ReturnType="Collection(juststayDbModel.GetAllPaymentByCustomerId)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllRestChairProfile" ReturnType="Collection(juststayDbModel.GetAllRestChairProfile)" />
+    <EntitySet Name="ATRCImages" EntityType="juststayDbModel.ATRCImage" />
+    <EntitySet Name="RestChairBookings" EntityType="juststayDbModel.RestChairBooking" />
+    <FunctionImport Name="SP_Delete" ReturnType="Collection(Int32)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="Mode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllCustomersDetails" ReturnType="Collection(juststayDbModel.GetAllCustomersDetails)">
+      <Parameter Name="Serach" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllBookingByCustomerIdAndroid" ReturnType="Collection(juststayDbModel.GetAllBookingByCustomerIdAndroid)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllPaymentByCustomerIdAndroid" ReturnType="Collection(juststayDbModel.GetAllPaymentByCustomerIdAndroid)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Settings" EntityType="juststayDbModel.Setting" />
+    <EntitySet Name="PrivacyPolicies" EntityType="juststayDbModel.PrivacyPolicy" />
+    <FunctionImport Name="GetAllOfflinePayment" ReturnType="Collection(juststayDbModel.GetAllOfflinePayment)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllOnlinePayment" ReturnType="Collection(juststayDbModel.GetAllOnlinePayment)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllBookingByCustomerId" ReturnType="Collection(juststayDbModel.GetAllBookingByCustomerId)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="search" Mode="In" Type="String" />
+      <Parameter Name="mode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetBookingForCancelByCustomerId" ReturnType="Collection(juststayDbModel.GetBookingForCancelByCustomerId)">
+      <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+      <Parameter Name="mode" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="RCRefunds" EntityType="juststayDbModel.RCRefund" />
+    <FunctionImport Name="GetAllCancelledBooking" ReturnType="Collection(juststayDbModel.GetAllCancelledBooking)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="mode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllRefunds" ReturnType="Collection(juststayDbModel.GetAllRefunds)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="mode" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ATRCAccounts" EntityType="juststayDbModel.ATRCAccount" />
+    <EntitySet Name="Companies" EntityType="juststayDbModel.Company" />
+    <EntitySet Name="CompanyAccounts" EntityType="juststayDbModel.CompanyAccount" />
+    <FunctionImport Name="ATRCOnlineBillingFromJuststay" ReturnType="Collection(juststayDbModel.ATRCOnlineBillingFromJuststay)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="ATRCBills" EntityType="juststayDbModel.ATRCBill" />
+    <FunctionImport Name="GetAllATRCBills" ReturnType="Collection(juststayDbModel.GetAllATRCBills)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="IsPaid" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="GetATRCBillById" ReturnType="Collection(juststayDbModel.GetATRCBillById)">
+      <Parameter Name="ATRCBillId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="RCPayments" EntityType="juststayDbModel.RCPayment" />
+    <EntitySet Name="JSBills" EntityType="juststayDbModel.JSBill" />
+    <FunctionImport Name="GetAllJSBills" ReturnType="Collection(juststayDbModel.GetAllJSBills)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="IsPaid" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="GetJSBillById" ReturnType="Collection(juststayDbModel.GetJSBillById)">
+      <Parameter Name="JSBillId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PayAtATRCBillingToJuststay" ReturnType="Collection(juststayDbModel.PayAtATRCBillingToJuststay)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetAdminDashboardDetails" ReturnType="Collection(juststayDbModel.GetAdminDashboardDetails)" />
+    <FunctionImport Name="GetTodaysBooking" ReturnType="Collection(juststayDbModel.GetTodaysBooking)" />
+    <EntitySet Name="Taxes" EntityType="juststayDbModel.Tax" />
+    <FunctionImport Name="GetAllBooking" ReturnType="Collection(juststayDbModel.GetAllBooking)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Userid" Mode="In" Type="Int32" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllATRC_Report" ReturnType="Collection(juststayDbModel.GetAllATRC_Report)">
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllCancelBookings_Report" ReturnType="Collection(juststayDbModel.GetAllCancelBookings_Report)">
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+      <Parameter Name="BookingType" Mode="In" Type="String" />
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllCustomer_Report" ReturnType="Collection(juststayDbModel.GetAllCustomer_Report)">
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllJSBills_Report" ReturnType="Collection(juststayDbModel.GetAllJSBills_Report)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="IsPaid" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllRefundTrasactions_Report" ReturnType="Collection(juststayDbModel.GetAllRefundTrasactions_Report)">
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+      <Parameter Name="BookingType" Mode="In" Type="String" />
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllTrasaction_Report" ReturnType="Collection(juststayDbModel.GetAllTrasaction_Report)">
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+      <Parameter Name="BookingType" Mode="In" Type="String" />
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllUserDetail_Report" ReturnType="Collection(juststayDbModel.GetAllUserDetail_Report)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetATRCProfile" ReturnType="Collection(juststayDbModel.ATRCProfile)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetATRCDashboardDetails" ReturnType="Collection(juststayDbModel.GetATRCDashboardDetails)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetATRCTodaysBooking" ReturnType="Collection(juststayDbModel.GetATRCTodaysBooking)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AndroGetATRCProfile" ReturnType="Collection(juststayDbModel.AndroGetATRCProfile)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetBookingReceipt" ReturnType="Collection(juststayDbModel.GetBookingReceipt)">
+      <Parameter Name="RestChairBookingId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllBooking_Report" ReturnType="Collection(juststayDbModel.GetAllBooking_Report)">
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+      <Parameter Name="BookingType" Mode="In" Type="String" />
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllATRCBills_Report" ReturnType="Collection(juststayDbModel.GetAllATRCBills_Report)">
+      <Parameter Name="ATRCId" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="IsPaid" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <EntitySet Name="Ratings" EntityType="juststayDbModel.Rating" />
+  </EntityContainer>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="UserTypeId" />
+    </Key>
+    <Property Name="UserTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserType1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ATRCCategory">
+    <Key>
+      <PropertyRef Name="ATRCCategoryId" />
+    </Key>
+    <Property Name="ATRCCategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ATRCSubCategory">
+    <Key>
+      <PropertyRef Name="ATRCSubCategoryId" />
+    </Key>
+    <Property Name="ATRCSubCategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCCategoryId" Type="Int32" />
+    <Property Name="SubCategory" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserTypeId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsPaid" Type="Boolean" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="RoleId" Type="Int32" />
+    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="Google_Id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="ATRCDetail">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Category" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Referral" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="LocationId" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="ATRCNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CATEGORYNAMES" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="REFERRALNAMES" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NAMEWITHCODE" Nullable="false" MaxLength="70" />
+    <Property Type="String" Name="CITY" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="LOCATION" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Details" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="DiningFacility" Nullable="true" />
+    <Property Type="Time" Name="DiningFromTime" Nullable="true" />
+    <Property Type="Time" Name="DiningToTime" Nullable="true" />
+    <Property Type="String" Name="ProfileImageName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProfileImageNewName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="String" Name="highlights" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Cuisines" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Amenities" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GeoLocationName" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ATRCTypeId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ATRCProfile">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Category" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Referral" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="LocationId" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="ATRCNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="StateName" Nullable="false" MaxLength="70" />
+    <Property Type="String" Name="CityName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="LocationName" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Details" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="DiningFacility" Nullable="true" />
+    <Property Type="Time" Name="DiningFromTime" Nullable="true" />
+    <Property Type="Time" Name="DiningToTime" Nullable="true" />
+    <Property Type="String" Name="DiningFacilityName" Nullable="false" MaxLength="18" />
+    <Property Type="String" Name="DiningStartsOn" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="DiningEndsOn" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="CategoryNames" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProfileImageName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProfileImageNewName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="String" Name="highlights" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Cuisines" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Amenities" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HighlightNames" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="CuisinesNames" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="AmenitiesNames" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="GeoLocationName" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="RestChairProfileId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCTypeId" Nullable="true" />
+    <Property Type="String" Name="NewAmenities" Nullable="true" />
+    <Property Type="Decimal" Name="Ratings" Nullable="true" Precision="12" Scale="2" />
+  </ComplexType>
+  <EntityType Name="ATRCAmenity">
+    <Key>
+      <PropertyRef Name="AmenityId" />
+    </Key>
+    <Property Name="AmenityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCId" Type="Int32" Nullable="false" />
+    <Property Name="Parking" Type="Boolean" Nullable="false" />
+    <Property Name="Wifi" Type="Boolean" Nullable="false" />
+    <Property Name="Restaurant" Type="Boolean" Nullable="false" />
+    <Property Name="CleanBathRoom" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="latitude" Type="Decimal" Precision="12" Scale="9" />
+    <Property Name="longitude" Type="Decimal" Precision="12" Scale="9" />
+  </EntityType>
+  <EntityType Name="FAQ">
+    <Key>
+      <PropertyRef Name="FAQId" />
+    </Key>
+    <Property Name="FAQId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Answer" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sequence" Type="Int32" Nullable="false" />
+    <Property Name="FAQAudienceId" Type="Int32" Nullable="false" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="UserDetail">
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Username" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="UserTypeId" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RoleId" Nullable="true" />
+    <Property Type="Boolean" Name="IsAdmin" Nullable="true" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Role" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Google_Id" Nullable="true" MaxLength="64" />
+  </ComplexType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="latitude" Type="Decimal" Precision="12" Scale="9" />
+    <Property Name="longitude" Type="Decimal" Precision="12" Scale="9" />
+  </EntityType>
+  <ComplexType Name="GetLocationDetails">
+    <Property Type="Int32" Name="LocationId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Decimal" Name="latitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="Decimal" Name="longitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="String" Name="CityName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsGuest" Type="Boolean" Nullable="false" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SMSTemplate">
+    <Key>
+      <PropertyRef Name="TemplateId" />
+    </Key>
+    <Property Name="TemplateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Template" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="EmailBody" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RefrenceId" Type="Int32" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="InsertedBy" Type="Int32" Nullable="false" />
+    <Property Name="MessageSource" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MessageRecipient">
+    <Key>
+      <PropertyRef Name="MessageRecipientId" />
+    </Key>
+    <Property Name="MessageRecipientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageId" Type="Int32" Nullable="false" />
+    <Property Name="ReceiverType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UnRead" Type="Boolean" Nullable="false" />
+    <Property Name="Trashed" Type="Boolean" Nullable="false" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="InboxMail">
+    <Property Type="Int32" Name="MessageId" Nullable="false" />
+    <Property Type="String" Name="Subject" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="FromEmail" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="UnRead" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="MessgeInfo">
+    <Property Type="Int32" Name="MessageId" Nullable="false" />
+    <Property Type="String" Name="Subject" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="EmailBody" Nullable="false" />
+    <Property Type="Int32" Name="RefrenceId" Nullable="true" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="InsertedBy" Nullable="false" />
+    <Property Type="String" Name="FromEmail" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="ToEmail" Nullable="true" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="EmailInfo">
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="BlogId" />
+    </Key>
+    <Property Name="BlogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BlogCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="BlogTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BlogContent" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BlogDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BlogImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BlogImageNewName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BlogCategory">
+    <Key>
+      <PropertyRef Name="BlogCategoryId" />
+    </Key>
+    <Property Name="BlogCategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="SupportRequestDetail">
+    <Property Type="Int32" Name="MessageId" Nullable="false" />
+    <Property Type="String" Name="Subject" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="BannerId" />
+    </Key>
+    <Property Name="BannerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Heading" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubHeading" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ImageNewName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <ComplexType Name="Localities">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="151" />
+    <Property Type="String" Name="Mode" Nullable="false" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="BlogWithDetail">
+    <Property Type="Int32" Name="BlogId" Nullable="false" />
+    <Property Type="Int32" Name="BlogCategoryId" Nullable="false" />
+    <Property Type="String" Name="BlogTitle" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="BlogContent" Nullable="false" />
+    <Property Type="DateTime" Name="BlogDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="BlogImageName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="BlogImageNewName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="AddedBy" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="Cust_ATRCBooking">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ATRCNumber" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FromTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ToTime" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="Persons" Nullable="false" />
+    <Property Type="Int32" Name="Hours" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Highlight">
+    <Key>
+      <PropertyRef Name="HighlightId" />
+    </Key>
+    <Property Name="HighlightId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Cuisine">
+    <Key>
+      <PropertyRef Name="CuisineId" />
+    </Key>
+    <Property Name="CuisineId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Amenity">
+    <Key>
+      <PropertyRef Name="AmenityId" />
+    </Key>
+    <Property Name="AmenityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IconName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="IconFileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Offer">
+    <Key>
+      <PropertyRef Name="OfferId" />
+    </Key>
+    <Property Name="OfferId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Heading" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubHeading" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShortDetail" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Details" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OfferImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OfferImgNewName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="CustomerDetail">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsGuest" Nullable="false" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Username" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IsActive" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="NewDOB" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="CustomerRequest">
+    <Key>
+      <PropertyRef Name="CustomerRequestId" />
+    </Key>
+    <Property Name="CustomerRequestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="Details" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <ComplexType Name="CustomerRequestDetail">
+    <Property Type="Int32" Name="CustomerRequestId" Nullable="false" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Details" Nullable="false" MaxLength="500" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="ATRCType">
+    <Key>
+      <PropertyRef Name="ATRCTypeId" />
+    </Key>
+    <Property Name="ATRCTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RestChairType">
+    <Key>
+      <PropertyRef Name="RestChairTypeId" />
+    </Key>
+    <Property Name="RestChairTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RestChairProfile">
+    <Key>
+      <PropertyRef Name="RestChairProfileId" />
+    </Key>
+    <Property Name="RestChairProfileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCId" Type="Int32" Nullable="false" />
+    <Property Name="ManagerName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerMobile" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ATRCTelephone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CheckInTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="CheckOutTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="ATRCPolicy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CancellationPolicy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CancellationPolicies" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RoomType">
+    <Key>
+      <PropertyRef Name="RoomTypeId" />
+    </Key>
+    <Property Name="RoomTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RoomLabel">
+    <Key>
+      <PropertyRef Name="RoomLabelId" />
+    </Key>
+    <Property Name="RoomLabelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IconName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IconFileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MasterTableId" Type="Int32" Nullable="false" />
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DocName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DocNewName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CancellationPolicy">
+    <Key>
+      <PropertyRef Name="PolicyId" />
+    </Key>
+    <Property Name="PolicyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PolicyName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PolicyType" Type="Byte" Nullable="false" />
+    <Property Name="Details" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FromTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ToTime" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ApplyAfterBooking" Type="Boolean" Nullable="false" />
+    <Property Name="ApplyBeforeCheckIn" Type="Boolean" Nullable="false" />
+    <Property Name="RefundPercentage" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="ATRCRestChair">
+    <Key>
+      <PropertyRef Name="ATRCRestChairId" />
+    </Key>
+    <Property Name="ATRCRestChairId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChairName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <Property Name="ChairCount" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Amenities" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RestChairProfileId" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="ATRCChair">
+    <Key>
+      <PropertyRef Name="ChairId" />
+    </Key>
+    <Property Name="ChairId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCRestChairId" Type="Int32" Nullable="false" />
+    <Property Name="ChairNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ATRC">
+    <Key>
+      <PropertyRef Name="ATRCId" />
+    </Key>
+    <Property Name="ATRCId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="StateId" Type="Int32" Nullable="false" />
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="Telephone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Referral" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LocationId" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="ATRCNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Details" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DiningFacility" Type="Int32" />
+    <Property Name="DiningFromTime" Type="Time" Precision="7" />
+    <Property Name="DiningToTime" Type="Time" Precision="7" />
+    <Property Name="ProfileImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProfileImageNewName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
+    <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
+    <Property Name="highlights" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cuisines" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amenities" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GeoLocationName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ATRCTypeId" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="GetRestChairbyId">
+    <Property Type="Int32" Name="ChairId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCRestChairId" Nullable="false" />
+    <Property Type="String" Name="ChairNumber" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="RCBookingDetail">
+    <Key>
+      <PropertyRef Name="RCBDetailId" />
+    </Key>
+    <Property Name="RCBDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RestChairBookingId" Type="Int32" />
+    <Property Name="ChairId" Type="Int32" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="SearchATRCCenters_Result">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Category" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Referral" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="LocationId" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="ATRCNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Details" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="DiningFacility" Nullable="true" />
+    <Property Type="Time" Name="DiningFromTime" Nullable="true" />
+    <Property Type="Time" Name="DiningToTime" Nullable="true" />
+    <Property Type="String" Name="ProfileImageName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProfileImageNewName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="String" Name="highlights" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Cuisines" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Amenities" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GeoLocationName" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ATRCTypeId" Nullable="true" />
+    <Property Type="String" Name="CategoryNames" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AmtForFilter" Nullable="true" />
+    <Property Type="String" Name="AmenitiesNames" Nullable="true" />
+    <Property Type="String" Name="BasicPrice" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="ATRCType" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="BookedChair" Nullable="true" />
+    <Property Type="Int32" Name="AvailableChair" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ATRCCenter">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Category" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Referral" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="LocationId" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="ATRCNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Details" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="DiningFacility" Nullable="true" />
+    <Property Type="Time" Name="DiningFromTime" Nullable="true" />
+    <Property Type="Time" Name="DiningToTime" Nullable="true" />
+    <Property Type="String" Name="ProfileImageName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProfileImageNewName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="String" Name="highlights" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Cuisines" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Amenities" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GeoLocationName" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ATRCTypeId" Nullable="true" />
+    <Property Type="String" Name="CategoryNames" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AmtForFilter" Nullable="true" />
+    <Property Type="String" Name="AmenitiesNames" Nullable="true" />
+    <Property Type="String" Name="BasicPrice" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="ATRCType" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="BookedChair" Nullable="true" />
+    <Property Type="Int32" Name="AvailableChair" Nullable="true" />
+    <Property Type="Decimal" Name="Ratings" Nullable="true" Precision="12" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetBookingDetailsByBookingId">
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Hour" Nullable="true" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Int32" Name="Person" Nullable="true" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="BookingNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CustEmail" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CustMobile" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="CustAddress" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ATRCNumber" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Details" Nullable="false" MaxLength="500" />
+    <Property Type="Time" Name="DiningFromTime" Nullable="false" />
+    <Property Type="Time" Name="DiningToTime" Nullable="false" />
+    <Property Type="String" Name="Cuisines" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Amenities" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Telephone" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="highlights" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CGST" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Discount" Nullable="false" />
+    <Property Type="String" Name="IsSuccess" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="MerchantTxnId" Nullable="false" MaxLength="300" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="PaymentDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="SGST" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="GST" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="String" Name="order_id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="razorpay_payment_id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="razorpay_signature" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="String" Name="OTP" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="true" />
+    <Property Type="String" Name="BookedChair" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="BookedChairNumber" Nullable="true" />
+    <Property Type="String" Name="BookingDateNew" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PaymentDateNew" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="FromTimeNew" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="ToTimeNew" Nullable="false" MaxLength="15" />
+    <Property Type="Boolean" Name="IsCancel" Nullable="true" />
+    <Property Type="Boolean" Name="IsRefund" Nullable="true" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetRestChairByAtrcId_Result">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCRestChairId" Nullable="false" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="TypeId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="AmenitiesNames" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="500" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="ChairCount" Nullable="false" />
+    <Property Type="Time" Name="CheckInTime" Nullable="false" />
+    <Property Type="Time" Name="CheckOutTime" Nullable="false" />
+    <Property Type="String" Name="CancellationPolicy" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ATRCPolicy" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Restchair" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetRestChairByAtrcId">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCRestChairId" Nullable="false" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="TypeId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="AmenitiesNames" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="500" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="ChairCount" Nullable="false" />
+    <Property Type="Time" Name="CheckInTime" Nullable="false" />
+    <Property Type="Time" Name="CheckOutTime" Nullable="false" />
+    <Property Type="String" Name="CancellationPolicy" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ATRCPolicy" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Restchair" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="Logid" />
+    </Key>
+    <Property Name="Logid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="error" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pagename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="eventname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorFrom" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="GetRestChairBookingByATRC">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="303" />
+    <Property Type="String" Name="Chairs" Nullable="true" />
+    <Property Type="String" Name="CustDetails" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="PayStatus" Nullable="true" MaxLength="433" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="DateTime" Name="Paydate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ATRCPaystatus" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="GetCustomerBookingsByATRC_Result">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="CustType" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Int32" Name="Person" Nullable="true" />
+    <Property Type="Int32" Name="Hour" Nullable="true" />
+    <Property Type="String" Name="BookingNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BookingStatus" Nullable="true" MaxLength="25" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="PaymentDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="CGST" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="SGST" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Discount" Nullable="true" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="MerchantTxnId" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="OTP" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetCustomerBookingsByATRC">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="CustType" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Int32" Name="Person" Nullable="true" />
+    <Property Type="Int32" Name="Hour" Nullable="true" />
+    <Property Type="String" Name="BookingNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BookingStatus" Nullable="true" MaxLength="25" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="PaymentDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="CGST" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="SGST" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Discount" Nullable="true" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="MerchantTxnId" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="OTP" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetAllCustomerByATRC">
+    <Property Type="Int32" Name="ATRCId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAllPaymentByCustomerId">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BookingDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BookingNumber" Nullable="false" MaxLength="50" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="IsSuccess" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllRestChairProfile">
+    <Property Type="Int32" Name="RestChairProfileId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="ManagerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ManagerMobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ATRCTelephone" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="StartDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="false" Precision="23" />
+    <Property Type="Time" Name="CheckInTime" Nullable="false" />
+    <Property Type="Time" Name="CheckOutTime" Nullable="false" />
+    <Property Type="String" Name="ATRCPolicy" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CancellationPolicy" Nullable="true" MaxLength="500" />
+    <Property Type="Byte" Name="Status" Nullable="false" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CancellationPolicies" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="ATRCImage">
+    <Key>
+      <PropertyRef Name="ATRCImageId" />
+    </Key>
+    <Property Name="ATRCImageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCId" Type="Int32" Nullable="false" />
+    <Property Name="ImageName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ContentType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NewImageName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="InsertedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsSD" Type="Boolean" />
+    <Property Name="SDName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SDDes" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsProfile" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="GetAllRestChairsByATRCProfile">
+    <Property Type="Int32" Name="ATRCRestChairId" Nullable="false" />
+    <Property Type="String" Name="ChairName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="TypeName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="ChairCount" Nullable="false" />
+    <Property Type="Int32" Name="RestChairProfileId" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="RestChairBooking">
+    <Key>
+      <PropertyRef Name="RestChairBookingId" />
+    </Key>
+    <Property Name="RestChairBookingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCId" Type="Int32" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="BookingDate" Type="DateTime" Precision="3" />
+    <Property Name="Hour" Type="Int32" />
+    <Property Name="FromTime" Type="Time" Precision="7" />
+    <Property Name="ToTime" Type="Time" Precision="7" />
+    <Property Name="Person" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="BookingNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsCancel" Type="Boolean" />
+    <Property Name="IsRefund" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="GetAllCustomersDetails">
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="CustType" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="BookingCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAllBookingByCustomerIdAndroid">
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BookingNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FromTime" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="ToTime" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="Hour" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Person" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ATRCNumber" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Chairs" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CustomerMobile" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="NetAmount" Nullable="false" MaxLength="18" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="PaymentMode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="orderid" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="OTP" Nullable="false" MaxLength="20" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAllPaymentByCustomerIdAndroid">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BookingDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BookingNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FromTime" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="ToTime" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="IsSuccess" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="SettingId" />
+    </Key>
+    <Property Name="SettingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SmsUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="SmsUsername" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SmsPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SmsSenderId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SMSBalanceUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="privacy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PrivacyPolicy">
+    <Key>
+      <PropertyRef Name="PrivacyPolicyId" />
+    </Key>
+    <Property Name="PrivacyPolicyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrivacyPolicy1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="GetAllOnlinePayment">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="DateTime" Name="PaymentDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="BookingNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="orderid" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="razorpay_payment_id" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="Razor_Fess" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="razor_gst" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalRazorFees" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmtfromRazor" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="ATRCCommission" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="JustStayCommission" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetAllOfflinePayment">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="DateTime" Name="PaymentDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="BookingNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="ATRCCommission" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="JustStayCommission" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetAllBookingByCustomerId">
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="236" />
+    <Property Type="String" Name="ATRCDetails" Nullable="false" MaxLength="77" />
+    <Property Type="String" Name="Chairs" Nullable="true" />
+    <Property Type="String" Name="CustDetails" Nullable="false" MaxLength="101" />
+    <Property Type="String" Name="PayStatus" Nullable="true" MaxLength="218" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="IsCancel" Nullable="true" />
+    <Property Type="Boolean" Name="IsRefund" Nullable="true" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="GetBookingForCancelByCustomerId">
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="236" />
+    <Property Type="String" Name="ATRCDetails" Nullable="false" MaxLength="77" />
+    <Property Type="String" Name="Chairs" Nullable="true" />
+    <Property Type="String" Name="CustDetails" Nullable="false" MaxLength="101" />
+    <Property Type="String" Name="PayStatus" Nullable="true" MaxLength="218" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="RCRefund">
+    <Key>
+      <PropertyRef Name="RCRefundPaymentId" />
+    </Key>
+    <Property Name="RCRefundPaymentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RestChairBookingId" Type="Int32" />
+    <Property Name="RCPaymentId" Type="Int32" />
+    <Property Name="RefundDate" Type="DateTime" Precision="3" />
+    <Property Name="RefundAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="razor_refund_id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="GetAllCancelledBooking">
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="313" />
+    <Property Type="String" Name="ATRCDetails" Nullable="false" MaxLength="77" />
+    <Property Type="String" Name="CustDetails" Nullable="false" MaxLength="101" />
+    <Property Type="String" Name="PayStatus" Nullable="true" MaxLength="222" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="order_id" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="razorpay_payment_id" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsRefund" Nullable="true" />
+    <Property Type="Boolean" Name="IsCancel" Nullable="true" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="Decimal" Name="RefundAmt" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="TotalRazorFees" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmtfromRazor" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="ATRCCommission" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="JustStayCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetAllRefunds">
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="420" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="order_id" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="razorpay_payment_id" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsRefund" Nullable="true" />
+    <Property Type="Boolean" Name="IsCancel" Nullable="true" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="Decimal" Name="RefundAmt" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="RefundDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="razor_refund_id" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="status" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="RCRefundPaymentId" Nullable="false" />
+    <Property Type="Decimal" Name="TotalRazorFees" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmtfromRazor" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="ATRCCommission" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="JustStayCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <EntityType Name="ATRCAccount">
+    <Key>
+      <PropertyRef Name="ATRCAccountId" />
+    </Key>
+    <Property Name="ATRCAccountId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCId" Type="Int32" />
+    <Property Name="BankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="IFSC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Branch" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Subheading" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PinCode" Type="Int32" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GSTIN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CIN" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="PAN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LandLine" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CompanyAccount">
+    <Key>
+      <PropertyRef Name="CompanyAccountId" />
+    </Key>
+    <Property Name="CompanyAccountId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="IFSC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Branch" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="ATRCOnlineBillingFromJuststay">
+    <Property Type="String" Name="Perticulars" Nullable="true" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="GST" Nullable="false" />
+    <Property Type="Decimal" Name="ATRCCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <EntityType Name="ATRCBill">
+    <Key>
+      <PropertyRef Name="ATRCBillId" />
+    </Key>
+    <Property Name="ATRCBillId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCId" Type="Int32" />
+    <Property Name="BillFrom" Type="DateTime" Precision="3" />
+    <Property Name="BillTo" Type="DateTime" Precision="3" />
+    <Property Name="BillNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BillDate" Type="DateTime" Precision="3" />
+    <Property Name="PaymentBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PaidAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsPaid" Type="Boolean" />
+    <Property Name="PaidDate" Type="DateTime" Precision="3" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="GetAllATRCBills">
+    <Property Type="Int32" Name="ATRCBillId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="true" />
+    <Property Type="DateTime" Name="BillFrom" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="BillTo" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillNo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="BillDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentBy" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="DateTime" Name="PaidDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetATRCBillById">
+    <Property Type="Int32" Name="ATRCBillId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="true" />
+    <Property Type="DateTime" Name="BillFrom" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="BillTo" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillNo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="BillDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentBy" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="DateTime" Name="PaidDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="Decimal" Name="BalanceAmount" Nullable="true" Precision="19" Scale="2" />
+  </ComplexType>
+  <EntityType Name="RCPayment">
+    <Key>
+      <PropertyRef Name="RCPaymentId" />
+    </Key>
+    <Property Name="RCPaymentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RestChairBookingId" Type="Int32" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="Int32" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CGST" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SGST" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MerchantTxnId" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="3" />
+    <Property Name="IsSuccess" Type="Boolean" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="PaymentMode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OTP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="order_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="razorpay_payment_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="razorpay_signature" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Paystatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Paydate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="JSBill">
+    <Key>
+      <PropertyRef Name="JSBillId" />
+    </Key>
+    <Property Name="JSBillId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCId" Type="Int32" />
+    <Property Name="BillFrom" Type="DateTime" Precision="3" />
+    <Property Name="BillTo" Type="DateTime" Precision="3" />
+    <Property Name="BillNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BillDate" Type="DateTime" Precision="3" />
+    <Property Name="PaymentBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PaidAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsPaid" Type="Boolean" />
+    <Property Name="PaidDate" Type="DateTime" Precision="3" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="GetAllJSBills">
+    <Property Type="Int32" Name="JSBillId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="true" />
+    <Property Type="DateTime" Name="BillFrom" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="BillTo" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillNo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="BillDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentBy" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="DateTime" Name="PaidDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetJSBillById">
+    <Property Type="Int32" Name="JSBillId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="true" />
+    <Property Type="DateTime" Name="BillFrom" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="BillTo" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillNo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="BillDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentBy" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="DateTime" Name="PaidDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="Decimal" Name="BalanceAmount" Nullable="true" Precision="19" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="PayAtATRCBillingToJuststay">
+    <Property Type="String" Name="Perticulars" Nullable="true" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="GST" Nullable="false" />
+    <Property Type="Decimal" Name="JSCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetAdminDashboardDetails">
+    <Property Type="Int32" Name="TotalCustomer" Nullable="true" />
+    <Property Type="Int32" Name="TotalATRC" Nullable="true" />
+    <Property Type="Int32" Name="TotalBooking" Nullable="true" />
+    <Property Type="Int32" Name="TotalOnlineBooking" Nullable="true" />
+    <Property Type="Int32" Name="TotalOfflineBooking" Nullable="true" />
+    <Property Type="Int32" Name="TotalTodayBooking" Nullable="true" />
+    <Property Type="Decimal" Name="TotalBookingAmt" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalOnlineBookingAmt" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalPayATRCBookingAmt" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalATRCCommission" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalJSCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetTodaysBooking">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CustDetails" Nullable="true" MaxLength="101" />
+  </ComplexType>
+  <EntityType Name="Tax">
+    <Key>
+      <PropertyRef Name="TaxId" />
+    </Key>
+    <Property Name="TaxId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaxName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CGST" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SGST" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="MinAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="MaxAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <ComplexType Name="GetAllBooking">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="ATRCDetails" Nullable="true" MaxLength="77" />
+    <Property Type="String" Name="Chairs" Nullable="true" />
+    <Property Type="String" Name="CustDetails" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="PayStatus" Nullable="true" MaxLength="218" />
+  </ComplexType>
+  <ComplexType Name="GetAllATRC_Report">
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ATRCNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="CityName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="StateWIthCode" Nullable="false" MaxLength="70" />
+  </ComplexType>
+  <ComplexType Name="GetAllCancelBookings_Report">
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="313" />
+    <Property Type="String" Name="ATRCDetails" Nullable="false" MaxLength="77" />
+    <Property Type="String" Name="CustDetails" Nullable="false" MaxLength="101" />
+    <Property Type="String" Name="PayStatus" Nullable="true" MaxLength="222" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="order_id" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="razorpay_payment_id" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsRefund" Nullable="true" />
+    <Property Type="Boolean" Name="IsCancel" Nullable="true" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="Decimal" Name="RefundAmt" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="TotalRazorFees" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmtfromRazor" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="ATRCCommission" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="JustStayCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetAllCustomer_Report">
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="DOB" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="RoleId" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Username" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetAllJSBills_Report">
+    <Property Type="Int32" Name="JSBillId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="true" />
+    <Property Type="DateTime" Name="BillFrom" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="BillTo" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillNo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="BillDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentBy" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="DateTime" Name="PaidDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetAllRefundTrasactions_Report">
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="420" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Time" Name="FromTime" Nullable="true" />
+    <Property Type="Time" Name="ToTime" Nullable="true" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="order_id" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="razorpay_payment_id" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsRefund" Nullable="true" />
+    <Property Type="Boolean" Name="IsCancel" Nullable="true" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="Decimal" Name="RefundAmt" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="RefundDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="razor_refund_id" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="status" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="RCRefundPaymentId" Nullable="false" />
+    <Property Type="Decimal" Name="TotalRazorFees" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmtfromRazor" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="ATRCCommission" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="JustStayCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetAllTrasaction_Report">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="Int32" Name="RCPaymentId" Nullable="false" />
+    <Property Type="DateTime" Name="PaymentDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsSuccess" Nullable="true" />
+    <Property Type="String" Name="BookingNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="orderid" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="razorpay_payment_id" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="NetAmount" Nullable="true" Precision="36" Scale="2" />
+    <Property Type="Decimal" Name="Razor_Fess" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="razor_gst" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalRazorFees" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmtfromRazor" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="ATRCCommission" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="JustStayCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetAllUserDetail_Report">
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Username" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="UserTypeId" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RoleId" Nullable="true" />
+    <Property Type="Boolean" Name="IsAdmin" Nullable="true" />
+    <Property Type="String" Name="Google_Id" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Role" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="GetATRCDashboardDetails">
+    <Property Type="Int32" Name="TotalBooking" Nullable="true" />
+    <Property Type="Int32" Name="TotalOnlineBooking" Nullable="true" />
+    <Property Type="Int32" Name="TotalOfflineBooking" Nullable="true" />
+    <Property Type="Int32" Name="TotalTodayBooking" Nullable="true" />
+    <Property Type="Decimal" Name="TotalBookingAmt" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalOnlineBookingAmt" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalPayATRCBookingAmt" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalATRCCommission" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetATRCTodaysBooking">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentMode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CustDetails" Nullable="true" MaxLength="101" />
+  </ComplexType>
+  <ComplexType Name="AndroGetATRCProfile">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Category" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Referral" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="LocationId" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="ATRCNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Details" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="DiningFacility" Nullable="true" />
+    <Property Type="Time" Name="DiningFromTime" Nullable="true" />
+    <Property Type="Time" Name="DiningToTime" Nullable="true" />
+    <Property Type="String" Name="ProfileImageName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProfileImageNewName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="12" Scale="9" />
+    <Property Type="String" Name="highlights" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Cuisines" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Amenities" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GeoLocationName" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ATRCTypeId" Nullable="true" />
+    <Property Type="String" Name="DiningFacilityName" Nullable="false" MaxLength="18" />
+    <Property Type="String" Name="CategoryNames" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AmtForFilter" Nullable="true" />
+    <Property Type="String" Name="AmenitiesNames" Nullable="true" />
+    <Property Type="String" Name="BasicPrice" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="ATRCType" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="HighlightNames" Nullable="true" />
+    <Property Type="String" Name="CuisinesNames" Nullable="true" />
+    <Property Type="String" Name="NewAmenities" Nullable="true" />
+    <Property Type="Decimal" Name="Ratings" Nullable="true" Precision="12" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetBookingReceipt">
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BookingNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FromTime" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="ToTime" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="Hour" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Person" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ATRCNumber" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Mobile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Chairs" Nullable="true" />
+    <Property Type="String" Name="CustName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CustMobile" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="NetAmt" Nullable="false" MaxLength="18" />
+    <Property Type="String" Name="PayStatus" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="PayMode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="OrderId" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="RazorPayId" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetAllBooking_Report">
+    <Property Type="Int32" Name="ATRCId" Nullable="false" />
+    <Property Type="Int32" Name="RestChairBookingId" Nullable="false" />
+    <Property Type="String" Name="BookingDetails" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="ATRCDetails" Nullable="true" MaxLength="77" />
+    <Property Type="String" Name="Chairs" Nullable="true" />
+    <Property Type="String" Name="CustDetails" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="PayStatus" Nullable="true" MaxLength="218" />
+  </ComplexType>
+  <ComplexType Name="GetAllATRCBills_Report">
+    <Property Type="Int32" Name="ATRCBillId" Nullable="false" />
+    <Property Type="Int32" Name="ATRCId" Nullable="true" />
+    <Property Type="DateTime" Name="BillFrom" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="BillTo" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillNo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="BillDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PaymentBy" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="TotalAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="IsPaid" Nullable="true" />
+    <Property Type="DateTime" Name="PaidDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="InsertedOn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="String" Name="ATRCName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="RatingId" />
+    </Key>
+    <Property Name="RatingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATRCId" Type="Int32" />
+    <Property Name="Star" Type="Double" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="InsertedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

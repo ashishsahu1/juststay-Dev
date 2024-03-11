@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/RestChairBookingService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+  <xs:import schemaLocation="http://localhost:56178/RestChairBookingService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+  <xs:element name="InsertRestChairBooking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="rcbdto" nillable="true" type="q1:RCBDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRestChairBookingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertRestChairBookingResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRestChair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="objRCBD" nillable="true" type="q2:RCBDDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRestChairResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertRestChairResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRestChairPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="objRCPdto" nillable="true" type="q3:RCPDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRestChairPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertRestChairPaymentResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookingDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookingid" type="xs:int" />
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookingDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetBookingDetailsResult" nillable="true" type="q4:GetBookingDetailsByBookingId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestChairBooking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestChairBookingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetRestChairBookingResult" nillable="true" type="q5:ArrayOfGetAllBooking" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestChairBookingByATRC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pmode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestChairBookingByATRCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetRestChairBookingByATRCResult" nillable="true" type="q6:ArrayOfGetRestChairBookingByATRC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCustomerByATRC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCustomerByATRCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllCustomerByATRCResult" nillable="true" type="q7:ArrayOfGetAllCustomerByATRC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerBookingsByATRC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="customerid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerBookingsByATRCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetCustomerBookingsByATRCResult" nillable="true" type="q8:ArrayOfGetCustomerBookingsByATRC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="pay" nillable="true" type="q9:RCPDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentSuccess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="pay" nillable="true" type="q10:RCPDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentSuccessResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPaymentByCustomerId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPaymentByCustomerIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllPaymentByCustomerIdResult" nillable="true" type="q11:ArrayOfGetAllPaymentByCustomerId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBookingByCustomerId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerid" type="xs:int" />
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBookingByCustomerIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllBookingByCustomerIdResult" nillable="true" type="q12:ArrayOfGetAllBookingByCustomerId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIsCancelBooking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rcbid" type="xs:int" />
+        <xs:element minOccurs="0" name="iscancel" type="xs:boolean" />
+        <xs:element minOccurs="0" name="isrefund" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIsCancelBookingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIsDeleted">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rcbid" type="xs:int" />
+        <xs:element minOccurs="0" name="isdeleted" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIsDeletedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookingForCancelByCustomerId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="pmode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookingForCancelByCustomerIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetBookingForCancelByCustomerIdResult" nillable="true" type="q13:ArrayOfGetBookingForCancelByCustomerId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePayStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RCPayId" type="xs:int" />
+        <xs:element minOccurs="0" name="RCBId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePayStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfBlogDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BlogDto" nillable="true" type="tns:BlogDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlogDto" nillable="true" type="tns:ArrayOfBlogDto" />
+  <xs:complexType name="BlogDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlogCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="BlogContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlogDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BlogFileUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlogId" type="xs:int" />
+      <xs:element minOccurs="0" name="BlogImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlogImageNewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlogTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlogDto" nillable="true" type="tns:BlogDto" />
+  <xs:complexType name="ArrayOfBlogCatgoryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BlogCatgoryDto" nillable="true" type="tns:BlogCatgoryDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlogCatgoryDto" nillable="true" type="tns:ArrayOfBlogCatgoryDto" />
+  <xs:complexType name="BlogCatgoryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlogCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlogCatgoryDto" nillable="true" type="tns:BlogCatgoryDto" />
+</xs:schema>

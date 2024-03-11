@@ -1,0 +1,1144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Data\E\Juststay-Latest\Publish\02-12-2020\web</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="about.aspx">
+      <publishTime>05/02/2020 16:59:53</publishTime>
+    </File>
+    <File Include="allbooking.aspx">
+      <publishTime>10/09/2020 18:07:49</publishTime>
+    </File>
+    <File Include="Aminities/10_Breakfast Place.png">
+      <publishTime>07/04/2020 19:35:58</publishTime>
+    </File>
+    <File Include="Aminities/10_Clean Toilet Bathroom.png">
+      <publishTime>12/19/2019 00:21:46</publishTime>
+    </File>
+    <File Include="Aminities/11_Clean Toilet Bathroom.png">
+      <publishTime>07/04/2020 19:36:37</publishTime>
+    </File>
+    <File Include="Aminities/1_CCTV.png">
+      <publishTime>03/26/2020 15:57:04</publishTime>
+    </File>
+    <File Include="Aminities/2_Bar.png">
+      <publishTime>03/26/2020 15:58:41</publishTime>
+    </File>
+    <File Include="Aminities/3_Breakfast Place.png">
+      <publishTime>03/26/2020 15:58:57</publishTime>
+    </File>
+    <File Include="Aminities/4_Clean Toilet Bathroom.png">
+      <publishTime>12/18/2019 23:48:16</publishTime>
+    </File>
+    <File Include="Aminities/4_Clean Toilet.png">
+      <publishTime>03/26/2020 15:59:10</publishTime>
+    </File>
+    <File Include="Aminities/5_Daily Newspaper.png">
+      <publishTime>03/26/2020 15:59:22</publishTime>
+    </File>
+    <File Include="Aminities/6_Non-Foldable Rest-Chair.png">
+      <publishTime>03/26/2020 15:59:35</publishTime>
+    </File>
+    <File Include="Aminities/7_Icon Foldable Rest-Chair.png">
+      <publishTime>03/26/2020 15:59:44</publishTime>
+    </File>
+    <File Include="Aminities/8_CCTV.png">
+      <publishTime>12/19/2019 00:21:07</publishTime>
+    </File>
+    <File Include="Aminities/9_CCTV.png">
+      <publishTime>07/04/2020 19:35:40</publishTime>
+    </File>
+    <File Include="Aminities/9_Daily Newspaper.png">
+      <publishTime>12/19/2019 00:21:32</publishTime>
+    </File>
+    <File Include="Andro-aboutus.aspx">
+      <publishTime>07/03/2020 19:04:25</publishTime>
+    </File>
+    <File Include="Andro-Faq.aspx">
+      <publishTime>07/03/2020 19:03:36</publishTime>
+    </File>
+    <File Include="Antro-PrivacyPolicy.aspx">
+      <publishTime>07/04/2020 12:04:37</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>02/26/2020 16:24:51</publishTime>
+    </File>
+    <File Include="atrc.aspx">
+      <publishTime>11/26/2020 16:22:22</publishTime>
+    </File>
+    <File Include="ATRCImages/1_1.jpg">
+      <publishTime>12/26/2019 23:49:45</publishTime>
+    </File>
+    <File Include="ATRCImages/1_2.jpg">
+      <publishTime>04/03/2020 11:03:01</publishTime>
+    </File>
+    <File Include="ATRCImages/1_4.jpg">
+      <publishTime>04/03/2020 11:03:01</publishTime>
+    </File>
+    <File Include="ATRCImages/1_5.jpg">
+      <publishTime>04/03/2020 11:03:01</publishTime>
+    </File>
+    <File Include="ATRCImages/1_ATRC_RESTCHAIR_1.jpg">
+      <publishTime>12/19/2019 00:38:56</publishTime>
+    </File>
+    <File Include="ATRCImages/1_ATRC_RESTCHAIR_2.jpg">
+      <publishTime>12/19/2019 00:38:57</publishTime>
+    </File>
+    <File Include="ATRCImages/1_P_trupti-atrc.jpg">
+      <publishTime>09/16/2020 16:32:03</publishTime>
+    </File>
+    <File Include="ATRCImages/1_trupti-atrc-SD.jpg">
+      <publishTime>04/07/2020 18:43:12</publishTime>
+    </File>
+    <File Include="ATRCImages/2_3_SA-SD.jpg">
+      <publishTime>04/07/2020 18:48:17</publishTime>
+    </File>
+    <File Include="ATRCImages/2_ATRC_RESTCHAIR_1.jpg">
+      <publishTime>12/23/2019 23:13:17</publishTime>
+    </File>
+    <File Include="ATRCImages/2_ATRC_RESTCHAIR_2.jpg">
+      <publishTime>12/23/2019 23:13:17</publishTime>
+    </File>
+    <File Include="ATRCImages/2_P_Shree-Agri-Profile.jpg">
+      <publishTime>09/16/2020 16:31:49</publishTime>
+    </File>
+    <File Include="ATRCImages/2_RK-SD.jpg">
+      <publishTime>02/29/2020 15:52:48</publishTime>
+    </File>
+    <File Include="ATRCImages/2_Shree-Agri-2.jpg">
+      <publishTime>09/16/2020 16:31:49</publishTime>
+    </File>
+    <File Include="ATRCImages/2_Shree-Agri-3.jpg">
+      <publishTime>09/16/2020 16:31:45</publishTime>
+    </File>
+    <File Include="ATRCImages/2_Shree-Agri-4.jpg">
+      <publishTime>09/16/2020 16:31:44</publishTime>
+    </File>
+    <File Include="ATRCImages/2_Shree-Agri-Profile.jpg">
+      <publishTime>09/16/2020 16:31:42</publishTime>
+    </File>
+    <File Include="ATRCImages/3_2_RK-SD.jpg">
+      <publishTime>04/03/2020 12:11:00</publishTime>
+    </File>
+    <File Include="ATRCImages/3_P_RK4profile.jpg">
+      <publishTime>09/16/2020 16:31:39</publishTime>
+    </File>
+    <File Include="ATRCImages/3_RK2.jpg">
+      <publishTime>09/16/2020 16:31:38</publishTime>
+    </File>
+    <File Include="ATRCImages/3_RK3.jpg">
+      <publishTime>09/16/2020 16:31:37</publishTime>
+    </File>
+    <File Include="ATRCImages/3_RK4profile.jpg">
+      <publishTime>04/03/2020 12:11:00</publishTime>
+    </File>
+    <File Include="ATRCImages/3_SA-SD.jpg">
+      <publishTime>02/29/2020 15:54:27</publishTime>
+    </File>
+    <File Include="ATRCImages/4_4_happyin-SD.jpg">
+      <publishTime>09/16/2020 16:31:34</publishTime>
+    </File>
+    <File Include="ATRCImages/4_happIn-Profile.jpg">
+      <publishTime>09/16/2020 16:31:37</publishTime>
+    </File>
+    <File Include="ATRCImages/4_happyin-2.jpg">
+      <publishTime>09/16/2020 16:31:33</publishTime>
+    </File>
+    <File Include="ATRCImages/4_happyin-3.jpg">
+      <publishTime>09/16/2020 16:31:33</publishTime>
+    </File>
+    <File Include="ATRCImages/4_happyin-SD.jpg">
+      <publishTime>02/29/2020 15:55:56</publishTime>
+    </File>
+    <File Include="ATRCImages/4_P_happIn-Profile.jpg">
+      <publishTime>09/16/2020 16:31:31</publishTime>
+    </File>
+    <File Include="ATRCImages/5_happIn-Profile.jpg">
+      <publishTime>04/07/2020 15:28:13</publishTime>
+    </File>
+    <File Include="ATRCImages/5_happyin-2.jpg">
+      <publishTime>04/07/2020 15:28:13</publishTime>
+    </File>
+    <File Include="ATRCImages/5_happyin-3.jpg">
+      <publishTime>04/07/2020 15:28:13</publishTime>
+    </File>
+    <File Include="ATRCImages/5_P_happIn-Profile.jpg">
+      <publishTime>04/07/2020 15:28:12</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>02/26/2020 16:24:51</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.pdb">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/HtmlAgilityPack.dll">
+      <publishTime>05/30/2020 18:57:26</publishTime>
+    </File>
+    <File Include="bin/HtmlAgilityPack.pdb">
+      <publishTime>05/30/2020 18:57:26</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>04/19/2015 21:09:32</publishTime>
+    </File>
+    <File Include="bin/itextsharp.xmlworker.dll">
+      <publishTime>04/19/2015 21:26:14</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.dll">
+      <publishTime>11/30/2020 15:59:27</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.dll.config">
+      <publishTime>02/17/2020 15:28:00</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.pdb">
+      <publishTime>11/30/2020 15:59:27</publishTime>
+    </File>
+    <File Include="bin/JustStay.Repo.dll">
+      <publishTime>12/02/2020 19:23:55</publishTime>
+    </File>
+    <File Include="bin/JustStay.Repo.dll.config">
+      <publishTime>08/30/2020 15:51:03</publishTime>
+    </File>
+    <File Include="bin/JustStay.Repo.pdb">
+      <publishTime>12/02/2020 19:23:55</publishTime>
+    </File>
+    <File Include="bin/JustStay.Services.dll">
+      <publishTime>12/02/2020 19:23:55</publishTime>
+    </File>
+    <File Include="bin/JustStay.Services.dll.config">
+      <publishTime>09/12/2020 14:49:40</publishTime>
+    </File>
+    <File Include="bin/JustStay.Services.pdb">
+      <publishTime>12/02/2020 19:23:55</publishTime>
+    </File>
+    <File Include="bin/JustStay.Web.dll">
+      <publishTime>12/02/2020 19:25:02</publishTime>
+    </File>
+    <File Include="bin/JustStay.Web.pdb">
+      <publishTime>12/02/2020 19:25:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/24/2018 17:44:14</publishTime>
+    </File>
+    <File Include="bin/Razorpay.dll">
+      <publishTime>11/09/2018 11:43:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/System.ValueTuple.dll">
+      <publishTime>08/29/2020 17:12:47</publishTime>
+    </File>
+    <File Include="blog.aspx">
+      <publishTime>03/13/2020 12:07:52</publishTime>
+    </File>
+    <File Include="BlogImages/1_bg_blog-hstay-1.jpg">
+      <publishTime>03/13/2020 11:14:15</publishTime>
+    </File>
+    <File Include="BlogImages/1_Shree-Agri-3.jpg">
+      <publishTime>03/30/2020 14:02:25</publishTime>
+    </File>
+    <File Include="BlogImages/2_2.jpg">
+      <publishTime>08/21/2020 14:14:04</publishTime>
+    </File>
+    <File Include="book.aspx">
+      <publishTime>05/08/2020 16:18:35</publishTime>
+    </File>
+    <File Include="BusinessLogic/ValidateData.ashx">
+      <publishTime>02/27/2020 09:47:02</publishTime>
+    </File>
+    <File Include="cancelbooking.aspx">
+      <publishTime>07/17/2020 14:49:59</publishTime>
+    </File>
+    <File Include="changepassword.aspx">
+      <publishTime>04/17/2020 12:37:38</publishTime>
+    </File>
+    <File Include="commingsoon.aspx">
+      <publishTime>03/13/2020 12:45:48</publishTime>
+    </File>
+    <File Include="contact.aspx">
+      <publishTime>05/03/2020 12:37:43</publishTime>
+    </File>
+    <File Include="css/all.min.css">
+      <publishTime>03/08/2020 17:00:50</publishTime>
+    </File>
+    <File Include="css/animate.css">
+      <publishTime>08/24/2017 22:54:58</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>03/10/2020 17:21:43</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>01/16/2017 21:27:20</publishTime>
+    </File>
+    <File Include="css/fonticons.css">
+      <publishTime>03/08/2020 16:04:38</publishTime>
+    </File>
+    <File Include="css/gijgo.min.css">
+      <publishTime>04/17/2020 11:35:45</publishTime>
+    </File>
+    <File Include="css/materialize.css">
+      <publishTime>05/23/2020 11:00:44</publishTime>
+    </File>
+    <File Include="css/mob.css">
+      <publishTime>03/06/2020 11:51:25</publishTime>
+    </File>
+    <File Include="css/radio.css">
+      <publishTime>08/24/2017 22:55:06</publishTime>
+    </File>
+    <File Include="css/receipt.css">
+      <publishTime>10/06/2020 13:15:34</publishTime>
+    </File>
+    <File Include="css/slick.min.css">
+      <publishTime>03/06/2020 11:04:11</publishTime>
+    </File>
+    <File Include="css/slicknav.min.css">
+      <publishTime>03/06/2020 11:04:11</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>11/26/2020 16:40:00</publishTime>
+    </File>
+    <File Include="edit-profile.aspx">
+      <publishTime>04/17/2020 11:45:14</publishTime>
+    </File>
+    <File Include="EV-Home.aspx">
+      <publishTime>02/29/2020 22:11:57</publishTime>
+    </File>
+    <File Include="faq.aspx">
+      <publishTime>04/07/2020 19:41:47</publishTime>
+    </File>
+    <File Include="flaticons/flaticons-link.css">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font/flaticon.css">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font/Flaticon.eot">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font/flaticon.html">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font/Flaticon.svg">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font/Flaticon.ttf">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font/Flaticon.woff">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font/_flaticon.scss">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font2/flaticon.css">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font2/flaticon.html">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font2/Flaticon2.eot">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font2/Flaticon2.svg">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font2/Flaticon2.ttf">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font2/Flaticon2.woff">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="flaticons/font2/_flaticon.scss">
+      <publishTime>03/08/2020 16:35:23</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>12/22/2016 15:50:34</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>12/22/2016 15:50:34</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>12/22/2016 15:50:34</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>12/22/2016 15:50:34</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>12/22/2016 15:50:34</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>12/22/2016 15:50:34</publishTime>
+    </File>
+    <File Include="Forgotpassword.aspx">
+      <publishTime>04/02/2020 10:52:47</publishTime>
+    </File>
+    <File Include="fullblog.aspx">
+      <publishTime>11/30/2020 18:36:38</publishTime>
+    </File>
+    <File Include="home.aspx">
+      <publishTime>08/12/2020 14:36:13</publishTime>
+    </File>
+    <File Include="HTMLTemplates/CustomerRegistration.html">
+      <publishTime>03/19/2020 20:04:50</publishTime>
+    </File>
+    <File Include="HTMLTemplates/ForgotPwdMail.html">
+      <publishTime>03/19/2020 20:04:50</publishTime>
+    </File>
+    <File Include="HTMLTemplates/PayAtATRC.html">
+      <publishTime>03/19/2020 20:04:50</publishTime>
+    </File>
+    <File Include="HTMLTemplates/Support.html">
+      <publishTime>03/19/2020 20:04:50</publishTime>
+    </File>
+    <File Include="HTMLTemplates/ThankYouSupport.html">
+      <publishTime>03/19/2020 20:04:50</publishTime>
+    </File>
+    <File Include="images/1.png">
+      <publishTime>02/02/2017 17:31:02</publishTime>
+    </File>
+    <File Include="images/2.png">
+      <publishTime>02/10/2017 23:17:06</publishTime>
+    </File>
+    <File Include="images/3.png">
+      <publishTime>02/02/2017 17:31:02</publishTime>
+    </File>
+    <File Include="images/android.jpg">
+      <publishTime>02/29/2020 16:00:56</publishTime>
+    </File>
+    <File Include="images/android.png">
+      <publishTime>06/05/2017 16:29:50</publishTime>
+    </File>
+    <File Include="images/apple.png">
+      <publishTime>06/05/2017 16:29:50</publishTime>
+    </File>
+    <File Include="images/atrc-header-mob.jpg">
+      <publishTime>03/06/2020 11:50:13</publishTime>
+    </File>
+    <File Include="images/band.png">
+      <publishTime>02/02/2017 17:31:02</publishTime>
+    </File>
+    <File Include="images/band1.png">
+      <publishTime>02/02/2017 17:31:02</publishTime>
+    </File>
+    <File Include="images/border.png">
+      <publishTime>02/02/2017 17:31:02</publishTime>
+    </File>
+    <File Include="images/btnCurrentLocation.png">
+      <publishTime>02/29/2020 09:57:28</publishTime>
+    </File>
+    <File Include="images/btnNearme.png">
+      <publishTime>02/29/2020 10:00:43</publishTime>
+    </File>
+    <File Include="images/clock.png">
+      <publishTime>02/02/2017 17:31:02</publishTime>
+    </File>
+    <File Include="images/cloud.png">
+      <publishTime>02/02/2017 17:31:02</publishTime>
+    </File>
+    <File Include="images/EV-icon.png">
+      <publishTime>02/29/2020 16:33:35</publishTime>
+    </File>
+    <File Include="images/flag.png">
+      <publishTime>02/02/2017 17:31:04</publishTime>
+    </File>
+    <File Include="images/flag1.png">
+      <publishTime>02/02/2017 17:31:02</publishTime>
+    </File>
+    <File Include="images/footer-upper.png">
+      <publishTime>03/13/2020 12:59:57</publishTime>
+    </File>
+    <File Include="images/gal-arr.png">
+      <publishTime>02/15/2017 21:47:20</publishTime>
+    </File>
+    <File Include="images/gettouch.jpg">
+      <publishTime>02/29/2020 17:10:54</publishTime>
+    </File>
+    <File Include="images/hci1.png">
+      <publishTime>02/02/2017 17:33:06</publishTime>
+    </File>
+    <File Include="images/header1.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="images/icon.png">
+      <publishTime>02/27/2020 14:07:27</publishTime>
+    </File>
+    <File Include="images/icon/1.png">
+      <publishTime>06/15/2017 17:08:16</publishTime>
+    </File>
+    <File Include="images/icon/10.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/11.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/12.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/13.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/14.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/15.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/16.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/17.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/18.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/19.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/2.png">
+      <publishTime>06/15/2017 17:08:16</publishTime>
+    </File>
+    <File Include="images/icon/20.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/21.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/22.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/23.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/24.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/25.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/26.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/27.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/28.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/29.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/3.png">
+      <publishTime>06/15/2017 17:08:16</publishTime>
+    </File>
+    <File Include="images/icon/30.png">
+      <publishTime>08/22/2017 23:32:24</publishTime>
+    </File>
+    <File Include="images/icon/31.png">
+      <publishTime>08/23/2017 22:38:30</publishTime>
+    </File>
+    <File Include="images/icon/4.png">
+      <publishTime>06/15/2017 17:08:16</publishTime>
+    </File>
+    <File Include="images/icon/5.png">
+      <publishTime>06/15/2017 16:32:12</publishTime>
+    </File>
+    <File Include="images/icon/6.png">
+      <publishTime>06/15/2017 16:32:12</publishTime>
+    </File>
+    <File Include="images/icon/7.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/8.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/9.png">
+      <publishTime>06/15/2017 20:29:34</publishTime>
+    </File>
+    <File Include="images/icon/a1.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a10.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a11.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a12.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a13.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a14.png">
+      <publishTime>02/17/2018 09:06:04</publishTime>
+    </File>
+    <File Include="images/icon/a15.png">
+      <publishTime>02/17/2018 09:06:04</publishTime>
+    </File>
+    <File Include="images/icon/a16.png">
+      <publishTime>02/17/2018 09:06:04</publishTime>
+    </File>
+    <File Include="images/icon/a17.png">
+      <publishTime>02/17/2018 09:06:04</publishTime>
+    </File>
+    <File Include="images/icon/a18.png">
+      <publishTime>02/17/2018 13:42:58</publishTime>
+    </File>
+    <File Include="images/icon/a19.png">
+      <publishTime>02/17/2018 13:46:38</publishTime>
+    </File>
+    <File Include="images/icon/a2.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a3.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a4.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a5.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a6.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a7.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a8.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/a9.png">
+      <publishTime>07/31/2017 14:51:28</publishTime>
+    </File>
+    <File Include="images/icon/db-arrow.png">
+      <publishTime>06/22/2017 20:32:02</publishTime>
+    </File>
+    <File Include="images/icon/db1.png">
+      <publishTime>06/22/2017 15:25:10</publishTime>
+    </File>
+    <File Include="images/icon/db2.png">
+      <publishTime>06/22/2017 15:25:10</publishTime>
+    </File>
+    <File Include="images/icon/db3.png">
+      <publishTime>06/22/2017 15:25:10</publishTime>
+    </File>
+    <File Include="images/icon/db4.png">
+      <publishTime>06/22/2017 15:25:10</publishTime>
+    </File>
+    <File Include="images/icon/dbl1.png">
+      <publishTime>06/22/2017 15:49:48</publishTime>
+    </File>
+    <File Include="images/icon/dbl2.png">
+      <publishTime>06/22/2017 15:49:48</publishTime>
+    </File>
+    <File Include="images/icon/dbl3.png">
+      <publishTime>06/22/2017 15:49:48</publishTime>
+    </File>
+    <File Include="images/icon/dbl4.png">
+      <publishTime>06/22/2017 15:49:48</publishTime>
+    </File>
+    <File Include="images/icon/dbl5.png">
+      <publishTime>06/22/2017 15:49:48</publishTime>
+    </File>
+    <File Include="images/icon/dbl6.png">
+      <publishTime>06/22/2017 15:49:48</publishTime>
+    </File>
+    <File Include="images/icon/dbl7.png">
+      <publishTime>06/22/2017 15:49:48</publishTime>
+    </File>
+    <File Include="images/icon/dbl8.png">
+      <publishTime>06/22/2017 15:49:48</publishTime>
+    </File>
+    <File Include="images/icon/dbl9.png">
+      <publishTime>06/25/2017 09:18:20</publishTime>
+    </File>
+    <File Include="images/icon/dis1.png">
+      <publishTime>02/11/2018 13:04:00</publishTime>
+    </File>
+    <File Include="images/icon/dis2.png">
+      <publishTime>02/11/2018 13:05:52</publishTime>
+    </File>
+    <File Include="images/icon/dis3.png">
+      <publishTime>02/11/2018 13:04:22</publishTime>
+    </File>
+    <File Include="images/icon/dis4.png">
+      <publishTime>02/11/2018 13:04:30</publishTime>
+    </File>
+    <File Include="images/icon/dis5.png">
+      <publishTime>02/11/2018 13:04:36</publishTime>
+    </File>
+    <File Include="images/icon/search.png">
+      <publishTime>02/02/2017 17:35:16</publishTime>
+    </File>
+    <File Include="images/info.png">
+      <publishTime>10/16/2016 17:31:34</publishTime>
+    </File>
+    <File Include="images/innerbanner.jpg">
+      <publishTime>03/01/2020 19:39:46</publishTime>
+    </File>
+    <File Include="images/innerbanner_new.jpg">
+      <publishTime>03/06/2020 11:23:47</publishTime>
+    </File>
+    <File Include="images/join-banner-1.jpg">
+      <publishTime>03/12/2020 11:18:47</publishTime>
+    </File>
+    <File Include="images/join-banner-4.jpg">
+      <publishTime>03/12/2020 11:31:42</publishTime>
+    </File>
+    <File Include="images/joinus-banner-2.jpg">
+      <publishTime>03/12/2020 11:29:41</publishTime>
+    </File>
+    <File Include="images/joinus-banner-3.jpg">
+      <publishTime>03/12/2020 11:30:53</publishTime>
+    </File>
+    <File Include="images/joinus-form.jpg">
+      <publishTime>03/12/2020 13:37:00</publishTime>
+    </File>
+    <File Include="images/left-arrow-new.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="images/left-arrow.png">
+      <publishTime>04/02/2020 14:44:19</publishTime>
+    </File>
+    <File Include="images/list-p-bg.jpg">
+      <publishTime>01/29/2017 17:44:52</publishTime>
+    </File>
+    <File Include="images/loader.jpg">
+      <publishTime>03/11/2020 19:20:55</publishTime>
+    </File>
+    <File Include="images/login.jpg">
+      <publishTime>02/27/2020 19:31:48</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="images/map.png">
+      <publishTime>10/16/2016 17:31:34</publishTime>
+    </File>
+    <File Include="images/newlogo.jpg">
+      <publishTime>03/23/2020 16:00:45</publishTime>
+    </File>
+    <File Include="images/nonveg.png">
+      <publishTime>03/01/2020 17:14:43</publishTime>
+    </File>
+    <File Include="images/offer.png">
+      <publishTime>10/16/2016 17:31:34</publishTime>
+    </File>
+    <File Include="images/owner.jpg">
+      <publishTime>03/12/2020 10:18:36</publishTime>
+    </File>
+    <File Include="images/points.png">
+      <publishTime>10/16/2016 17:31:34</publishTime>
+    </File>
+    <File Include="images/price.png">
+      <publishTime>10/16/2016 17:31:36</publishTime>
+    </File>
+    <File Include="images/Private-Guide.png">
+      <publishTime>02/03/2017 17:07:06</publishTime>
+    </File>
+    <File Include="images/profile img.jpg">
+      <publishTime>03/10/2020 17:14:38</publishTime>
+    </File>
+    <File Include="images/razorpay.png">
+      <publishTime>04/03/2020 16:40:32</publishTime>
+    </File>
+    <File Include="images/reat hourly basis.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="images/rest-icon-10.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="images/restroom-icon-10.png">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="images/ribbon_.png">
+      <publishTime>02/02/2017 17:35:12</publishTime>
+    </File>
+    <File Include="images/right-arrow.png">
+      <publishTime>04/02/2020 14:46:51</publishTime>
+    </File>
+    <File Include="images/searchicon.png">
+      <publishTime>10/16/2016 17:31:36</publishTime>
+    </File>
+    <File Include="images/success.png">
+      <publishTime>03/12/2020 13:15:53</publishTime>
+    </File>
+    <File Include="images/tick.png">
+      <publishTime>10/16/2016 17:31:36</publishTime>
+    </File>
+    <File Include="images/tips1.png">
+      <publishTime>10/16/2016 17:31:36</publishTime>
+    </File>
+    <File Include="images/tips2.png">
+      <publishTime>10/16/2016 17:31:36</publishTime>
+    </File>
+    <File Include="images/tips3.png">
+      <publishTime>10/16/2016 17:31:36</publishTime>
+    </File>
+    <File Include="images/umbrella.png">
+      <publishTime>03/13/2020 14:58:44</publishTime>
+    </File>
+    <File Include="images/veg.png">
+      <publishTime>03/01/2020 17:14:43</publishTime>
+    </File>
+    <File Include="images/vid.jpg">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="joinus.aspx">
+      <publishTime>08/14/2020 13:30:00</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>09/30/2016 20:53:18</publishTime>
+    </File>
+    <File Include="js/custom.js">
+      <publishTime>05/04/2020 12:27:03</publishTime>
+    </File>
+    <File Include="js/gijgo.min.js">
+      <publishTime>04/17/2020 11:35:09</publishTime>
+    </File>
+    <File Include="js/html5shiv.js">
+      <publishTime>09/09/2016 14:20:48</publishTime>
+    </File>
+    <File Include="js/isotope.pkgd.min.js">
+      <publishTime>03/01/2020 17:44:48</publishTime>
+    </File>
+    <File Include="js/jquery-3.3.1.min.js">
+      <publishTime>02/29/2020 11:56:30</publishTime>
+    </File>
+    <File Include="js/jquery-latest.min.js">
+      <publishTime>01/09/2017 19:50:10</publishTime>
+    </File>
+    <File Include="js/jquery-ui.js">
+      <publishTime>07/31/2017 21:39:58</publishTime>
+    </File>
+    <File Include="js/mail.js">
+      <publishTime>11/11/2018 13:09:28</publishTime>
+    </File>
+    <File Include="js/materialize.min.js">
+      <publishTime>04/17/2020 14:24:32</publishTime>
+    </File>
+    <File Include="js/respond.min.js">
+      <publishTime>09/09/2016 14:20:58</publishTime>
+    </File>
+    <File Include="js/slick.min.js">
+      <publishTime>03/06/2020 11:04:55</publishTime>
+    </File>
+    <File Include="js/wow.min.js">
+      <publishTime>01/28/2017 21:51:54</publishTime>
+    </File>
+    <File Include="Just Stay Survey Document.pdf">
+      <publishTime>03/12/2020 10:25:02</publishTime>
+    </File>
+    <File Include="mypayment.aspx">
+      <publishTime>11/28/2020 15:26:48</publishTime>
+    </File>
+    <File Include="myprofile.aspx">
+      <publishTime>03/10/2020 19:55:17</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/06/2020 16:46:26</publishTime>
+    </File>
+    <File Include="payment.aspx">
+      <publishTime>08/07/2020 17:08:26</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>12/02/2020 19:25:03</publishTime>
+    </File>
+    <File Include="privacypolicy.aspx">
+      <publishTime>05/23/2020 17:51:07</publishTime>
+    </File>
+    <File Include="profile.aspx">
+      <publishTime>10/08/2020 17:30:49</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.AmenityDto.datasource">
+      <publishTime>03/07/2020 19:50:57</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.ATRCDto.datasource">
+      <publishTime>03/07/2020 19:49:13</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.ATRCImageDto.datasource">
+      <publishTime>03/07/2020 19:49:13</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.AttachmentDto.datasource">
+      <publishTime>03/07/2020 19:12:47</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.BlogCatgoryDto.datasource">
+      <publishTime>03/07/2020 19:50:29</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.BlogDto.datasource">
+      <publishTime>03/07/2020 19:50:29</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.CancellationPolicyDto.datasource">
+      <publishTime>07/03/2020 19:26:11</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.CompanyDto.datasource">
+      <publishTime>10/06/2020 14:51:42</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.CuisineDto.datasource">
+      <publishTime>03/07/2020 19:50:57</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.FAQDto.datasource">
+      <publishTime>03/13/2020 10:14:06</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.HighlightDto.datasource">
+      <publishTime>03/07/2020 19:50:57</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.PrivacyPolicyDto.datasource">
+      <publishTime>07/04/2020 12:03:32</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.RatingDto.datasource">
+      <publishTime>03/07/2020 19:36:30</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.RoomLabelDto.datasource">
+      <publishTime>03/07/2020 19:50:57</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.SettingDto.datasource">
+      <publishTime>03/07/2020 19:12:47</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.SMSTemplateDto.datasource">
+      <publishTime>03/07/2020 19:12:47</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.TypeDto.datasource">
+      <publishTime>03/07/2020 19:50:57</publishTime>
+    </File>
+    <File Include="Properties/DataSources/JustStay.Services.DTO.UserDto.datasource">
+      <publishTime>03/07/2020 19:50:53</publishTime>
+    </File>
+    <File Include="Receipt.aspx">
+      <publishTime>10/07/2020 15:35:20</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.Web.ATRCServiceReference.ATRCCenter.datasource">
+      <publishTime>08/31/2020 19:21:37</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.Web.ATRCServiceReference.ATRCProfile.datasource">
+      <publishTime>08/31/2020 19:21:37</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.Web.ATRCServiceReference.GetRestChairByAtrcId.datasource">
+      <publishTime>08/31/2020 19:21:37</publishTime>
+    </File>
+    <File Include="Service References/ATRCServiceReference/JustStay.Web.ATRCServiceReference.GetRestChairbyId.datasource">
+      <publishTime>08/31/2020 19:21:37</publishTime>
+    </File>
+    <File Include="Service References/BlogServiceReference/JustStay.Web.BlogServiceReference.BlogWithDetail.datasource">
+      <publishTime>08/31/2020 19:21:48</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.Web.CommonServiceReference.ATRCCategory.datasource">
+      <publishTime>08/31/2020 19:22:15</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.Web.CommonServiceReference.ATRCSubCategory.datasource">
+      <publishTime>08/31/2020 19:22:15</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.Web.CommonServiceReference.ATRCType.datasource">
+      <publishTime>08/31/2020 19:22:15</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.Web.CommonServiceReference.City.datasource">
+      <publishTime>08/31/2020 19:22:15</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.Web.CommonServiceReference.Localities.datasource">
+      <publishTime>08/31/2020 19:22:15</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.Web.CommonServiceReference.Location.datasource">
+      <publishTime>08/31/2020 19:22:15</publishTime>
+    </File>
+    <File Include="Service References/CommonServiceReference/JustStay.Web.CommonServiceReference.State.datasource">
+      <publishTime>08/31/2020 19:22:15</publishTime>
+    </File>
+    <File Include="Service References/CustomerServiceReference/JustStay.Web.CustomerServiceReference.CustomerDetail.datasource">
+      <publishTime>08/31/2020 19:22:25</publishTime>
+    </File>
+    <File Include="Service References/CustomerServiceReference/JustStay.Web.CustomerServiceReference.CustomerInfo.datasource">
+      <publishTime>04/21/2020 22:06:47</publishTime>
+    </File>
+    <File Include="Service References/CustomerServiceReference/JustStay.Web.CustomerServiceReference.CustomerRequestDetail.datasource">
+      <publishTime>08/31/2020 19:22:29</publishTime>
+    </File>
+    <File Include="Service References/CustomerServiceReference/JustStay.Web.CustomerServiceReference.GetAllCustomersDetails.datasource">
+      <publishTime>08/31/2020 19:22:29</publishTime>
+    </File>
+    <File Include="Service References/MessageServiceReference/JustStay.Web.MessageServiceReference.InboxMail.datasource">
+      <publishTime>08/31/2020 19:23:13</publishTime>
+    </File>
+    <File Include="Service References/MessageServiceReference/JustStay.Web.MessageServiceReference.MessgeInfo.datasource">
+      <publishTime>08/31/2020 19:23:13</publishTime>
+    </File>
+    <File Include="Service References/MessageServiceReference/JustStay.Web.MessageServiceReference.SupportRequestDetail.datasource">
+      <publishTime>08/31/2020 19:23:13</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetAllBooking.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetAllBookingByCustomerId.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetAllCustomerByATRC.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetAllPaymentByCustomerId.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetBookingDetailsByBookingId.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetBookingForCancelByCustomerId.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetBookingReceipt.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetCustomerBookingsByATRC.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCBookingServiceReference/JustStay.Web.RCBookingServiceReference.GetRestChairBookingByATRC.datasource">
+      <publishTime>10/09/2020 17:10:53</publishTime>
+    </File>
+    <File Include="Service References/RCRefundServiceReference/JustStay.Web.RCRefundServiceReference.GetAllCancelledBooking.datasource">
+      <publishTime>08/31/2020 19:23:38</publishTime>
+    </File>
+    <File Include="Service References/RCRefundServiceReference/JustStay.Web.RCRefundServiceReference.GetAllRefunds.datasource">
+      <publishTime>08/31/2020 19:23:41</publishTime>
+    </File>
+    <File Include="SignIn.aspx">
+      <publishTime>08/14/2020 14:21:04</publishTime>
+    </File>
+    <File Include="SignUp.aspx">
+      <publishTime>04/28/2020 12:57:15</publishTime>
+    </File>
+    <File Include="Site1.Master">
+      <publishTime>11/23/2020 18:19:17</publishTime>
+    </File>
+    <File Include="termsconditions.aspx">
+      <publishTime>03/13/2020 10:50:02</publishTime>
+    </File>
+    <File Include="userMenuBar.ascx">
+      <publishTime>07/17/2020 14:47:45</publishTime>
+    </File>
+    <File Include="view-booking.aspx">
+      <publishTime>07/17/2020 14:51:14</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/06/2020 17:41:39</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.eot">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.svg">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.ttf">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.woff">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.woff2">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.eot">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.svg">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.ttf">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.woff">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.woff2">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.eot">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.svg">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.ttf">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.woff">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.woff2">
+      <publishTime>03/08/2020 16:50:21</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>09/16/2020 14:13:11</publishTime>
+    </File>
+    <File Include="WebForm2.aspx">
+      <publishTime>05/27/2020 16:33:40</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

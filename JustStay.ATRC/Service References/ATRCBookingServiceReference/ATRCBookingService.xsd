@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Repo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCust_ATRCBooking">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cust_ATRCBooking" nillable="true" type="tns:Cust_ATRCBooking" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCust_ATRCBooking" nillable="true" type="tns:ArrayOfCust_ATRCBooking" />
+  <xs:complexType name="Cust_ATRCBooking">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookingDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FromTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hours" type="xs:int" />
+      <xs:element minOccurs="0" name="Persons" type="xs:int" />
+      <xs:element minOccurs="0" name="ToTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cust_ATRCBooking" nillable="true" type="tns:Cust_ATRCBooking" />
+</xs:schema>

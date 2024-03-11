@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="JustStay.Services.RCPaymentService" CodeBehind="RCPaymentService.svc.cs" %>

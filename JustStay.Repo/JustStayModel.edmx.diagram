@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="182228583dfb415ea614167de62bd353" Name="Diagram1">
+        <EntityTypeShape EntityType="juststayDbModel.State" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.UserType" Width="1.5" PointX="10.25" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCCategory" Width="1.5" PointX="0.5" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCSubCategory" Width="1.5" PointX="2.125" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Role" Width="1.5" PointX="3.75" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.User" Width="1.5" PointX="8.625" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCAmenity" Width="1.5" PointX="7" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.City" Width="1.5" PointX="7" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.FAQ" Width="1.5" PointX="8.625" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Location" Width="1.5" PointX="3.75" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Customer" Width="1.5" PointX="10.25" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.SMSTemplate" Width="1.5" PointX="2.125" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Message" Width="1.5" PointX="3.75" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.MessageRecipient" Width="1.5" PointX="5.375" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Blog" Width="1.5" PointX="7" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.BlogCategory" Width="1.5" PointX="8.625" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Banner" Width="1.5" PointX="10.25" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Highlight" Width="1.5" PointX="2.125" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Cuisine" Width="1.5" PointX="3.75" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Amenity" Width="1.5" PointX="5.375" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Offer" Width="1.5" PointX="7" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.CustomerRequest" Width="1.5" PointX="8.625" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCType" Width="1.5" PointX="0.5" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.RestChairType" Width="1.5" PointX="2.125" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.RestChairProfile" Width="1.5" PointX="0.5" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.RoomType" Width="1.5" PointX="3.75" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.RoomLabel" Width="1.5" PointX="5.375" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Attachment" Width="1.5" PointX="7" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.CancellationPolicy" Width="1.5" PointX="8.625" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCRestChair" Width="1.5" PointX="5.375" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCChair" Width="1.5" PointX="10.25" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRC" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.RCBookingDetail" Width="1.5" PointX="0.5" PointY="3.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ErrorLog" Width="1.5" PointX="5.375" PointY="3.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCImage" Width="1.5" PointX="2.125" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.RestChairBooking" Width="1.5" PointX="2.125" PointY="3.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Setting" Width="1.5" PointX="0.5" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.PrivacyPolicy" Width="1.5" PointX="8.625" PointY="3.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.RCRefund" Width="1.5" PointX="10.25" PointY="3.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCAccount" Width="1.5" PointX="0.5" PointY="4" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Company" Width="1.5" PointX="2.125" PointY="4" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.CompanyAccount" Width="1.5" PointX="3.75" PointY="4" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.ATRCBill" Width="1.5" PointX="5.375" PointY="4" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.RCPayment" Width="1.5" PointX="3.75" PointY="3.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.JSBill" Width="1.5" PointX="7" PointY="4" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Tax" Width="1.5" PointX="10.25" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="juststayDbModel.Rating" Width="1.5" PointX="7" PointY="3.5" IsExpanded="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

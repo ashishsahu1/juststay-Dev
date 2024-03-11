@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+  <xs:element name="GetUserbyId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserbyIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetUserbyIdResult" nillable="true" type="q1:UserDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="userdto" nillable="true" type="q2:UserDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUserResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserPwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="user" nillable="true" type="q3:UserDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserPwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserPwdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usertypeid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetUserDetailsResult" nillable="true" type="q4:UserDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="UserListResult" nillable="true" type="q5:ArrayOfUserDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUserResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsEmailExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsEmailExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsEmailExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoCompleteEmailList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoCompleteEmailListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAutoCompleteEmailListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserIdByEmailAndUserType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserIdByEmailAndUserTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserIdByEmailAndUserTypeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMobileExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMobileExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsMobileExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustUserByUsernameOrMobile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustUserByUsernameOrMobileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetCustUserByUsernameOrMobileResult" nillable="true" type="q6:UserDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGoogleUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="googleId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGoogleUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetGoogleUserResult" nillable="true" type="q7:UserDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserGoogleId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="googleId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserGoogleIdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="newpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cnfpass" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangeUserPasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isactive" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="usrdto" nillable="true" type="q8:UserDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAdminResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

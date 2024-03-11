@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MastersService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56178/MastersService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56178/MastersService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56178/MastersService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMastersService_GetAllCuisines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCuisines" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllCuisines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCuisinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertCuisine_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCuisine" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertCuisine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCuisineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateCusines_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCusines" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateCusines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCusinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteCuisine_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCuisine" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteCuisine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCuisineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllAmenities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAmenities" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllAmenities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAmenitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAmenityById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmenityById" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAmenityById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmenityByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertAmenity_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAmenity" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertAmenity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAmenityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateAmenity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAmenity" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateAmenity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAmenityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateAmenityIcon_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAmenityIcon" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateAmenityIcon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAmenityIconResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteAmenity_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAmenity" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteAmenity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAmenityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllHighlights_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHighlights" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllHighlights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHighlightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertHighlight_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertHighlight" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertHighlight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertHighlightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateHighlight_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHighlight" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateHighlight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHighlightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteHighlight_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHighlight" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteHighlight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHighlightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllRCTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRCTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllRCTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRCTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetRCTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRCTypeId" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetRCTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRCTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertRCType_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRCType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertRCType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRCTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateRCType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRCType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateRCType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRCTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteRCType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRCType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteRCType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRCTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllATRCTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllATRCTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetATRCTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetATRCTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertATRCType_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertATRCType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertATRCType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertATRCTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateATRCType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateATRCType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteATRCType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteATRCType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteATRCType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteATRCTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllRoomTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoomTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllRoomTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoomTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetRoomTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetRoomTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertRoomType_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoomType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertRoomType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoomTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateRoomType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoomType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateRoomType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoomTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteRoomType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoomType" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteRoomType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoomTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllRoomLabels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoomLabels" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetAllRoomLabels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoomLabelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetRoomLabelById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomLabelById" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_GetRoomLabelById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomLabelByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertRoomLabel_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoomLabel" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_InsertRoomLabel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoomLabelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateRoomLabel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoomLabel" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateRoomLabel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoomLabelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateRoomLabelIcon_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoomLabelIcon" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_UpdateRoomLabelIcon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoomLabelIconResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteRoomLabel_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoomLabel" />
+  </wsdl:message>
+  <wsdl:message name="IMastersService_DeleteRoomLabel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoomLabelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMastersService">
+    <wsdl:operation name="GetAllCuisines">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetAllCuisines" message="tns:IMastersService_GetAllCuisines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetAllCuisinesResponse" message="tns:IMastersService_GetAllCuisines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCuisine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/InsertCuisine" message="tns:IMastersService_InsertCuisine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/InsertCuisineResponse" message="tns:IMastersService_InsertCuisine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCusines">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateCusines" message="tns:IMastersService_UpdateCusines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateCusinesResponse" message="tns:IMastersService_UpdateCusines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCuisine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/DeleteCuisine" message="tns:IMastersService_DeleteCuisine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/DeleteCuisineResponse" message="tns:IMastersService_DeleteCuisine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAmenities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetAllAmenities" message="tns:IMastersService_GetAllAmenities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetAllAmenitiesResponse" message="tns:IMastersService_GetAllAmenities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmenityById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetAmenityById" message="tns:IMastersService_GetAmenityById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetAmenityByIdResponse" message="tns:IMastersService_GetAmenityById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAmenity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/InsertAmenity" message="tns:IMastersService_InsertAmenity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/InsertAmenityResponse" message="tns:IMastersService_InsertAmenity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmenity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateAmenity" message="tns:IMastersService_UpdateAmenity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateAmenityResponse" message="tns:IMastersService_UpdateAmenity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmenityIcon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateAmenityIcon" message="tns:IMastersService_UpdateAmenityIcon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateAmenityIconResponse" message="tns:IMastersService_UpdateAmenityIcon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAmenity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/DeleteAmenity" message="tns:IMastersService_DeleteAmenity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/DeleteAmenityResponse" message="tns:IMastersService_DeleteAmenity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHighlights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetAllHighlights" message="tns:IMastersService_GetAllHighlights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetAllHighlightsResponse" message="tns:IMastersService_GetAllHighlights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertHighlight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/InsertHighlight" message="tns:IMastersService_InsertHighlight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/InsertHighlightResponse" message="tns:IMastersService_InsertHighlight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHighlight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateHighlight" message="tns:IMastersService_UpdateHighlight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateHighlightResponse" message="tns:IMastersService_UpdateHighlight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHighlight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/DeleteHighlight" message="tns:IMastersService_DeleteHighlight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/DeleteHighlightResponse" message="tns:IMastersService_DeleteHighlight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRCTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetAllRCTypes" message="tns:IMastersService_GetAllRCTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetAllRCTypesResponse" message="tns:IMastersService_GetAllRCTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRCTypeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetRCTypeId" message="tns:IMastersService_GetRCTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetRCTypeIdResponse" message="tns:IMastersService_GetRCTypeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRCType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/InsertRCType" message="tns:IMastersService_InsertRCType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/InsertRCTypeResponse" message="tns:IMastersService_InsertRCType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRCType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateRCType" message="tns:IMastersService_UpdateRCType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateRCTypeResponse" message="tns:IMastersService_UpdateRCType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRCType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/DeleteRCType" message="tns:IMastersService_DeleteRCType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/DeleteRCTypeResponse" message="tns:IMastersService_DeleteRCType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetAllATRCTypes" message="tns:IMastersService_GetAllATRCTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetAllATRCTypesResponse" message="tns:IMastersService_GetAllATRCTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCTypeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetATRCTypeById" message="tns:IMastersService_GetATRCTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetATRCTypeByIdResponse" message="tns:IMastersService_GetATRCTypeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertATRCType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/InsertATRCType" message="tns:IMastersService_InsertATRCType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/InsertATRCTypeResponse" message="tns:IMastersService_InsertATRCType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateATRCType" message="tns:IMastersService_UpdateATRCType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateATRCTypeResponse" message="tns:IMastersService_UpdateATRCType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteATRCType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/DeleteATRCType" message="tns:IMastersService_DeleteATRCType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/DeleteATRCTypeResponse" message="tns:IMastersService_DeleteATRCType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoomTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetAllRoomTypes" message="tns:IMastersService_GetAllRoomTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetAllRoomTypesResponse" message="tns:IMastersService_GetAllRoomTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomTypeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetRoomTypeById" message="tns:IMastersService_GetRoomTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetRoomTypeByIdResponse" message="tns:IMastersService_GetRoomTypeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoomType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/InsertRoomType" message="tns:IMastersService_InsertRoomType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/InsertRoomTypeResponse" message="tns:IMastersService_InsertRoomType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoomType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateRoomType" message="tns:IMastersService_UpdateRoomType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateRoomTypeResponse" message="tns:IMastersService_UpdateRoomType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/DeleteRoomType" message="tns:IMastersService_DeleteRoomType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/DeleteRoomTypeResponse" message="tns:IMastersService_DeleteRoomType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoomLabels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetAllRoomLabels" message="tns:IMastersService_GetAllRoomLabels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetAllRoomLabelsResponse" message="tns:IMastersService_GetAllRoomLabels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomLabelById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/GetRoomLabelById" message="tns:IMastersService_GetRoomLabelById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/GetRoomLabelByIdResponse" message="tns:IMastersService_GetRoomLabelById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoomLabel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/InsertRoomLabel" message="tns:IMastersService_InsertRoomLabel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/InsertRoomLabelResponse" message="tns:IMastersService_InsertRoomLabel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoomLabel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateRoomLabel" message="tns:IMastersService_UpdateRoomLabel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateRoomLabelResponse" message="tns:IMastersService_UpdateRoomLabel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoomLabelIcon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/UpdateRoomLabelIcon" message="tns:IMastersService_UpdateRoomLabelIcon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/UpdateRoomLabelIconResponse" message="tns:IMastersService_UpdateRoomLabelIcon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomLabel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMastersService/DeleteRoomLabel" message="tns:IMastersService_DeleteRoomLabel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMastersService/DeleteRoomLabelResponse" message="tns:IMastersService_DeleteRoomLabel_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMastersService" type="tns:IMastersService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllCuisines">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetAllCuisines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCuisine">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/InsertCuisine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCusines">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateCusines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCuisine">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/DeleteCuisine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAmenities">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetAllAmenities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmenityById">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetAmenityById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAmenity">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/InsertAmenity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmenity">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateAmenity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmenityIcon">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateAmenityIcon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAmenity">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/DeleteAmenity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHighlights">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetAllHighlights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHighlight">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/InsertHighlight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHighlight">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateHighlight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHighlight">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/DeleteHighlight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRCTypes">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetAllRCTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRCTypeId">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetRCTypeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRCType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/InsertRCType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRCType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateRCType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRCType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/DeleteRCType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCTypes">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetAllATRCTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCTypeById">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetATRCTypeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertATRCType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/InsertATRCType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateATRCType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteATRCType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/DeleteATRCType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoomTypes">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetAllRoomTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomTypeById">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetRoomTypeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoomType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/InsertRoomType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoomType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateRoomType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomType">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/DeleteRoomType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoomLabels">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetAllRoomLabels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomLabelById">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/GetRoomLabelById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoomLabel">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/InsertRoomLabel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoomLabel">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateRoomLabel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoomLabelIcon">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/UpdateRoomLabelIcon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomLabel">
+      <soap:operation soapAction="http://tempuri.org/IMastersService/DeleteRoomLabel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MastersService">
+    <wsdl:port name="BasicHttpBinding_IMastersService" binding="tns:BasicHttpBinding_IMastersService">
+      <soap:address location="http://localhost:56178/MastersService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

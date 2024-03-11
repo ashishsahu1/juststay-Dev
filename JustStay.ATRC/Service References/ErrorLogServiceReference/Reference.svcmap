@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f5a75032-fb08-4761-bd31-f165433fd57c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56178/ErrorLogService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ErrorLogService.xsd" MetadataType="Schema" ID="1665ab89-7ff0-4795-818a-89c1f333e788" SourceId="1" SourceUrl="http://localhost:56178/ErrorLogService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ErrorLogService1.xsd" MetadataType="Schema" ID="63e6e1c2-0a91-42b7-8edb-c507b6591f4f" SourceId="1" SourceUrl="http://localhost:56178/ErrorLogService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ErrorLogService.disco" MetadataType="Disco" ID="3db7a4e8-272e-44f7-8a00-10250f3b7deb" SourceId="1" SourceUrl="http://localhost:56178/ErrorLogService.svc?disco" />
+    <MetadataFile FileName="ErrorLogService2.xsd" MetadataType="Schema" ID="8eb731bb-126c-4b38-9427-64afd0c2da33" SourceId="1" SourceUrl="http://localhost:56178/ErrorLogService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ErrorLogService.wsdl" MetadataType="Wsdl" ID="74f99151-94aa-47c9-afa0-de4afd78790b" SourceId="1" SourceUrl="http://localhost:56178/ErrorLogService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

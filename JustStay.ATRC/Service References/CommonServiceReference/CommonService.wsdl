@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56178/CommonService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56178/CommonService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56178/CommonService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+      <xsd:import schemaLocation="http://localhost:56178/CommonService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommonService_GetAllStates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStates" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllStates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCities" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllCitiesBySearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitiesBySearch" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllCitiesBySearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitiesBySearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAlLocationsByCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlLocationsByCity" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAlLocationsByCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlLocationsByCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllATRCCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCCategory" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllATRCCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllATRCSubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllATRCSubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettings" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetSMSTemplateByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSTemplateByName" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetSMSTemplateByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSTemplateByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAutoLocalities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoLocalities" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAutoLocalities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoLocalitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetATRCTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCTypes" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetATRCTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAttachementsByMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttachementsByMaster" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAttachementsByMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttachementsByMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_InsertAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAttachment" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_InsertAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_DeleteAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttachment" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_DeleteAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_InsertRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRating" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_InsertRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRating" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetAllRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_Encrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_Encrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_Decrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_Decrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommonService">
+    <wsdl:operation name="GetAllStates">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAllStates" message="tns:ICommonService_GetAllStates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAllStatesResponse" message="tns:ICommonService_GetAllStates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAllCities" message="tns:ICommonService_GetAllCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAllCitiesResponse" message="tns:ICommonService_GetAllCities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCitiesBySearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAllCitiesBySearch" message="tns:ICommonService_GetAllCitiesBySearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAllCitiesBySearchResponse" message="tns:ICommonService_GetAllCitiesBySearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlLocationsByCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAlLocationsByCity" message="tns:ICommonService_GetAlLocationsByCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAlLocationsByCityResponse" message="tns:ICommonService_GetAlLocationsByCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAllATRCCategory" message="tns:ICommonService_GetAllATRCCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAllATRCCategoryResponse" message="tns:ICommonService_GetAllATRCCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCSubCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAllATRCSubCategory" message="tns:ICommonService_GetAllATRCSubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAllATRCSubCategoryResponse" message="tns:ICommonService_GetAllATRCSubCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetSettings" message="tns:ICommonService_GetSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetSettingsResponse" message="tns:ICommonService_GetSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSTemplateByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetSMSTemplateByName" message="tns:ICommonService_GetSMSTemplateByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetSMSTemplateByNameResponse" message="tns:ICommonService_GetSMSTemplateByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoLocalities">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAutoLocalities" message="tns:ICommonService_GetAutoLocalities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAutoLocalitiesResponse" message="tns:ICommonService_GetAutoLocalities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetATRCTypes" message="tns:ICommonService_GetATRCTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetATRCTypesResponse" message="tns:ICommonService_GetATRCTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachementsByMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAttachementsByMaster" message="tns:ICommonService_GetAttachementsByMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAttachementsByMasterResponse" message="tns:ICommonService_GetAttachementsByMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAttachment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/InsertAttachment" message="tns:ICommonService_InsertAttachment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/InsertAttachmentResponse" message="tns:ICommonService_InsertAttachment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttachment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/DeleteAttachment" message="tns:ICommonService_DeleteAttachment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/DeleteAttachmentResponse" message="tns:ICommonService_DeleteAttachment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/InsertRating" message="tns:ICommonService_InsertRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/InsertRatingResponse" message="tns:ICommonService_InsertRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetAllRating" message="tns:ICommonService_GetAllRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetAllRatingResponse" message="tns:ICommonService_GetAllRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/Encrypt" message="tns:ICommonService_Encrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/EncryptResponse" message="tns:ICommonService_Encrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/Decrypt" message="tns:ICommonService_Decrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/DecryptResponse" message="tns:ICommonService_Decrypt_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICommonService" type="tns:ICommonService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllStates">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAllStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCities">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAllCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCitiesBySearch">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAllCitiesBySearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlLocationsByCity">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAlLocationsByCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCCategory">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAllATRCCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCSubCategory">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAllATRCSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSettings">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSTemplateByName">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetSMSTemplateByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoLocalities">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAutoLocalities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCTypes">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetATRCTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachementsByMaster">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAttachementsByMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAttachment">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/InsertAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttachment">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/DeleteAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRating">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/InsertRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRating">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetAllRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/Encrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/Decrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonService">
+    <wsdl:port name="BasicHttpBinding_ICommonService" binding="tns:BasicHttpBinding_ICommonService">
+      <soap:address location="http://localhost:56178/CommonService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

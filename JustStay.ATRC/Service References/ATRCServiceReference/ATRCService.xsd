@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+  <xs:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+  <xs:element name="InsertATRC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="center" nillable="true" type="q1:ATRCDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertATRCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertATRCResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCIdByProfileID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCIdByProfileIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetATRCIdByProfileIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetATRCByIdResult" nillable="true" type="q2:ATRCDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCByUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCByUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetATRCByUserIdResult" nillable="true" type="q3:ATRCDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCByIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCByIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetATRCByIdsResult" nillable="true" type="q5:ArrayOfATRCDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllATRC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllATRCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="getAllATRCResult" nillable="true" type="q6:ArrayOfATRCDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetATRCProfileByIdResult" nillable="true" type="q7:ATRCProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchATRCCenters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="minLat" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxLtd" type="xs:decimal" />
+        <xs:element minOccurs="0" name="minLng" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxLng" type="xs:decimal" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="hour" type="xs:int" />
+        <xs:element minOccurs="0" name="cityId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchATRCCentersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="SearchATRCCentersResult" nillable="true" type="q8:ArrayOfATRCCenter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="artcid" type="xs:int" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="center" nillable="true" type="q9:ATRCDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProfileImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="center" nillable="true" type="q10:ATRCDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProfileImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllATRCImagesById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllATRCImagesByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetAllATRCImagesByIdResult" nillable="true" type="q11:ArrayOfATRCImageDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertATRCImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="image" nillable="true" type="q12:ATRCImageDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertATRCImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteATRCImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteATRCImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCImageSD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="atrcimage" nillable="true" type="q13:ATRCImageDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCImageSDResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="atrcimage" nillable="true" type="q14:ATRCImageDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateATRCProfileResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCSDImages">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCSDImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetATRCSDImagesResult" nillable="true" type="q15:ArrayOfATRCImageDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestChairDetailsByAtrcId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="hour" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestChairDetailsByAtrcIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetRestChairDetailsByAtrcIdResult" nillable="true" type="q16:ArrayOfGetRestChairByAtrcId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestchair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestchairResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetRestchairResult" nillable="true" type="q17:ArrayOfGetRestChairbyId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

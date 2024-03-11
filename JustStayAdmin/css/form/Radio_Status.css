@@ -1,0 +1,117 @@
+﻿/* CSS used here will be applied after bootstrap.css */
+.btn-default-green {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default-green:focus,
+.btn-default-green.focus {
+  color: #00ff7f;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.btn-default-green:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default-green:active,
+.btn-default-green.active,
+.open > .dropdown-toggle.btn-default-green {
+  color: #00ff7f;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default-green:active:hover,
+.btn-default-green.active:hover,
+.open > .dropdown-toggle.btn-default-green:hover,
+.btn-default-green:active:focus,
+.btn-default-green.active:focus,
+.open > .dropdown-toggle.btn-default-green:focus,
+.btn-default-green:active.focus,
+.btn-default-green.active.focus,
+.open > .dropdown-toggle.btn-default-green.focus {
+  color: #00ff7f;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.btn-default-green:active,
+.btn-default-green.active,
+.open > .dropdown-toggle.btn-default-green {
+  background-image: none;
+}
+.btn-default-green.disabled:hover,
+.btn-default-green[disabled]:hover,
+fieldset[disabled] .btn-default-green:hover,
+.btn-default-green.disabled:focus,
+.btn-default-green[disabled]:focus,
+fieldset[disabled] .btn-default-green:focus,
+.btn-default-green.disabled.focus,
+.btn-default-green[disabled].focus,
+fieldset[disabled] .btn-default-green.focus {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default-green .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+.btn-default-red {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default-red:focus,
+.btn-default-red.focus {
+  color: #ff0000;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.btn-default-red:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default-red:active,
+.btn-default-red.active,
+.open > .dropdown-toggle.btn-default-red {
+  color: #ff0000;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default-red:active:hover,
+.btn-default-red.active:hover,
+.open > .dropdown-toggle.btn-default-red:hover,
+.btn-default-red:active:focus,
+.btn-default-red.active:focus,
+.open > .dropdown-toggle.btn-default-red:focus,
+.btn-default-red:active.focus,
+.btn-default-red.active.focus,
+.open > .dropdown-toggle.btn-default-red.focus {
+  color: #ff0000;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.btn-default-green:active,
+.btn-default-green.active,
+.open > .dropdown-toggle.btn-default-green {
+  background-image: none;
+}
+.btn-default-red.disabled:hover,
+.btn-default-red[disabled]:hover,
+fieldset[disabled] .btn-default-red:hover,
+.btn-default-red.disabled:focus,
+.btn-default-red[disabled]:focus,
+fieldset[disabled] .btn-default-red:focus,
+.btn-default-red.disabled.focus,
+.btn-default-red[disabled].focus,
+fieldset[disabled] .btn-default-red.focus {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default-red .badge {
+  color: #fff;
+  background-color: #333;
+}

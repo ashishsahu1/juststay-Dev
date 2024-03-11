@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCancellationPolicyDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CancellationPolicyDto" nillable="true" type="tns:CancellationPolicyDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCancellationPolicyDto" nillable="true" type="tns:ArrayOfCancellationPolicyDto" />
+  <xs:complexType name="CancellationPolicyDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplyAfterBooking" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ApplyBeforeCheckIn" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyId" type="xs:int" />
+      <xs:element minOccurs="0" name="PolicyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyType" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="RefundPercentage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ToTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancellationPolicyDto" nillable="true" type="tns:CancellationPolicyDto" />
+  <xs:complexType name="PrivacyPolicyDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PrivacyPolicy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrivacyPolicyId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PrivacyPolicyDto" nillable="true" type="tns:PrivacyPolicyDto" />
+</xs:schema>

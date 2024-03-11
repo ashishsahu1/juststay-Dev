@@ -1,0 +1,240 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="JustStay.Web.Site1" %>
+
+
+<%@ Import Namespace="JustStay.Web.BusinessLogic" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Just Stay</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="images/icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fonticons.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+   
+      <link rel="stylesheet" href="css/materialize.css" />
+     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/mob.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <link rel="stylesheet" href="css/slick.min.css" />
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>
+        <section>
+            <div class="ed-mob-menu">
+                <div class="ed-mob-menu-con">
+                    <div class="ed-mm-left">
+                        <div class="wed-logo">
+                            <a href="home.aspx">
+                                <img src="images/newlogo.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ed-mm-right">
+                        <div class="ed-mm-menu">
+                            <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                            <div class="ed-mm-inn">
+                                <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                                <h4>JustStay Home</h4>
+                                <ul>
+                                    <li><a href="home.aspx">Home</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="about.aspx">About</a></li>
+                                </ul>
+                                <h4>Join Us Now</h4>
+                                <ul>
+                                    <li><a href="joinus.aspx">Join Us Today for ATRC</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="blog.aspx">Blog</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="contact.aspx">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="ed-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ed-com-t1-left">
+                                <ul>
+                                    <li><a href="tel:7972560068">Phone: +91 7972560068</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ed-com-t1-right">
+
+                                <%if (!Common.IsLogedIn)
+                                    {%>
+                                <ul>
+                                    <li><a href="SignIn.aspx">Sign In</a>
+                                    </li>
+                                    <li><a href="SignUp.aspx">Sign Up</a>
+                                    </li>
+                                </ul>
+                                <%}
+                                    else
+                                    { %>
+                                <div class="userlogin">
+                                    <a class="waves-effect dropdown-button top-user-pro" href="#" data-activates="top-menu">
+                                        <img src="images/tips2.png" alt="" />Welcome <asp:Label ID="lblusername" runat="server"></asp:Label> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul id="top-menu" class="dropdown-content top-menu-sty" style="width: 169.45px; position: absolute; top: 0px; left: -51.3333px; opacity: 1; display: none;">
+                                        <li>
+                                            <a href="allbooking.aspx" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>My Account</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <asp:LinkButton ID="lnklogout" runat="server" CssClass="ho-dr-con-last waves-effect" OnClick="lnklogout_Click"><i class="fa fa-sign-in" aria-hidden="true"></i>Logout</asp:LinkButton>
+                                            <a href="#" class="ho-dr-con-last waves-effect"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <%} %>
+                            </div>
+                            <div class="ed-com-t1-social">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/juststaypune/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="https://www.instagram.com/juststaypune" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="https://www.twitter.com/JustStaypune" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-logo" data-spy="affix" data-offset-top="250">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="wed-logo">
+                                <a href="home.aspx">
+                                    <img src="images/newlogo.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="main-menu">
+                                <ul>
+                                    <li><a href="home.aspx">Home</a>
+                                    </li>
+                                    <li><a href="about.aspx">About Us</a>
+                                    </li>
+                                    <li><a href="joinus.aspx">Join Us as ATRC</a>
+                                    </li>
+                                    <li><a href="blog.aspx">Blog</a>
+                                    </li>
+                                    <li><a href="contact.aspx">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <section>
+            <div class="rows">
+                <div class="footer">
+                    <div class="container">
+                        <div class="foot-sec2">
+                            <div>
+                                <div class="row">
+                                    <div class="col-sm-3 foot-spec foot-com">
+                                        <h4><span>Just Stay</span> Rest Chair</h4>
+                                        <p>Just Stay is Any Time Refreshment Center booking service which allows travellers to book staying options available at highways at lowest costs on hourly basis across India. They are available in compartment & Dormitory type of occupancy with A/C and Non A/c combination. </p>
+                                    </div>
+                                    <div class="col-sm-3 foot-spec foot-com">
+                                        <h4><span>Address</span> & Contact Info</h4>
+                                        <p>Sr.No. 82/1/7, Pritam Plaza, Shop No. 6, Prabhat Nagar, Pimple Gurav, Pune, Maharashtra </p>
+                                        <p><span class="strong">Phone: </span><span class="highlighted">+91 79 72 56 00 68</span> </p>
+                                        <p><span class="highlighted">contact@juststay.in</span></p>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                        <h4><span>SUPPORT</span> & HELP</h4>
+                                        <ul class="two-columns">
+                                            <li><a href="about.aspx">About Us</a> </li>
+                                            <li><a href="blog.aspx">Blog </a></li>
+                                            <li><a href="contact.aspx">Contact Us</a> </li>
+                                             <li><a href="faq.aspx?f=<%=new JustStay.CommonHub.JSEDS().Encrypt("1") %>">FAQ</a> </li>
+                                            <li><a href="privacypolicy.aspx">Customer Policy</a></li>
+                                            <li><a href="termsconditions.aspx">Terms & Conditions</a></li>
+                                        </ul>
+                                    </div>  
+                                    <div class="col-sm-3 foot-social foot-spec foot-com">
+                                        <h4><span>Follow us</span></h4>
+                                        <p>Don't miss important updates in future.</p>
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/juststaypune/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.instagram.com/juststaypune" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                             <li><a href="https://www.twitter.com/JustStaypune" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                       <div style="margin-top:80px;">
+                                           <a href="https://razorpay.com/" target="_blank">
+                                            <img src="images/razorpay.png" class="img-responsive" alt="Razor Pay Payment Gateway" />
+                                           </a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="rows copy">
+                <div class="container">
+                    <p>&copy; Copyrights 2020-2021. All rights reserved by : <a target="_blank" class="copy-link" href="#">Namo Services-Pune</a>&nbsp;&nbsp;   Developed by :<a target="_blank" class="copy-link" href="http://www.nmskaar.com/"> nmskaar infotech</a></p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="icon-float">
+                <ul>
+                    <li><a href="https://www.facebook.com/juststaypune/" target="_blank" class="fb1"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/juststaypune" target="_blank" class="ista"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.twitter.com/JustStaypune" class="tw1" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </section>
+        <script src="js/jquery-latest.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/slick.min.js"></script>
+    </form>
+</body>
+</html>

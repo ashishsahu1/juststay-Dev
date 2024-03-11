@@ -1,0 +1,246 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="JustStayAdmin.Admin.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>JustStay :: Administration</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Quicksand:300,400,500" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mob.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/materialize.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div class="container-fluid sb1">
+            <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                    <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                    <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a>
+                    <a href="dashboard.aspx" class="logo">
+                        <img src="images/newlogo.jpg" alt="" />
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 mob-hide">
+                    <asp:Label ID="lblsmsbalance" Style="padding-top: 10px; font-size: 20px;" runat="server" />
+                </div>
+                <div class="col-md-2 tab-hide">
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <a class='waves-effect dropdown-button top-user-pro' href='#' data-activates='top-menu'>
+                        <img src="images/manface.png" alt="" />Admin Account <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul id='top-menu' class='dropdown-content top-menu-sty'>
+                         <li><a href="adminprofile.aspx" class="waves-effect"><i class="fa fa-male" aria-hidden="true"></i>Profile</a>
+                        </li>
+                        <li><a href="#" onclick="ShowChangePwdPopup();" class="waves-effect"><i class="fa fa-undo" aria-hidden="true"></i>Change Password</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <asp:LinkButton ID="lnklogout" runat="server" OnClick="lnkLogOut_Click" CssClass="ho-dr-con-last waves-effect"><i class="fa fa-sign-in" aria-hidden="true"></i>Logout</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid sb2">
+            <div class="row">
+                <div class="sb2-1">
+                    <div class="sb2-12">
+                        <ul>
+                            <li>
+                                <img src="images/manface.png" alt="" />
+                            </li>
+                            <li>
+                                <h5>
+                                    <a href="adminprofile.aspx"> <asp:Label ID="lblusername" runat="server"></asp:Label><span>
+                                        <asp:Label ID="lbladdress" runat="server"></asp:Label></span></a>
+                                   </h5>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="sb2-13">
+                        <ul class="collapsible" data-collapsible="accordion">
+                           
+                            <li><a href="dashboard.aspx" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i>Dashboard</a>
+                            </li>
+                              <li><a href="updatecompany.aspx"><i class="fa fa-building" aria-hidden="true"></i>About Company</a>
+                            </li>
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-list" aria-hidden="true"></i>Matsers</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="citylist.aspx">City</a></li>
+                                        <li><a href="managelocation.aspx">Location</a></li>
+                                        <li><a href="aminitylist.aspx">Amenities</a></li>
+                                        <li><a href="cuisines.aspx">Cuisines</a></li>
+                                        <li><a href="highlight.aspx">Highlight</a></li>
+                                        <li><a href="rctype.aspx">Rest Chair Type</a></li>
+                                        <li><a href="atrctype.aspx">ATRC Type</a></li>
+                                        <li><a href="roomtype.aspx">Room Type</a></li>
+                                        <li><a href="roomlabel.aspx">Room Label</a></li>
+                                        <li><a href="taxes.aspx">Tax Manager</a></li>
+                                        <li><a href="manageprivacypolicy.aspx">Privacy Policy</a></li>
+                                        <li><a href="cancellationpolicy.aspx">Cancellation Policy</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-envelope" aria-hidden="true"></i>Messages</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="compose.aspx">Compose</a></li>
+                                        <li><a href="Inbox.aspx">Inbox</a></li>
+                                        <li><a href="Inbox.aspx?sent=1">Sent</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-list" aria-hidden="true"></i>Manage Website</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="faq.aspx">FAQs</a></li>
+                                        <li><a href="blogs.aspx">Blog</a></li>
+                                        <li><a href="manageimages.aspx">Manage ATRC Images</a></li>
+                                        <%-- <li><a href="#">Manage Banner</a></li>
+                                          <li><a href="#">Create Offers</a></li>--%>
+                                    </ul>
+                                </div>
+                            </li>
+                             <li><a href="userlist.aspx"><i class="fa fa-user" aria-hidden="true"></i>Users</a>
+                            </li>
+                            <li><a href="customer.aspx"><i class="fa fa-user" aria-hidden="true"></i>Customers</a>
+                            </li>
+
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-list" aria-hidden="true"></i>ATRC</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="atrcrequest.aspx">ATRC Requests</a></li>
+                                        <li><a href="atrc.aspx">ATRC</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-list" aria-hidden="true"></i>Rest Chair</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="restchairprofiles.aspx">Rest Chair Profiles</a></li>
+                                        <li><a href="managercprofile.aspx">Manage Rest Chair Profiles</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li><a href="allrestchairbooking.aspx"><i class="fa fa-table" aria-hidden="true"></i>Rest Chair Bookings</a>
+                            </li>
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-list" aria-hidden="true"></i>Trasaction Details</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="onlinepayment.aspx">Online Payment Details</a></li>
+                                        <li><a href="offlinepayment.aspx">Offline Payment Details</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-list" aria-hidden="true"></i>Cancelled / Refund Bookings</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="rccancelbooking.aspx">Make Refund</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-list" aria-hidden="true"></i>Billing Account</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="atrcbilllist.aspx">Bills to ATRC</a></li>
+                                        <li><a href="jsbilllist.aspx">Bills from ATRC</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-list" aria-hidden="true"></i>Reports</a>
+                                <div class="collapsible-body left-sub-menu">
+                                    <ul>
+                                        <li><a href="allcustomerreport.aspx">Customer</a></li>
+                                        <li><a href="allatrcreport.aspx">ATRC</a></li>
+                                         <li><a href="allatrcbillreport.aspx">ATRC Bills Report</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="supportrequest.aspx">Support Request</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="changepwd" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <h4 class="modal-title">Change Password</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <p>
+                            <asp:Label ID="lblchange" runat="server" Style="font-size: 13px;"></asp:Label>
+                        </p>
+                        <div class="form-group">
+                            <label>Current Password</label>
+                            <asp:TextBox ID="txtcurrentpass" runat="server" MaxLength="50" CssClass="form-control" placeholder="Current Password"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfvpass" runat="server"
+                                Display="Dynamic" SetFocusOnError="true" ForeColor="Red"
+                                ControlToValidate="txtcurrentpass" ValidationGroup="passchg">
+                                </asp:RequiredFieldValidator>
+                        </div>
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <asp:TextBox ID="txtpassnew" runat="server" MaxLength="50" CssClass="form-control" placeholder="New Password"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfvnewpass" runat="server"
+                                Display="Dynamic" SetFocusOnError="true" ForeColor="Red"
+                                ControlToValidate="txtpassnew" ValidationGroup="passchg">
+                                </asp:RequiredFieldValidator>
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <asp:TextBox ID="txtpassconfirm" runat="server" MaxLength="50" CssClass="form-control" placeholder="Confirm Password"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfvpassconfirm" runat="server"
+                                Display="Dynamic" SetFocusOnError="true" ForeColor="Red"
+                                ControlToValidate="txtpassconfirm" ValidationGroup="passchg">
+                                </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: none;">
+                    <asp:LinkButton ID="btnclose" runat="server" class="btn btn-primary" CausesValidation="false" PostBackUrl="~/Admin/dashboard.aspx">Close</asp:LinkButton>
+                    <asp:LinkButton ID="btnChangePwd" runat="server" class="btn btn-primary" CausesValidation="true" ValidationGroup="passchg" OnClick="btnChangePwd_Click">Change</asp:LinkButton>
+                </div>
+            </div>
+        </div>
+        
+        <asp:HiddenField ID="hdnpassid" runat="server" Value="0" />
+       <script src="js/jquery-3.5.1.min.js"></script>
+       <script src="js/jquery-ui.min.js"></script>
+       <script src="js/bootstrap.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script>
+            function ShowChangePwdPopup() {
+                $('.modal').modal();
+                $('#txtcurrentpass').val('');
+                $('#txtpassnew').val('');
+                $('#txtpassconfirm').val('');
+                if ($('#hdnpassid').val() == '0') {
+                    $('#lblchange').text('');
+                }
+                $('#changepwd').modal('open');
+                $('.trigger-modal').modal();
+            }
+        </script>
+    </form>
+</body>
+</html>

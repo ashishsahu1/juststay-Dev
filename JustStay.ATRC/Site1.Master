@@ -1,0 +1,332 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="JustStay.ATRC.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>ATRC Dashboard | Just Stay</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet" />
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/meanmenu.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/educate-custon-icon.css" />
+    <link rel="stylesheet" href="css/morrisjs/morris.css" />
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css" />
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css" />
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css" />
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css" />
+    <link rel="stylesheet" href="css/editor/select2.css" />
+    <link rel="stylesheet" href="css/editor/datetimepicker.css" />
+    <link rel="stylesheet" href="css/editor/bootstrap-editable.css" />
+
+    <link rel="stylesheet" href="css/data-table/bootstrap-table.css" />
+    <link rel="stylesheet" href="css/data-table/bootstrap-editable.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link href="css/Common.css" rel="stylesheet" />
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+        <div class="left-sidebar-pro">
+            <nav id="sidebar" class="">
+                <div class="sidebar-header">
+                    <a href="index.html">
+                        <img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                    <strong><a href="ATRCDashboard.aspx">
+                        <img src="img/logo/logosn.png" alt="" /></a></strong>
+                </div>
+                <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                    <nav class="sidebar-nav left-sidebar-menu-pro">
+                        <ul class="metismenu" id="menu1">
+                            <%if (Common.ATRCId != 0 && Common.ATRCStatus == 1)
+                                {  %>
+                            <li>
+                                <a title="MyProfile" href="MyProfile.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">My Profile</span></a>
+                            </li>
+                            <%} %>
+                            <li class="active">
+                                <a class="has-arrow" href="ATRCDashboard.aspx">
+                                    <span class="educate-icon educate-home icon-wrap"></span>
+                                    <span class="mini-click-non">Dashboard</span>
+                                </a>
+                            </li>
+                            <%if (Common.ATRCId != 0 && Common.ATRCStatus == 1)
+                                {  %>
+                            <li><a title="Messages" onclick="javascript:return(0);" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Messages</span></a>
+                                <ul class="submenu-angle" aria-expanded="false">
+                                    <li><a title="Compose" href="Compose.aspx"><span class="mini-sub-pro">Compose</span></a></li>
+                                    <li><a title="Inbox" href="Inbox.aspx"><span class="mini-sub-pro">Inbox</span></a></li>
+                                    <li><a title="Sent" href="Inbox.aspx?sent=1"><span class="mini-sub-pro">Sent</span></a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a title="Customers" href="Customer.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Customer</span></a>
+                            </li>
+                            <li>
+                                <a title="Rest Chair Booking" href="RestChairBooking.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Rest Chair Booking</span></a>
+                            </li>
+                            <li><a title="Trasaction" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Trasaction Details</span></a>
+                                <ul class="submenu-angle">
+                                    <li><a title="Online" href="onlinepayment.aspx"><span class="mini-sub-pro">Online</span></a></li>
+                                    <li><a title="PayAtATRC" href="offlinetrasction.aspx"><span class="mini-sub-pro">PayAtATRC</span></a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a title="refund" href="refundtrasaction.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Refunds Bookings</span></a>
+                            </li>
+                            <li><a title="Billing" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Billing</span></a>
+                                <ul class="submenu-angle">
+                                    <li><a title="Online" href="billstojuststay.aspx"><span class="mini-sub-pro">Bills to JS</span></a></li>
+                                    <li><a title="PayAtATRC" href="billsfromjuststay.aspx"><span class="mini-sub-pro">Bills from JS</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a title="Support" href="ManageSupport.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Support Request</span></a>
+                            </li>
+
+                            <%} %>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+        <div class="all-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="logo-pro">
+                            <a href="ATRCDashboard.aspx">
+                                <img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-advance-area">
+                <div class="header-top-area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="header-top-wraper">
+                                    <div class="row">
+                                        <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                            <div class="menu-switcher-pro">
+                                                <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="educate-icon educate-nav"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                            <div class="header-right-info">
+                                                <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                    <li class="nav-item">
+                                                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                            <img src="img/manface.png" alt="" />
+                                                            <span class="admin-name">
+                                                                <asp:Label ID="lblusername" runat="server"></asp:Label></span>
+                                                            <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+                                                        </a>
+                                                        <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+
+                                                            <li><a href="#" onclick="ShowChangePwdPopup();"><span class="edu-icon edu-settings author-log-ic"></span>Change Password</a></li>
+                                                            <li>
+                                                                <asp:LinkButton ID="lnkLogOut" runat="server" OnClick="lnkLogOut_Click"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</asp:LinkButton>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu start -->
+                <div class="mobile-menu-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="mobile-menu">
+                                    <nav id="dropdown">
+                                        <ul class="mobile-menu-nav">
+                                            <li class="active">
+                                                <a class="has-arrow" href="ATRCDashboard.aspx">
+                                                    <span class="educate-icon educate-home icon-wrap"></span>
+                                                    <span class="mini-click-non">Dashboard</span>
+                                                </a>
+                                            </li>
+                                            <%if (Common.ATRCId != 0 && Common.ATRCStatus == 1)
+                                                {  %>
+                                            <li><a title="Messages" onclick="javascript:return(0);" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Messages</span></a>
+                                                <ul class="submenu-angle" aria-expanded="false">
+                                                    <li><a title="Compose" href="Compose.aspx"><span class="mini-sub-pro">Compose</span></a></li>
+                                                    <li><a title="Inbox" href="Inbox.aspx"><span class="mini-sub-pro">Inbox</span></a></li>
+                                                    <li><a title="Sent" href="Inbox.aspx?sent=1"><span class="mini-sub-pro">Sent</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="MyProfile" href="MyProfile.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">My Profile</span></a>
+                                            </li>
+                                            <li>
+                                                <a title="Customers" href="Customer.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Customer</span></a>
+                                            </li>
+                                            <li>
+                                                <a title="Rest Chair Booking" href="RestChairBooking.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Rest Chair Booking</span></a>
+                                            </li>
+                                            <li>
+                                                <a title="Support" href="ManageSupport.aspx" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span><span class="mini-click-non">Support Request</span></a>
+                                            </li>
+                                            <%} %>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu end -->
+                <div class="breadcome-area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="breadcome-list single-page-breadcome">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <ul class="breadcome-menu">
+                                                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="true" />
+                                                <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" > " RenderCurrentNodeAsLink="false">
+                                                </asp:SiteMapPath>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder ID="main" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="footer-copyright-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer-copy-right">
+                                <p>Copyright © 2018-2020. All rights reserved. Namo Services-Pune Developed By <a href="http://www.nmskaar.com" target="_blank">NMSKAAR INFOTECH</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="changepwd" class="modal fade" role="dialog" style="padding-top: 20px;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Change Password</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <p>
+                                <asp:Label ID="lblchange" runat="server" Style="font-size: 13px;"></asp:Label>
+                            </p>
+                            <div class="form-group">
+                                <label>Current Password</label>
+                                <asp:TextBox ID="txtcurrentpass" runat="server" MaxLength="50" CssClass="form-control" placeholder="Current Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvpass" runat="server"
+                                    Display="Dynamic" ErrorMessage="*" SetFocusOnError="true" ForeColor="Red"
+                                    ControlToValidate="txtcurrentpass" ValidationGroup="passchg">
+                                </asp:RequiredFieldValidator>
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <asp:TextBox ID="txtpassnew" runat="server" MaxLength="50" CssClass="form-control" placeholder="New Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvnewpass" runat="server"
+                                    Display="Dynamic" ErrorMessage="*" SetFocusOnError="true" ForeColor="Red"
+                                    ControlToValidate="txtpassnew" ValidationGroup="passchg">
+                                </asp:RequiredFieldValidator>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <asp:TextBox ID="txtpassconfirm" runat="server" MaxLength="50" CssClass="form-control" placeholder="Confirm Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvpassconfirm" runat="server"
+                                    Display="Dynamic" ErrorMessage="*" SetFocusOnError="true" ForeColor="Red"
+                                    ControlToValidate="txtpassconfirm" ValidationGroup="passchg">
+                                </asp:RequiredFieldValidator>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <asp:LinkButton ID="btnChangePwd" runat="server" class="btn btn-primary" CausesValidation="true" ValidationGroup="passchg" OnClick="btnChangePwd_Click">Change</asp:LinkButton>
+                        <asp:LinkButton ID="btnclose" runat="server" class="btn btn-primary" CausesValidation="false" PostBackUrl="ATRCDashboard.aspx">Close</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/data-table/bootstrap-table.js"></script>
+        <script src="js/data-table/tableExport.js"></script>
+        <script src="js/data-table/data-table-active.js"></script>
+        <script src="js/data-table/bootstrap-table-editable.js"></script>
+        <script src="js/data-table/bootstrap-editable.js"></script>
+        <script src="js/data-table/bootstrap-table-resizable.js"></script>
+        <script src="js/data-table/colResizable-1.5.source.js"></script>
+        <script src="js/data-table/bootstrap-table-export.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script src="ckeditor/ckeditor.js"></script>
+        <script src="js/Common.js"></script>
+        <script type="text/javascript">
+            function ShowChangePwdPopup() {
+                $('#changepwd').modal('show');
+            }
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#main_txtfromdate').attr('readOnly', 'true');
+                $('#main_txttodate').attr('readOnly', 'true');
+                $('#main_txtfromdate').datepicker({
+                    "dateFormat": "mm-dd-yy",
+                    "keyboardNavigation": false,
+                    "autoclose": true
+                });
+
+                $('#main_txttodate').datepicker({
+                    "dateFormat": "mm-dd-yy",
+                    "keyboardNavigation": false,
+                    "autoclose": true
+                });
+
+                $('#main_txtfromdate').keypress(function (key) {
+                    if (key.charCode < 48 || key.charCode > 57) return false;
+                });
+
+                $('#main_txttodate').keypress(function (key) {
+                    if (key.charCode < 48 || key.charCode > 57) return false;
+                });
+            });
+
+        </script>
+    </form>
+</body>
+</html>

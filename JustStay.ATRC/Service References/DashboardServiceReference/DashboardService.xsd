@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/DashboardService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+  <xs:element name="GetAdminDashboardDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminDashboardDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAdminDashboardDetailsResult" nillable="true" type="q1:GetAdminDashboardDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTodayBooking">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTodayBookingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetTodayBookingResult" nillable="true" type="q2:ArrayOfGetTodaysBooking" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCDashboardDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCDashboardDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetATRCDashboardDetailsResult" nillable="true" type="q3:GetATRCDashboardDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCTodayBooking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCTodayBookingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetATRCTodayBookingResult" nillable="true" type="q4:ArrayOfGetATRCTodaysBooking" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

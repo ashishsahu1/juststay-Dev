@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Repo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfInboxMail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InboxMail" nillable="true" type="tns:InboxMail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInboxMail" nillable="true" type="tns:ArrayOfInboxMail" />
+  <xs:complexType name="InboxMail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MessageId" type="xs:int" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnRead" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InboxMail" nillable="true" type="tns:InboxMail" />
+  <xs:complexType name="MessgeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailBody" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MessageId" type="xs:int" />
+      <xs:element minOccurs="0" name="RefrenceId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToEmail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessgeInfo" nillable="true" type="tns:MessgeInfo" />
+  <xs:complexType name="ArrayOfSupportRequestDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupportRequestDetail" nillable="true" type="tns:SupportRequestDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSupportRequestDetail" nillable="true" type="tns:ArrayOfSupportRequestDetail" />
+  <xs:complexType name="SupportRequestDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MessageId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupportRequestDetail" nillable="true" type="tns:SupportRequestDetail" />
+</xs:schema>

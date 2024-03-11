@@ -1,0 +1,1819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="juststayDbModelStoreContainer" CdmEntityContainer="juststayDbEntities">
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="juststayDbModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="NameWithCode" ColumnName="NameWithCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTypes">
+      <EntityTypeMapping TypeName="juststayDbModel.UserType">
+        <MappingFragment StoreEntitySet="UserType">
+          <ScalarProperty Name="UserType1" ColumnName="UserType" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATRCCategories">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCCategory">
+        <MappingFragment StoreEntitySet="ATRCCategory">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ATRCCategoryId" ColumnName="ATRCCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATRCSubCategories">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCSubCategory">
+        <MappingFragment StoreEntitySet="ATRCSubCategory">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="SubCategory" ColumnName="SubCategory" />
+          <ScalarProperty Name="ATRCCategoryId" ColumnName="ATRCCategoryId" />
+          <ScalarProperty Name="ATRCSubCategoryId" ColumnName="ATRCSubCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="juststayDbModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Role1" ColumnName="Role" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="juststayDbModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Google_Id" ColumnName="Google_Id" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllATRCRegistarions" FunctionName="juststayDbModel.Store.GetAllATRCRegistarions">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.ATRCDetail">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="CATEGORYNAMES" ColumnName="CATEGORYNAMES" />
+          <ScalarProperty Name="REFERRALNAMES" ColumnName="REFERRALNAMES" />
+          <ScalarProperty Name="NAMEWITHCODE" ColumnName="NAMEWITHCODE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="DiningFacility" ColumnName="DiningFacility" />
+          <ScalarProperty Name="DiningFromTime" ColumnName="DiningFromTime" />
+          <ScalarProperty Name="DiningToTime" ColumnName="DiningToTime" />
+          <ScalarProperty Name="ProfileImageName" ColumnName="ProfileImageName" />
+          <ScalarProperty Name="ProfileImageNewName" ColumnName="ProfileImageNewName" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="highlights" ColumnName="highlights" />
+          <ScalarProperty Name="Cuisines" ColumnName="Cuisines" />
+          <ScalarProperty Name="Amenities" ColumnName="Amenities" />
+          <ScalarProperty Name="GeoLocationName" ColumnName="GeoLocationName" />
+          <ScalarProperty Name="ATRCTypeId" ColumnName="ATRCTypeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ATRCAmenities">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCAmenity">
+        <MappingFragment StoreEntitySet="ATRCAmenities">
+          <ScalarProperty Name="CleanBathRoom" ColumnName="CleanBathRoom" />
+          <ScalarProperty Name="Restaurant" ColumnName="Restaurant" />
+          <ScalarProperty Name="Wifi" ColumnName="Wifi" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="AmenityId" ColumnName="AmenityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="juststayDbModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQs">
+      <EntityTypeMapping TypeName="juststayDbModel.FAQ">
+        <MappingFragment StoreEntitySet="FAQ">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="FAQAudienceId" ColumnName="FAQAudienceId" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="FAQId" ColumnName="FAQId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetUserDetail" FunctionName="juststayDbModel.Store.GetUserDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.UserDetail">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Google_Id" ColumnName="Google_Id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="juststayDbModel.Location">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetLocation" FunctionName="juststayDbModel.Store.GetLocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetLocationDetails">
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="juststayDbModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="IsGuest" ColumnName="IsGuest" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMSTemplates">
+      <EntityTypeMapping TypeName="juststayDbModel.SMSTemplate">
+        <MappingFragment StoreEntitySet="SMSTemplate">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Template" ColumnName="Template" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="juststayDbModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="MessageSource" ColumnName="MessageSource" />
+          <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="RefrenceId" ColumnName="RefrenceId" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageRecipients">
+      <EntityTypeMapping TypeName="juststayDbModel.MessageRecipient">
+        <MappingFragment StoreEntitySet="MessageRecipient">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Trashed" ColumnName="Trashed" />
+          <ScalarProperty Name="UnRead" ColumnName="UnRead" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ReceiverType" ColumnName="ReceiverType" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="MessageRecipientId" ColumnName="MessageRecipientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetEmailsList" FunctionName="juststayDbModel.Store.GetEmailsList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.EmailInfo">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetInboxMails" FunctionName="juststayDbModel.Store.GetInboxMails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.InboxMail">
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UnRead" ColumnName="UnRead" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetMessgeById" FunctionName="juststayDbModel.Store.GetMessgeById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.MessgeInfo">
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="RefrenceId" ColumnName="RefrenceId" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="ToEmail" ColumnName="ToEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="juststayDbModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="BlogImageNewName" ColumnName="BlogImageNewName" />
+          <ScalarProperty Name="BlogImageName" ColumnName="BlogImageName" />
+          <ScalarProperty Name="BlogDate" ColumnName="BlogDate" />
+          <ScalarProperty Name="BlogContent" ColumnName="BlogContent" />
+          <ScalarProperty Name="BlogTitle" ColumnName="BlogTitle" />
+          <ScalarProperty Name="BlogCategoryId" ColumnName="BlogCategoryId" />
+          <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogCategories">
+      <EntityTypeMapping TypeName="juststayDbModel.BlogCategory">
+        <MappingFragment StoreEntitySet="BlogCategory">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BlogCategoryId" ColumnName="BlogCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAdminSupportRequests" FunctionName="juststayDbModel.Store.GetAdminSupportRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.SupportRequestDetail">
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Banners">
+      <EntityTypeMapping TypeName="juststayDbModel.Banner">
+        <MappingFragment StoreEntitySet="Banner">
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="ImageNewName" ColumnName="ImageNewName" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SubHeading" ColumnName="SubHeading" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAutocompleteLocalities" FunctionName="juststayDbModel.Store.GetAutocompleteLocalities">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.Localities">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetATRCCenters" FunctionName="juststayDbModel.Store.GetATRCCenters" />
+    <FunctionImportMapping FunctionImportName="GetBlogWithDetail" FunctionName="juststayDbModel.Store.GetBlogWithDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.BlogWithDetail">
+          <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+          <ScalarProperty Name="BlogCategoryId" ColumnName="BlogCategoryId" />
+          <ScalarProperty Name="BlogTitle" ColumnName="BlogTitle" />
+          <ScalarProperty Name="BlogContent" ColumnName="BlogContent" />
+          <ScalarProperty Name="BlogDate" ColumnName="BlogDate" />
+          <ScalarProperty Name="BlogImageName" ColumnName="BlogImageName" />
+          <ScalarProperty Name="BlogImageNewName" ColumnName="BlogImageNewName" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CheckRestChairAvailability" FunctionName="juststayDbModel.Store.CheckRestChairAvailability" />
+    <FunctionImportMapping FunctionImportName="GetATRCBookingsByCustomer" FunctionName="juststayDbModel.Store.GetATRCBookingsByCustomer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.Cust_ATRCBooking">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="Persons" ColumnName="Persons" />
+          <ScalarProperty Name="Hours" ColumnName="Hours" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Highlights">
+      <EntityTypeMapping TypeName="juststayDbModel.Highlight">
+        <MappingFragment StoreEntitySet="Highlight">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HighlightId" ColumnName="HighlightId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cuisines">
+      <EntityTypeMapping TypeName="juststayDbModel.Cuisine">
+        <MappingFragment StoreEntitySet="Cuisine">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CuisineId" ColumnName="CuisineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Amenities">
+      <EntityTypeMapping TypeName="juststayDbModel.Amenity">
+        <MappingFragment StoreEntitySet="Amenity">
+          <ScalarProperty Name="IconFileName" ColumnName="IconFileName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="IconName" ColumnName="IconName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AmenityId" ColumnName="AmenityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Offers">
+      <EntityTypeMapping TypeName="juststayDbModel.Offer">
+        <MappingFragment StoreEntitySet="Offer">
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="OfferImgNewName" ColumnName="OfferImgNewName" />
+          <ScalarProperty Name="OfferImage" ColumnName="OfferImage" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="ShortDetail" ColumnName="ShortDetail" />
+          <ScalarProperty Name="SubHeading" ColumnName="SubHeading" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="OfferId" ColumnName="OfferId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetCustomerDetail" FunctionName="juststayDbModel.Store.GetCustomerDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.CustomerDetail">
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsGuest" ColumnName="IsGuest" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="NewDOB" ColumnName="NewDOB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CustomerRequests">
+      <EntityTypeMapping TypeName="juststayDbModel.CustomerRequest">
+        <MappingFragment StoreEntitySet="CustomerRequest">
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerRequestId" ColumnName="CustomerRequestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllCustomerRequests" FunctionName="juststayDbModel.Store.GetAllCustomerRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.CustomerRequestDetail">
+          <ScalarProperty Name="CustomerRequestId" ColumnName="CustomerRequestId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ATRCTypes">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCType">
+        <MappingFragment StoreEntitySet="ATRCType">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ATRCTypeId" ColumnName="ATRCTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RestChairTypes">
+      <EntityTypeMapping TypeName="juststayDbModel.RestChairType">
+        <MappingFragment StoreEntitySet="RestChairType">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RestChairTypeId" ColumnName="RestChairTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RestChairProfiles">
+      <EntityTypeMapping TypeName="juststayDbModel.RestChairProfile">
+        <MappingFragment StoreEntitySet="RestChairProfile">
+          <ScalarProperty Name="CancellationPolicies" ColumnName="CancellationPolicies" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CancellationPolicy" ColumnName="CancellationPolicy" />
+          <ScalarProperty Name="ATRCPolicy" ColumnName="ATRCPolicy" />
+          <ScalarProperty Name="CheckOutTime" ColumnName="CheckOutTime" />
+          <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ATRCTelephone" ColumnName="ATRCTelephone" />
+          <ScalarProperty Name="ManagerMobile" ColumnName="ManagerMobile" />
+          <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairProfileId" ColumnName="RestChairProfileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomTypes">
+      <EntityTypeMapping TypeName="juststayDbModel.RoomType">
+        <MappingFragment StoreEntitySet="RoomType">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RoomTypeId" ColumnName="RoomTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomLabels">
+      <EntityTypeMapping TypeName="juststayDbModel.RoomLabel">
+        <MappingFragment StoreEntitySet="RoomLabel">
+          <ScalarProperty Name="IconFileName" ColumnName="IconFileName" />
+          <ScalarProperty Name="IconName" ColumnName="IconName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RoomLabelId" ColumnName="RoomLabelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachments">
+      <EntityTypeMapping TypeName="juststayDbModel.Attachment">
+        <MappingFragment StoreEntitySet="Attachment">
+          <ScalarProperty Name="DocNewName" ColumnName="DocNewName" />
+          <ScalarProperty Name="DocName" ColumnName="DocName" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="MasterTableId" ColumnName="MasterTableId" />
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CancellationPolicies">
+      <EntityTypeMapping TypeName="juststayDbModel.CancellationPolicy">
+        <MappingFragment StoreEntitySet="CancellationPolicy">
+          <ScalarProperty Name="RefundPercentage" ColumnName="RefundPercentage" />
+          <ScalarProperty Name="ApplyBeforeCheckIn" ColumnName="ApplyBeforeCheckIn" />
+          <ScalarProperty Name="ApplyAfterBooking" ColumnName="ApplyAfterBooking" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="PolicyType" ColumnName="PolicyType" />
+          <ScalarProperty Name="PolicyName" ColumnName="PolicyName" />
+          <ScalarProperty Name="PolicyId" ColumnName="PolicyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATRCRestChairs">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCRestChair">
+        <MappingFragment StoreEntitySet="ATRCRestChair">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="RestChairProfileId" ColumnName="RestChairProfileId" />
+          <ScalarProperty Name="Amenities" ColumnName="Amenities" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ChairCount" ColumnName="ChairCount" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="ChairName" ColumnName="ChairName" />
+          <ScalarProperty Name="ATRCRestChairId" ColumnName="ATRCRestChairId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATRCChairs">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCChair">
+        <MappingFragment StoreEntitySet="ATRCChairs">
+          <ScalarProperty Name="ChairNumber" ColumnName="ChairNumber" />
+          <ScalarProperty Name="ATRCRestChairId" ColumnName="ATRCRestChairId" />
+          <ScalarProperty Name="ChairId" ColumnName="ChairId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATRCs">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRC">
+        <MappingFragment StoreEntitySet="ATRC">
+          <ScalarProperty Name="ATRCTypeId" ColumnName="ATRCTypeId" />
+          <ScalarProperty Name="GeoLocationName" ColumnName="GeoLocationName" />
+          <ScalarProperty Name="Amenities" ColumnName="Amenities" />
+          <ScalarProperty Name="Cuisines" ColumnName="Cuisines" />
+          <ScalarProperty Name="highlights" ColumnName="highlights" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="ProfileImageNewName" ColumnName="ProfileImageNewName" />
+          <ScalarProperty Name="ProfileImageName" ColumnName="ProfileImageName" />
+          <ScalarProperty Name="DiningToTime" ColumnName="DiningToTime" />
+          <ScalarProperty Name="DiningFromTime" ColumnName="DiningFromTime" />
+          <ScalarProperty Name="DiningFacility" ColumnName="DiningFacility" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllRestChairsByATRCProfile" FunctionName="juststayDbModel.Store.GetAllRestChairsByATRCProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllRestChairsByATRCProfile">
+          <ScalarProperty Name="ATRCRestChairId" ColumnName="ATRCRestChairId" />
+          <ScalarProperty Name="ChairName" ColumnName="ChairName" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="ChairCount" ColumnName="ChairCount" />
+          <ScalarProperty Name="RestChairProfileId" ColumnName="RestChairProfileId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetRestChairbyId" FunctionName="juststayDbModel.Store.GetRestChairbyId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetRestChairbyId">
+          <ScalarProperty Name="ChairId" ColumnName="ChairId" />
+          <ScalarProperty Name="ATRCRestChairId" ColumnName="ATRCRestChairId" />
+          <ScalarProperty Name="ChairNumber" ColumnName="ChairNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="RCBookingDetails">
+      <EntityTypeMapping TypeName="juststayDbModel.RCBookingDetail">
+        <MappingFragment StoreEntitySet="RCBookingDetail">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="ChairId" ColumnName="ChairId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="RCBDetailId" ColumnName="RCBDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SearchATRCCenters" FunctionName="juststayDbModel.Store.SearchATRCCenters">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.ATRCCenter">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="DiningFacility" ColumnName="DiningFacility" />
+          <ScalarProperty Name="DiningFromTime" ColumnName="DiningFromTime" />
+          <ScalarProperty Name="DiningToTime" ColumnName="DiningToTime" />
+          <ScalarProperty Name="ProfileImageName" ColumnName="ProfileImageName" />
+          <ScalarProperty Name="ProfileImageNewName" ColumnName="ProfileImageNewName" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="highlights" ColumnName="highlights" />
+          <ScalarProperty Name="Cuisines" ColumnName="Cuisines" />
+          <ScalarProperty Name="Amenities" ColumnName="Amenities" />
+          <ScalarProperty Name="GeoLocationName" ColumnName="GeoLocationName" />
+          <ScalarProperty Name="ATRCTypeId" ColumnName="ATRCTypeId" />
+          <ScalarProperty Name="CategoryNames" ColumnName="CategoryNames" />
+          <ScalarProperty Name="AmtForFilter" ColumnName="AmtForFilter" />
+          <ScalarProperty Name="AmenitiesNames" ColumnName="AmenitiesNames" />
+          <ScalarProperty Name="BasicPrice" ColumnName="BasicPrice" />
+          <ScalarProperty Name="ATRCType" ColumnName="ATRCType" />
+          <ScalarProperty Name="BookedChair" ColumnName="BookedChair" />
+          <ScalarProperty Name="AvailableChair" ColumnName="AvailableChair" />
+          <ScalarProperty Name="Ratings" ColumnName="Ratings" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetBookingDetailsByBookingId" FunctionName="juststayDbModel.Store.GetBookingDetailsByBookingId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetBookingDetailsByBookingId">
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="Hour" ColumnName="Hour" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="Person" ColumnName="Person" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CustEmail" ColumnName="CustEmail" />
+          <ScalarProperty Name="CustMobile" ColumnName="CustMobile" />
+          <ScalarProperty Name="CustAddress" ColumnName="CustAddress" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="DiningFromTime" ColumnName="DiningFromTime" />
+          <ScalarProperty Name="DiningToTime" ColumnName="DiningToTime" />
+          <ScalarProperty Name="Cuisines" ColumnName="Cuisines" />
+          <ScalarProperty Name="Amenities" ColumnName="Amenities" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="highlights" ColumnName="highlights" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="CGST" ColumnName="CGST" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="MerchantTxnId" ColumnName="MerchantTxnId" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="SGST" ColumnName="SGST" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="razorpay_payment_id" ColumnName="razorpay_payment_id" />
+          <ScalarProperty Name="razorpay_signature" ColumnName="razorpay_signature" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="OTP" ColumnName="OTP" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookedChair" ColumnName="BookedChair" />
+          <ScalarProperty Name="BookedChairNumber" ColumnName="BookedChairNumber" />
+          <ScalarProperty Name="BookingDateNew" ColumnName="BookingDateNew" />
+          <ScalarProperty Name="PaymentDateNew" ColumnName="PaymentDateNew" />
+          <ScalarProperty Name="FromTimeNew" ColumnName="FromTimeNew" />
+          <ScalarProperty Name="ToTimeNew" ColumnName="ToTimeNew" />
+          <ScalarProperty Name="IsCancel" ColumnName="IsCancel" />
+          <ScalarProperty Name="IsRefund" ColumnName="IsRefund" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetRestChairByAtrcId" FunctionName="juststayDbModel.Store.GetRestChairByAtrcId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetRestChairByAtrcId">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCRestChairId" ColumnName="ATRCRestChairId" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AmenitiesNames" ColumnName="AmenitiesNames" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ChairCount" ColumnName="ChairCount" />
+          <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+          <ScalarProperty Name="CheckOutTime" ColumnName="CheckOutTime" />
+          <ScalarProperty Name="CancellationPolicy" ColumnName="CancellationPolicy" />
+          <ScalarProperty Name="ATRCPolicy" ColumnName="ATRCPolicy" />
+          <ScalarProperty Name="Restchair" ColumnName="Restchair" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ErrorLogs">
+      <EntityTypeMapping TypeName="juststayDbModel.ErrorLog">
+        <MappingFragment StoreEntitySet="ErrorLog">
+          <ScalarProperty Name="ErrorFrom" ColumnName="ErrorFrom" />
+          <ScalarProperty Name="eventname" ColumnName="eventname" />
+          <ScalarProperty Name="pagename" ColumnName="pagename" />
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="Logid" ColumnName="Logid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetRestChairBookingByATRC" FunctionName="juststayDbModel.Store.GetRestChairBookingByATRC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetRestChairBookingByATRC">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="Chairs" ColumnName="Chairs" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="Paydate" ColumnName="Paydate" />
+          <ScalarProperty Name="ATRCPaystatus" ColumnName="ATRCPaystatus" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllCustomerByATRC" FunctionName="juststayDbModel.Store.GetAllCustomerByATRC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllCustomerByATRC">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCustomerBookingsByATRC" FunctionName="juststayDbModel.Store.GetCustomerBookingsByATRC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetCustomerBookingsByATRC">
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="CustType" ColumnName="CustType" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="Person" ColumnName="Person" />
+          <ScalarProperty Name="Hour" ColumnName="Hour" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="CGST" ColumnName="CGST" />
+          <ScalarProperty Name="SGST" ColumnName="SGST" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="MerchantTxnId" ColumnName="MerchantTxnId" />
+          <ScalarProperty Name="OTP" ColumnName="OTP" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllPaymentByCustomerId" FunctionName="juststayDbModel.Store.GetAllPaymentByCustomerId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllPaymentByCustomerId">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllRestChairProfile" FunctionName="juststayDbModel.Store.GetAllRestChairProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllRestChairProfile">
+          <ScalarProperty Name="RestChairProfileId" ColumnName="RestChairProfileId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+          <ScalarProperty Name="ManagerMobile" ColumnName="ManagerMobile" />
+          <ScalarProperty Name="ATRCTelephone" ColumnName="ATRCTelephone" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+          <ScalarProperty Name="CheckOutTime" ColumnName="CheckOutTime" />
+          <ScalarProperty Name="ATRCPolicy" ColumnName="ATRCPolicy" />
+          <ScalarProperty Name="CancellationPolicy" ColumnName="CancellationPolicy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CancellationPolicies" ColumnName="CancellationPolicies" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ATRCImages">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCImage">
+        <MappingFragment StoreEntitySet="ATRCImages">
+          <ScalarProperty Name="IsProfile" ColumnName="IsProfile" />
+          <ScalarProperty Name="SDDes" ColumnName="SDDes" />
+          <ScalarProperty Name="SDName" ColumnName="SDName" />
+          <ScalarProperty Name="IsSD" ColumnName="IsSD" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="NewImageName" ColumnName="NewImageName" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCImageId" ColumnName="ATRCImageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RestChairBookings">
+      <EntityTypeMapping TypeName="juststayDbModel.RestChairBooking">
+        <MappingFragment StoreEntitySet="RestChairBooking">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsRefund" ColumnName="IsRefund" />
+          <ScalarProperty Name="IsCancel" ColumnName="IsCancel" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Person" ColumnName="Person" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="Hour" ColumnName="Hour" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_Delete" FunctionName="juststayDbModel.Store.SP_Delete" />
+    <FunctionImportMapping FunctionImportName="GetAllCustomersDetails" FunctionName="juststayDbModel.Store.GetAllCustomersDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllCustomersDetails">
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="CustType" ColumnName="CustType" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BookingCount" ColumnName="BookingCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllBookingByCustomerIdAndroid" FunctionName="juststayDbModel.Store.GetAllBookingByCustomerIdAndroid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllBookingByCustomerIdAndroid">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="Hour" ColumnName="Hour" />
+          <ScalarProperty Name="Person" ColumnName="Person" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="Chairs" ColumnName="Chairs" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerMobile" ColumnName="CustomerMobile" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="OTP" ColumnName="OTP" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllPaymentByCustomerIdAndroid" FunctionName="juststayDbModel.Store.GetAllPaymentByCustomerIdAndroid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllPaymentByCustomerIdAndroid">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="juststayDbModel.Setting">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="privacy" ColumnName="privacy" />
+          <ScalarProperty Name="SMSBalanceUrl" ColumnName="SMSBalanceUrl" />
+          <ScalarProperty Name="SmsSenderId" ColumnName="SmsSenderId" />
+          <ScalarProperty Name="SmsPassword" ColumnName="SmsPassword" />
+          <ScalarProperty Name="SmsUsername" ColumnName="SmsUsername" />
+          <ScalarProperty Name="SmsUrl" ColumnName="SmsUrl" />
+          <ScalarProperty Name="SettingId" ColumnName="SettingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrivacyPolicies">
+      <EntityTypeMapping TypeName="juststayDbModel.PrivacyPolicy">
+        <MappingFragment StoreEntitySet="PrivacyPolicy">
+          <ScalarProperty Name="PrivacyPolicy1" ColumnName="PrivacyPolicy" />
+          <ScalarProperty Name="PrivacyPolicyId" ColumnName="PrivacyPolicyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllOfflinePayment" FunctionName="juststayDbModel.Store.GetAllOfflinePayment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllOfflinePayment">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="ATRCCommission" ColumnName="ATRCCommission" />
+          <ScalarProperty Name="JustStayCommission" ColumnName="JustStayCommission" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllOnlinePayment" FunctionName="juststayDbModel.Store.GetAllOnlinePayment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllOnlinePayment">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="razorpay_payment_id" ColumnName="razorpay_payment_id" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Razor_Fess" ColumnName="Razor_Fess" />
+          <ScalarProperty Name="razor_gst" ColumnName="razor_gst" />
+          <ScalarProperty Name="TotalRazorFees" ColumnName="TotalRazorFees" />
+          <ScalarProperty Name="PaidAmtfromRazor" ColumnName="PaidAmtfromRazor" />
+          <ScalarProperty Name="ATRCCommission" ColumnName="ATRCCommission" />
+          <ScalarProperty Name="JustStayCommission" ColumnName="JustStayCommission" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllBookingByCustomerId" FunctionName="juststayDbModel.Store.GetAllBookingByCustomerId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllBookingByCustomerId">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="ATRCDetails" ColumnName="ATRCDetails" />
+          <ScalarProperty Name="Chairs" ColumnName="Chairs" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="IsCancel" ColumnName="IsCancel" />
+          <ScalarProperty Name="IsRefund" ColumnName="IsRefund" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetBookingForCancelByCustomerId" FunctionName="juststayDbModel.Store.GetBookingForCancelByCustomerId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetBookingForCancelByCustomerId">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="ATRCDetails" ColumnName="ATRCDetails" />
+          <ScalarProperty Name="Chairs" ColumnName="Chairs" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="RCRefunds">
+      <EntityTypeMapping TypeName="juststayDbModel.RCRefund">
+        <MappingFragment StoreEntitySet="RCRefund">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="razor_refund_id" ColumnName="razor_refund_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="RefundAmount" ColumnName="RefundAmount" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="RCRefundPaymentId" ColumnName="RCRefundPaymentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllCancelledBooking" FunctionName="juststayDbModel.Store.GetAllCancelledBooking">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllCancelledBooking">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="ATRCDetails" ColumnName="ATRCDetails" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="razorpay_payment_id" ColumnName="razorpay_payment_id" />
+          <ScalarProperty Name="IsRefund" ColumnName="IsRefund" />
+          <ScalarProperty Name="IsCancel" ColumnName="IsCancel" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RefundAmt" ColumnName="RefundAmt" />
+          <ScalarProperty Name="TotalRazorFees" ColumnName="TotalRazorFees" />
+          <ScalarProperty Name="PaidAmtfromRazor" ColumnName="PaidAmtfromRazor" />
+          <ScalarProperty Name="ATRCCommission" ColumnName="ATRCCommission" />
+          <ScalarProperty Name="JustStayCommission" ColumnName="JustStayCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllRefunds" FunctionName="juststayDbModel.Store.GetAllRefunds">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllRefunds">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="razorpay_payment_id" ColumnName="razorpay_payment_id" />
+          <ScalarProperty Name="IsRefund" ColumnName="IsRefund" />
+          <ScalarProperty Name="IsCancel" ColumnName="IsCancel" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RefundAmt" ColumnName="RefundAmt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="razor_refund_id" ColumnName="razor_refund_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="RCRefundPaymentId" ColumnName="RCRefundPaymentId" />
+          <ScalarProperty Name="TotalRazorFees" ColumnName="TotalRazorFees" />
+          <ScalarProperty Name="PaidAmtfromRazor" ColumnName="PaidAmtfromRazor" />
+          <ScalarProperty Name="ATRCCommission" ColumnName="ATRCCommission" />
+          <ScalarProperty Name="JustStayCommission" ColumnName="JustStayCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ATRCAccounts">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCAccount">
+        <MappingFragment StoreEntitySet="ATRCAccount">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="IFSC" ColumnName="IFSC" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCAccountId" ColumnName="ATRCAccountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="juststayDbModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="LandLine" ColumnName="LandLine" />
+          <ScalarProperty Name="PAN" ColumnName="PAN" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GSTIN" ColumnName="GSTIN" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Subheading" ColumnName="Subheading" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyAccounts">
+      <EntityTypeMapping TypeName="juststayDbModel.CompanyAccount">
+        <MappingFragment StoreEntitySet="CompanyAccount">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="IFSC" ColumnName="IFSC" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CompanyAccountId" ColumnName="CompanyAccountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ATRCOnlineBillingFromJuststay" FunctionName="juststayDbModel.Store.ATRCOnlineBillingFromJuststay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.ATRCOnlineBillingFromJuststay">
+          <ScalarProperty Name="Perticulars" ColumnName="Perticulars" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+          <ScalarProperty Name="ATRCCommission" ColumnName="ATRCCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ATRCBills">
+      <EntityTypeMapping TypeName="juststayDbModel.ATRCBill">
+        <MappingFragment StoreEntitySet="ATRCBill">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PaymentBy" ColumnName="PaymentBy" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="BillFrom" ColumnName="BillFrom" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCBillId" ColumnName="ATRCBillId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllATRCBills" FunctionName="juststayDbModel.Store.GetAllATRCBills">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllATRCBills">
+          <ScalarProperty Name="ATRCBillId" ColumnName="ATRCBillId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="BillFrom" ColumnName="BillFrom" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="PaymentBy" ColumnName="PaymentBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetATRCBillById" FunctionName="juststayDbModel.Store.GetATRCBillById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetATRCBillById">
+          <ScalarProperty Name="ATRCBillId" ColumnName="ATRCBillId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="BillFrom" ColumnName="BillFrom" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="PaymentBy" ColumnName="PaymentBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="BalanceAmount" ColumnName="BalanceAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="RCPayments">
+      <EntityTypeMapping TypeName="juststayDbModel.RCPayment">
+        <MappingFragment StoreEntitySet="RCPayment">
+          <ScalarProperty Name="Paydate" ColumnName="Paydate" />
+          <ScalarProperty Name="Paystatus" ColumnName="Paystatus" />
+          <ScalarProperty Name="razorpay_signature" ColumnName="razorpay_signature" />
+          <ScalarProperty Name="razorpay_payment_id" ColumnName="razorpay_payment_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="OTP" ColumnName="OTP" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="MerchantTxnId" ColumnName="MerchantTxnId" />
+          <ScalarProperty Name="SGST" ColumnName="SGST" />
+          <ScalarProperty Name="CGST" ColumnName="CGST" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JSBills">
+      <EntityTypeMapping TypeName="juststayDbModel.JSBill">
+        <MappingFragment StoreEntitySet="JSBill">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PaymentBy" ColumnName="PaymentBy" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="BillFrom" ColumnName="BillFrom" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="JSBillId" ColumnName="JSBillId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllJSBills" FunctionName="juststayDbModel.Store.GetAllJSBills">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllJSBills">
+          <ScalarProperty Name="JSBillId" ColumnName="JSBillId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="BillFrom" ColumnName="BillFrom" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="PaymentBy" ColumnName="PaymentBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJSBillById" FunctionName="juststayDbModel.Store.GetJSBillById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetJSBillById">
+          <ScalarProperty Name="JSBillId" ColumnName="JSBillId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="BillFrom" ColumnName="BillFrom" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="PaymentBy" ColumnName="PaymentBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="BalanceAmount" ColumnName="BalanceAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PayAtATRCBillingToJuststay" FunctionName="juststayDbModel.Store.PayAtATRCBillingToJuststay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.PayAtATRCBillingToJuststay">
+          <ScalarProperty Name="Perticulars" ColumnName="Perticulars" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+          <ScalarProperty Name="JSCommission" ColumnName="JSCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAdminDashboardDetails" FunctionName="juststayDbModel.Store.GetAdminDashboardDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAdminDashboardDetails">
+          <ScalarProperty Name="TotalCustomer" ColumnName="TotalCustomer" />
+          <ScalarProperty Name="TotalATRC" ColumnName="TotalATRC" />
+          <ScalarProperty Name="TotalBooking" ColumnName="TotalBooking" />
+          <ScalarProperty Name="TotalOnlineBooking" ColumnName="TotalOnlineBooking" />
+          <ScalarProperty Name="TotalOfflineBooking" ColumnName="TotalOfflineBooking" />
+          <ScalarProperty Name="TotalTodayBooking" ColumnName="TotalTodayBooking" />
+          <ScalarProperty Name="TotalBookingAmt" ColumnName="TotalBookingAmt" />
+          <ScalarProperty Name="TotalOnlineBookingAmt" ColumnName="TotalOnlineBookingAmt" />
+          <ScalarProperty Name="TotalPayATRCBookingAmt" ColumnName="TotalPayATRCBookingAmt" />
+          <ScalarProperty Name="TotalATRCCommission" ColumnName="TotalATRCCommission" />
+          <ScalarProperty Name="TotalJSCommission" ColumnName="TotalJSCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTodaysBooking" FunctionName="juststayDbModel.Store.GetTodaysBooking">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetTodaysBooking">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Taxes">
+      <EntityTypeMapping TypeName="juststayDbModel.Tax">
+        <MappingFragment StoreEntitySet="Tax">
+          <ScalarProperty Name="MaxAmount" ColumnName="MaxAmount" />
+          <ScalarProperty Name="MinAmount" ColumnName="MinAmount" />
+          <ScalarProperty Name="SGST" ColumnName="SGST" />
+          <ScalarProperty Name="CGST" ColumnName="CGST" />
+          <ScalarProperty Name="TaxName" ColumnName="TaxName" />
+          <ScalarProperty Name="TaxId" ColumnName="TaxId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllBooking" FunctionName="juststayDbModel.Store.GetAllBooking">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllBooking">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="ATRCDetails" ColumnName="ATRCDetails" />
+          <ScalarProperty Name="Chairs" ColumnName="Chairs" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllATRC_Report" FunctionName="juststayDbModel.Store.GetAllATRC_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllATRC_Report">
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateWIthCode" ColumnName="StateWIthCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllCancelBookings_Report" FunctionName="juststayDbModel.Store.GetAllCancelBookings_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllCancelBookings_Report">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="ATRCDetails" ColumnName="ATRCDetails" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="razorpay_payment_id" ColumnName="razorpay_payment_id" />
+          <ScalarProperty Name="IsRefund" ColumnName="IsRefund" />
+          <ScalarProperty Name="IsCancel" ColumnName="IsCancel" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RefundAmt" ColumnName="RefundAmt" />
+          <ScalarProperty Name="TotalRazorFees" ColumnName="TotalRazorFees" />
+          <ScalarProperty Name="PaidAmtfromRazor" ColumnName="PaidAmtfromRazor" />
+          <ScalarProperty Name="ATRCCommission" ColumnName="ATRCCommission" />
+          <ScalarProperty Name="JustStayCommission" ColumnName="JustStayCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllCustomer_Report" FunctionName="juststayDbModel.Store.GetAllCustomer_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllCustomer_Report">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllJSBills_Report" FunctionName="juststayDbModel.Store.GetAllJSBills_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllJSBills_Report">
+          <ScalarProperty Name="JSBillId" ColumnName="JSBillId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="BillFrom" ColumnName="BillFrom" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="PaymentBy" ColumnName="PaymentBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllRefundTrasactions_Report" FunctionName="juststayDbModel.Store.GetAllRefundTrasactions_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllRefundTrasactions_Report">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="razorpay_payment_id" ColumnName="razorpay_payment_id" />
+          <ScalarProperty Name="IsRefund" ColumnName="IsRefund" />
+          <ScalarProperty Name="IsCancel" ColumnName="IsCancel" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RefundAmt" ColumnName="RefundAmt" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="razor_refund_id" ColumnName="razor_refund_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="RCRefundPaymentId" ColumnName="RCRefundPaymentId" />
+          <ScalarProperty Name="TotalRazorFees" ColumnName="TotalRazorFees" />
+          <ScalarProperty Name="PaidAmtfromRazor" ColumnName="PaidAmtfromRazor" />
+          <ScalarProperty Name="ATRCCommission" ColumnName="ATRCCommission" />
+          <ScalarProperty Name="JustStayCommission" ColumnName="JustStayCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllTrasaction_Report" FunctionName="juststayDbModel.Store.GetAllTrasaction_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllTrasaction_Report">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="RCPaymentId" ColumnName="RCPaymentId" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="razorpay_payment_id" ColumnName="razorpay_payment_id" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Razor_Fess" ColumnName="Razor_Fess" />
+          <ScalarProperty Name="razor_gst" ColumnName="razor_gst" />
+          <ScalarProperty Name="TotalRazorFees" ColumnName="TotalRazorFees" />
+          <ScalarProperty Name="PaidAmtfromRazor" ColumnName="PaidAmtfromRazor" />
+          <ScalarProperty Name="ATRCCommission" ColumnName="ATRCCommission" />
+          <ScalarProperty Name="JustStayCommission" ColumnName="JustStayCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllUserDetail_Report" FunctionName="juststayDbModel.Store.GetAllUserDetail_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllUserDetail_Report">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="Google_Id" ColumnName="Google_Id" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetATRCProfile" FunctionName="juststayDbModel.Store.GetATRCProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.ATRCProfile">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="DiningFacility" ColumnName="DiningFacility" />
+          <ScalarProperty Name="DiningFromTime" ColumnName="DiningFromTime" />
+          <ScalarProperty Name="DiningToTime" ColumnName="DiningToTime" />
+          <ScalarProperty Name="DiningFacilityName" ColumnName="DiningFacilityName" />
+          <ScalarProperty Name="DiningStartsOn" ColumnName="DiningStartsOn" />
+          <ScalarProperty Name="DiningEndsOn" ColumnName="DiningEndsOn" />
+          <ScalarProperty Name="CategoryNames" ColumnName="CategoryNames" />
+          <ScalarProperty Name="ProfileImageName" ColumnName="ProfileImageName" />
+          <ScalarProperty Name="ProfileImageNewName" ColumnName="ProfileImageNewName" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="highlights" ColumnName="highlights" />
+          <ScalarProperty Name="Cuisines" ColumnName="Cuisines" />
+          <ScalarProperty Name="Amenities" ColumnName="Amenities" />
+          <ScalarProperty Name="HighlightNames" ColumnName="HighlightNames" />
+          <ScalarProperty Name="CuisinesNames" ColumnName="CuisinesNames" />
+          <ScalarProperty Name="AmenitiesNames" ColumnName="AmenitiesNames" />
+          <ScalarProperty Name="GeoLocationName" ColumnName="GeoLocationName" />
+          <ScalarProperty Name="RestChairProfileId" ColumnName="RestChairProfileId" />
+          <ScalarProperty Name="ATRCTypeId" ColumnName="ATRCTypeId" />
+          <ScalarProperty Name="NewAmenities" ColumnName="NewAmenities" />
+          <ScalarProperty Name="Ratings" ColumnName="Ratings" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetATRCDashboardDetails" FunctionName="juststayDbModel.Store.GetATRCDashboardDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetATRCDashboardDetails">
+          <ScalarProperty Name="TotalBooking" ColumnName="TotalBooking" />
+          <ScalarProperty Name="TotalOnlineBooking" ColumnName="TotalOnlineBooking" />
+          <ScalarProperty Name="TotalOfflineBooking" ColumnName="TotalOfflineBooking" />
+          <ScalarProperty Name="TotalTodayBooking" ColumnName="TotalTodayBooking" />
+          <ScalarProperty Name="TotalBookingAmt" ColumnName="TotalBookingAmt" />
+          <ScalarProperty Name="TotalOnlineBookingAmt" ColumnName="TotalOnlineBookingAmt" />
+          <ScalarProperty Name="TotalPayATRCBookingAmt" ColumnName="TotalPayATRCBookingAmt" />
+          <ScalarProperty Name="TotalATRCCommission" ColumnName="TotalATRCCommission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetATRCTodaysBooking" FunctionName="juststayDbModel.Store.GetATRCTodaysBooking">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetATRCTodaysBooking">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AndroGetATRCProfile" FunctionName="juststayDbModel.Store.AndroGetATRCProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.AndroGetATRCProfile">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="DiningFacility" ColumnName="DiningFacility" />
+          <ScalarProperty Name="DiningFromTime" ColumnName="DiningFromTime" />
+          <ScalarProperty Name="DiningToTime" ColumnName="DiningToTime" />
+          <ScalarProperty Name="ProfileImageName" ColumnName="ProfileImageName" />
+          <ScalarProperty Name="ProfileImageNewName" ColumnName="ProfileImageNewName" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="highlights" ColumnName="highlights" />
+          <ScalarProperty Name="Cuisines" ColumnName="Cuisines" />
+          <ScalarProperty Name="Amenities" ColumnName="Amenities" />
+          <ScalarProperty Name="GeoLocationName" ColumnName="GeoLocationName" />
+          <ScalarProperty Name="ATRCTypeId" ColumnName="ATRCTypeId" />
+          <ScalarProperty Name="DiningFacilityName" ColumnName="DiningFacilityName" />
+          <ScalarProperty Name="CategoryNames" ColumnName="CategoryNames" />
+          <ScalarProperty Name="AmtForFilter" ColumnName="AmtForFilter" />
+          <ScalarProperty Name="AmenitiesNames" ColumnName="AmenitiesNames" />
+          <ScalarProperty Name="BasicPrice" ColumnName="BasicPrice" />
+          <ScalarProperty Name="ATRCType" ColumnName="ATRCType" />
+          <ScalarProperty Name="HighlightNames" ColumnName="HighlightNames" />
+          <ScalarProperty Name="CuisinesNames" ColumnName="CuisinesNames" />
+          <ScalarProperty Name="NewAmenities" ColumnName="NewAmenities" />
+          <ScalarProperty Name="Ratings" ColumnName="Ratings" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetBookingReceipt" FunctionName="juststayDbModel.Store.GetBookingReceipt">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetBookingReceipt">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="BookingNumber" ColumnName="BookingNumber" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="Hour" ColumnName="Hour" />
+          <ScalarProperty Name="Person" ColumnName="Person" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+          <ScalarProperty Name="ATRCNumber" ColumnName="ATRCNumber" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Chairs" ColumnName="Chairs" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustMobile" ColumnName="CustMobile" />
+          <ScalarProperty Name="NetAmt" ColumnName="NetAmt" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="PayMode" ColumnName="PayMode" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="RazorPayId" ColumnName="RazorPayId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllBooking_Report" FunctionName="juststayDbModel.Store.GetAllBooking_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllBooking_Report">
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RestChairBookingId" ColumnName="RestChairBookingId" />
+          <ScalarProperty Name="BookingDetails" ColumnName="BookingDetails" />
+          <ScalarProperty Name="ATRCDetails" ColumnName="ATRCDetails" />
+          <ScalarProperty Name="Chairs" ColumnName="Chairs" />
+          <ScalarProperty Name="CustDetails" ColumnName="CustDetails" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllATRCBills_Report" FunctionName="juststayDbModel.Store.GetAllATRCBills_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="juststayDbModel.GetAllATRCBills_Report">
+          <ScalarProperty Name="ATRCBillId" ColumnName="ATRCBillId" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="BillFrom" ColumnName="BillFrom" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="PaymentBy" ColumnName="PaymentBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ATRCName" ColumnName="ATRCName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Ratings">
+      <EntityTypeMapping TypeName="juststayDbModel.Rating">
+        <MappingFragment StoreEntitySet="Rating">
+          <ScalarProperty Name="InsertedOn" ColumnName="InsertedOn" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Star" ColumnName="Star" />
+          <ScalarProperty Name="ATRCId" ColumnName="ATRCId" />
+          <ScalarProperty Name="RatingId" ColumnName="RatingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

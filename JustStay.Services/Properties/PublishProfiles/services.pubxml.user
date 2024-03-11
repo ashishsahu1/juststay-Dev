@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Data\E\Juststay-Latest\publish\20-2-2021\services</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AndroATRCService.svc">
+      <publishTime>12/09/2019 23:01:44</publishTime>
+    </File>
+    <File Include="AndroCommonService.svc">
+      <publishTime>12/18/2019 12:14:46</publishTime>
+    </File>
+    <File Include="AndroMastersService.svc">
+      <publishTime>12/19/2019 11:12:36</publishTime>
+    </File>
+    <File Include="AndroRestChairBookingService.svc">
+      <publishTime>01/29/2020 20:49:02</publishTime>
+    </File>
+    <File Include="AndroUserService.svc">
+      <publishTime>12/10/2019 21:57:58</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCBookingService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="ATRCService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="BannerService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="BannerService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>02/20/2021 20:05:32</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>02/20/2021 20:05:32</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>06/18/2018 13:00:14</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.pdb">
+      <publishTime>06/18/2018 13:00:14</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.dll">
+      <publishTime>02/18/2021 18:19:51</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.dll.config">
+      <publishTime>02/17/2020 15:28:02</publishTime>
+    </File>
+    <File Include="bin/JustStay.CommonHub.pdb">
+      <publishTime>02/18/2021 18:19:51</publishTime>
+    </File>
+    <File Include="bin/JustStay.Repo.dll">
+      <publishTime>02/06/2021 19:39:29</publishTime>
+    </File>
+    <File Include="bin/JustStay.Repo.dll.config">
+      <publishTime>12/28/2020 19:26:01</publishTime>
+    </File>
+    <File Include="bin/JustStay.Repo.pdb">
+      <publishTime>02/06/2021 19:39:29</publishTime>
+    </File>
+    <File Include="bin/JustStay.Services.dll">
+      <publishTime>02/20/2021 20:05:26</publishTime>
+    </File>
+    <File Include="bin/JustStay.Services.pdb">
+      <publishTime>02/20/2021 20:05:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/30/2016 16:07:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/07/2016 11:45:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/06/2016 15:15:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/07/2016 11:49:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/06/2016 15:09:52</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/Razorpay.dll">
+      <publishTime>11/09/2018 11:43:46</publishTime>
+    </File>
+    <File Include="bin/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>11/05/2016 04:57:14</publishTime>
+    </File>
+    <File Include="bin/System.Security.Cryptography.Encoding.dll">
+      <publishTime>11/05/2016 04:57:08</publishTime>
+    </File>
+    <File Include="bin/System.Security.Cryptography.Primitives.dll">
+      <publishTime>11/05/2016 04:57:18</publishTime>
+    </File>
+    <File Include="bin/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>11/05/2016 04:57:18</publishTime>
+    </File>
+    <File Include="bin/System.ValueTuple.dll">
+      <publishTime>12/04/2020 17:31:47</publishTime>
+    </File>
+    <File Include="BlogService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="BlogService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="CancellationPolicyService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="CancellationPolicyService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="CityService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="CityService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="CommonService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="CommonService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="CompanyService.svc">
+      <publishTime>07/23/2020 18:15:18</publishTime>
+    </File>
+    <File Include="CustomerService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="CustomerService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="DashboardService.svc">
+      <publishTime>08/06/2020 17:58:50</publishTime>
+    </File>
+    <File Include="ErrorLogService.svc">
+      <publishTime>08/27/2020 17:13:46</publishTime>
+    </File>
+    <File Include="FAQService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="FAQService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="LocationService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="LocationService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="MastersService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="MastersService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="MessageService.asmx">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="MessageService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="OfferService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/11/2020 18:51:06</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>02/20/2021 20:05:27</publishTime>
+    </File>
+    <File Include="RCPaymentService.svc">
+      <publishTime>07/11/2020 18:16:12</publishTime>
+    </File>
+    <File Include="RCRefundService.svc">
+      <publishTime>07/17/2020 17:41:14</publishTime>
+    </File>
+    <File Include="ReportService.svc">
+      <publishTime>08/28/2020 16:25:04</publishTime>
+    </File>
+    <File Include="RestChairBookingService.svc">
+      <publishTime>01/03/2020 18:08:38</publishTime>
+    </File>
+    <File Include="RestChairProfileService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="TaxService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="UserService.svc">
+      <publishTime>12/08/2019 12:20:04</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/18/2021 16:12:46</publishTime>
+    </File>
+    <File Include="web_messages.svclog">
+      <publishTime>12/27/2019 23:54:54</publishTime>
+    </File>
+    <File Include="web_tracelog.svclog">
+      <publishTime>12/27/2019 23:54:54</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

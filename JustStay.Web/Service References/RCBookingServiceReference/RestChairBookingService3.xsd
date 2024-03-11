@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/RestChairBookingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="RCBDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="BookingDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BookingNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      <xs:element minOccurs="0" name="FromTime" type="ser:duration" />
+      <xs:element minOccurs="0" name="Hour" type="xs:int" />
+      <xs:element minOccurs="0" name="IsCancel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRefund" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Person" type="xs:int" />
+      <xs:element minOccurs="0" name="RestChairBookingId" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToTime" type="ser:duration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RCBDto" nillable="true" type="tns:RCBDto" />
+  <xs:complexType name="RCBDDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChairId" type="xs:int" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RCBDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="RestChairBookingId" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RCBDDto" nillable="true" type="tns:RCBDDto" />
+  <xs:complexType name="RCPDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CGST" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Discount" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MerchantTxnId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NetAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OTP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RCPaymentId" type="xs:int" />
+      <xs:element minOccurs="0" name="RestChairBookingId" type="xs:int" />
+      <xs:element minOccurs="0" name="SGST" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="order_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="razorpay_payment_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="razorpay_signature" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RCPDto" nillable="true" type="tns:RCPDto" />
+</xs:schema>

@@ -1,0 +1,1124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F97CA9F-FA45-4C19-A525-2947491134C8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JustStay.Web</RootNamespace>
+    <AssemblyName>JustStay.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.11.24.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.24\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\DarpanComputers\Docs\dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\..\..\DarpanComputers\Docs\dll\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="JustStay.CommonHub, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JustStay.CommonHub\bin\Debug\JustStay.CommonHub.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Razorpay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JustStayWeb\bin\Razorpay.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="allbooking.aspx" />
+    <Content Include="Aminities\10_Breakfast Place.png" />
+    <Content Include="Aminities\11_Clean Toilet Bathroom.png" />
+    <Content Include="Aminities\2_Bar.png" />
+    <Content Include="Aminities\3_Breakfast Place.png" />
+    <Content Include="Aminities\4_Clean Toilet.png" />
+    <Content Include="Aminities\5_Daily Newspaper.png" />
+    <Content Include="Aminities\6_Non-Foldable Rest-Chair.png" />
+    <Content Include="Aminities\7_Icon Foldable Rest-Chair.png" />
+    <Content Include="Aminities\9_CCTV.png" />
+    <Content Include="Andro-aboutus.aspx" />
+    <Content Include="Andro-Faq.aspx" />
+    <Content Include="Antro-PrivacyPolicy.aspx" />
+    <Content Include="atrc.aspx" />
+    <Content Include="ATRCImages\1_P_trupti-atrc.jpg" />
+    <Content Include="ATRCImages\2_P_Shree-Agri-Profile.jpg" />
+    <Content Include="ATRCImages\2_Shree-Agri-2.jpg" />
+    <Content Include="ATRCImages\2_Shree-Agri-3.jpg" />
+    <Content Include="ATRCImages\2_Shree-Agri-4.jpg" />
+    <Content Include="ATRCImages\2_Shree-Agri-Profile.jpg" />
+    <Content Include="ATRCImages\3_P_RK4profile.jpg" />
+    <Content Include="ATRCImages\3_RK2.jpg" />
+    <Content Include="ATRCImages\3_RK3.jpg" />
+    <Content Include="ATRCImages\4_4_happyin-SD.jpg" />
+    <Content Include="ATRCImages\4_happIn-Profile.jpg" />
+    <Content Include="ATRCImages\4_happyin-2.jpg" />
+    <Content Include="ATRCImages\4_happyin-3.jpg" />
+    <Content Include="ATRCImages\4_P_happIn-Profile.jpg" />
+    <Content Include="blog.aspx" />
+    <Content Include="BlogImages\1_Shree-Agri-3.jpg" />
+    <Content Include="BlogImages\2_2.jpg" />
+    <Content Include="book.aspx" />
+    <Content Include="cancelbooking.aspx" />
+    <Content Include="changepassword.aspx" />
+    <Content Include="commingsoon.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="css\all.min.css" />
+    <Content Include="css\fonticons.css" />
+    <Content Include="css\gijgo.min.css" />
+    <Content Include="css\receipt.css" />
+    <Content Include="css\slick.min.css" />
+    <Content Include="css\slicknav.min.css" />
+    <Content Include="edit-profile.aspx" />
+    <Content Include="EV-Home.aspx" />
+    <Content Include="faq.aspx" />
+    <Content Include="flaticons\flaticons-link.css" />
+    <Content Include="flaticons\font2\flaticon.css" />
+    <Content Include="flaticons\font2\flaticon.html" />
+    <Content Include="flaticons\font2\Flaticon2.svg" />
+    <Content Include="flaticons\font\flaticon.css" />
+    <Content Include="flaticons\font\flaticon.html" />
+    <Content Include="flaticons\font\Flaticon.svg" />
+    <Content Include="Forgotpassword.aspx" />
+    <Content Include="fullblog.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HTMLTemplates\CustomerRegistration.html" />
+    <Content Include="HTMLTemplates\ForgotPwdMail.html" />
+    <Content Include="HTMLTemplates\PayAtATRC.html" />
+    <Content Include="HTMLTemplates\Support.html" />
+    <Content Include="HTMLTemplates\ThankYouSupport.html" />
+    <Content Include="images\android.jpg" />
+    <Content Include="images\atrc-header-mob.jpg" />
+    <Content Include="images\btnCurrentLocation.png" />
+    <Content Include="images\btnNearme.png" />
+    <Content Include="images\EV-icon.png" />
+    <Content Include="images\footer-upper.png" />
+    <Content Include="images\gettouch.jpg" />
+    <Content Include="images\header1.jpg" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\innerbanner.jpg" />
+    <Content Include="images\innerbanner_new.jpg" />
+    <Content Include="images\join-banner-1.jpg" />
+    <Content Include="images\join-banner-4.jpg" />
+    <Content Include="images\joinus-banner-2.jpg" />
+    <Content Include="images\joinus-banner-3.jpg" />
+    <Content Include="images\joinus-form.jpg" />
+    <Content Include="images\left-arrow-new.png" />
+    <Content Include="images\left-arrow.png" />
+    <Content Include="images\loader.jpg" />
+    <Content Include="images\login.jpg" />
+    <Content Include="images\nonveg.png" />
+    <Content Include="images\owner.jpg" />
+    <Content Include="images\profile img.jpg" />
+    <Content Include="images\razorpay.png" />
+    <Content Include="images\reat hourly basis.png" />
+    <Content Include="images\rest-icon-10.png" />
+    <Content Include="images\restroom-icon-10.png" />
+    <Content Include="images\right-arrow.png" />
+    <Content Include="images\success.png" />
+    <Content Include="images\veg.png" />
+    <Content Include="images\vid.jpg" />
+    <Content Include="joinus.aspx" />
+    <Content Include="js\gijgo.min.js" />
+    <Content Include="js\isotope.pkgd.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\slick.min.js" />
+    <Content Include="mypayment.aspx" />
+    <Content Include="myprofile.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="payment.aspx" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.AttachmentDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.SettingDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.SMSTemplateDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.RatingDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.ATRCDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.ATRCImageDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.BlogCatgoryDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.BlogDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.UserDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.AmenityDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.CuisineDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.HighlightDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.RoomLabelDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.TypeDto.datasource" />
+    <Content Include="flaticons\font\Flaticon.eot" />
+    <Content Include="flaticons\font\Flaticon.ttf" />
+    <Content Include="flaticons\font\Flaticon.woff" />
+    <Content Include="flaticons\font\_flaticon.scss" />
+    <Content Include="flaticons\font2\Flaticon2.eot" />
+    <Content Include="flaticons\font2\Flaticon2.ttf" />
+    <Content Include="flaticons\font2\Flaticon2.woff" />
+    <Content Include="flaticons\font2\_flaticon.scss" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.FAQDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.CancellationPolicyDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.PrivacyPolicyDto.datasource" />
+    <Content Include="Properties\DataSources\JustStay.Services.DTO.CompanyDto.datasource" />
+    <None Include="Service References\CancellationPolicyServiceReference\CancellationPolicyService.disco" />
+    <None Include="Service References\CancellationPolicyServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CancellationPolicyServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CancellationPolicyServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Receipt.aspx" />
+    <None Include="Service References\CompanyServiceReference\CompanyService.disco" />
+    <None Include="Service References\CompanyServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CompanyServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CompanyServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetAllBooking.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetAllBookingByCustomerId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetAllCustomerByATRC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetAllPaymentByCustomerId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetBookingDetailsByBookingId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetBookingForCancelByCustomerId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetCustomerBookingsByATRC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetRestChairBookingByATRC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CustomerServiceReference\JustStay.Web.CustomerServiceReference.GetAllCustomersDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCBookingServiceReference\JustStay.Web.RCBookingServiceReference.GetBookingReceipt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CompanyServiceReference\CompanyService.wsdl" />
+    <None Include="Service References\CompanyServiceReference\CompanyService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CompanyServiceReference\CompanyService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CompanyServiceReference\CompanyService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCBookingServiceReference\RestChairBookingService.disco" />
+    <None Include="Service References\RCBookingServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\RCBookingServiceReference\configuration.svcinfo" />
+    <None Include="Service References\RCBookingServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\RCRefundServiceReference\JustStay.Web.RCRefundServiceReference.GetAllCancelledBooking.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RCRefundServiceReference\JustStay.Web.RCRefundServiceReference.GetAllRefunds.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\RCRefundServiceReference\RCRefundService.disco" />
+    <None Include="Service References\RCRefundServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\RCRefundServiceReference\configuration.svcinfo" />
+    <None Include="Service References\RCRefundServiceReference\RCRefundService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCRefundServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <None Include="Properties\PublishProfiles\juststay-web.pubxml" />
+    <None Include="Service References\CancellationPolicyServiceReference\CancellationPolicyService.wsdl" />
+    <None Include="Service References\CancellationPolicyServiceReference\CancellationPolicyService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CancellationPolicyServiceReference\CancellationPolicyService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CancellationPolicyServiceReference\CancellationPolicyService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FAQServiceReference\FAQService.disco" />
+    <None Include="Service References\FAQServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\FAQServiceReference\configuration.svcinfo" />
+    <None Include="Service References\FAQServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\MessageServiceReference\JustStay.Web.MessageServiceReference.InboxMail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MessageServiceReference\JustStay.Web.MessageServiceReference.MessgeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MessageServiceReference\JustStay.Web.MessageServiceReference.SupportRequestDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\MessageServiceReference\MessageService.disco" />
+    <None Include="Service References\MessageServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\MessageServiceReference\configuration.svcinfo" />
+    <None Include="Service References\MessageServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Just Stay Survey Document.pdf" />
+    <None Include="Service References\FAQServiceReference\FAQService.wsdl" />
+    <None Include="Service References\FAQServiceReference\FAQService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FAQServiceReference\FAQService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FAQServiceReference\FAQService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceReference\MessageService.wsdl" />
+    <None Include="Service References\MessageServiceReference\MessageService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceReference\MessageService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceReference\MessageService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceReference\MessageService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="userMenuBar.ascx" />
+    <Content Include="view-booking.aspx" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+    <None Include="Service References\ATRCServiceReference\ATRCService.disco" />
+    <None Include="Service References\ATRCServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\ATRCServiceReference\configuration.svcinfo" />
+    <Content Include="privacypolicy.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="Service References\ATRCServiceReference\JustStay.Web.ATRCServiceReference.ATRCCenter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ATRCServiceReference\JustStay.Web.ATRCServiceReference.ATRCProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ATRCServiceReference\JustStay.Web.ATRCServiceReference.GetRestChairByAtrcId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ATRCServiceReference\JustStay.Web.ATRCServiceReference.GetRestChairbyId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ATRCServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ErrorLogServiceReference\ErrorLogService.wsdl" />
+    <None Include="Service References\ErrorLogServiceReference\ErrorLogService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ErrorLogServiceReference\ErrorLogService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ErrorLogServiceReference\ErrorLogService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterServiceReference\MastersService.disco" />
+    <None Include="Service References\MasterServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\MasterServiceReference\configuration.svcinfo" />
+    <None Include="Service References\MasterServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ErrorLogServiceReference\ErrorLogService.disco" />
+    <None Include="Service References\ErrorLogServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\ErrorLogServiceReference\configuration.svcinfo" />
+    <None Include="Service References\ErrorLogServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SignIn.aspx" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="Site1.Master" />
+    <None Include="Service References\ATRCServiceReference\ATRCService.wsdl" />
+    <None Include="Service References\ATRCServiceReference\ATRCService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ATRCServiceReference\ATRCService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ATRCServiceReference\ATRCService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ATRCServiceReference\ATRCService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ATRCServiceReference\ATRCService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonServiceReference\CommonService.wsdl" />
+    <None Include="Service References\CommonServiceReference\CommonService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonServiceReference\CommonService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonServiceReference\CommonService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterServiceReference\MastersService.wsdl" />
+    <None Include="Service References\MasterServiceReference\MastersService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterServiceReference\MastersService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterServiceReference\MastersService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCBookingServiceReference\RestChairBookingService.wsdl" />
+    <None Include="Service References\RCBookingServiceReference\RestChairBookingService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCBookingServiceReference\RestChairBookingService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCBookingServiceReference\RestChairBookingService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCBookingServiceReference\RestChairBookingService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCRefundServiceReference\RCRefundService.wsdl" />
+    <None Include="Service References\RCRefundServiceReference\RCRefundService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCRefundServiceReference\RCRefundService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RCRefundServiceReference\RCRefundService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\materialize.css" />
+    <Content Include="css\mob.css" />
+    <Content Include="css\radio.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="home.aspx" />
+    <Content Include="images\1.png" />
+    <Content Include="images\2.png" />
+    <Content Include="images\3.png" />
+    <Content Include="images\android.png" />
+    <Content Include="images\apple.png" />
+    <Content Include="images\band.png" />
+    <Content Include="images\band1.png" />
+    <Content Include="images\border.png" />
+    <Content Include="images\clock.png" />
+    <Content Include="images\cloud.png" />
+    <Content Include="images\flag.png" />
+    <Content Include="images\flag1.png" />
+    <Content Include="images\gal-arr.png" />
+    <Content Include="images\hci1.png" />
+    <Content Include="images\icon\1.png" />
+    <Content Include="images\icon\10.png" />
+    <Content Include="images\icon\11.png" />
+    <Content Include="images\icon\12.png" />
+    <Content Include="images\icon\13.png" />
+    <Content Include="images\icon\14.png" />
+    <Content Include="images\icon\15.png" />
+    <Content Include="images\icon\16.png" />
+    <Content Include="images\icon\17.png" />
+    <Content Include="images\icon\18.png" />
+    <Content Include="images\icon\19.png" />
+    <Content Include="images\icon\2.png" />
+    <Content Include="images\icon\20.png" />
+    <Content Include="images\icon\21.png" />
+    <Content Include="images\icon\22.png" />
+    <Content Include="images\icon\23.png" />
+    <Content Include="images\icon\24.png" />
+    <Content Include="images\icon\25.png" />
+    <Content Include="images\icon\26.png" />
+    <Content Include="images\icon\27.png" />
+    <Content Include="images\icon\28.png" />
+    <Content Include="images\icon\29.png" />
+    <Content Include="images\icon\3.png" />
+    <Content Include="images\icon\30.png" />
+    <Content Include="images\icon\31.png" />
+    <Content Include="images\icon\4.png" />
+    <Content Include="images\icon\5.png" />
+    <Content Include="images\icon\6.png" />
+    <Content Include="images\icon\7.png" />
+    <Content Include="images\icon\8.png" />
+    <Content Include="images\icon\9.png" />
+    <Content Include="images\icon\a1.png" />
+    <Content Include="images\icon\a10.png" />
+    <Content Include="images\icon\a11.png" />
+    <Content Include="images\icon\a12.png" />
+    <Content Include="images\icon\a13.png" />
+    <Content Include="images\icon\a14.png" />
+    <Content Include="images\icon\a15.png" />
+    <Content Include="images\icon\a16.png" />
+    <Content Include="images\icon\a17.png" />
+    <Content Include="images\icon\a18.png" />
+    <Content Include="images\icon\a19.png" />
+    <Content Include="images\icon\a2.png" />
+    <Content Include="images\icon\a3.png" />
+    <Content Include="images\icon\a4.png" />
+    <Content Include="images\icon\a5.png" />
+    <Content Include="images\icon\a6.png" />
+    <Content Include="images\icon\a7.png" />
+    <Content Include="images\icon\a8.png" />
+    <Content Include="images\icon\a9.png" />
+    <Content Include="images\icon\db-arrow.png" />
+    <Content Include="images\icon\db1.png" />
+    <Content Include="images\icon\db2.png" />
+    <Content Include="images\icon\db3.png" />
+    <Content Include="images\icon\db4.png" />
+    <Content Include="images\icon\dbl1.png" />
+    <Content Include="images\icon\dbl2.png" />
+    <Content Include="images\icon\dbl3.png" />
+    <Content Include="images\icon\dbl4.png" />
+    <Content Include="images\icon\dbl5.png" />
+    <Content Include="images\icon\dbl6.png" />
+    <Content Include="images\icon\dbl7.png" />
+    <Content Include="images\icon\dbl8.png" />
+    <Content Include="images\icon\dbl9.png" />
+    <Content Include="images\icon\dis1.png" />
+    <Content Include="images\icon\dis2.png" />
+    <Content Include="images\icon\dis3.png" />
+    <Content Include="images\icon\dis4.png" />
+    <Content Include="images\icon\dis5.png" />
+    <Content Include="images\icon\search.png" />
+    <Content Include="images\info.png" />
+    <Content Include="images\list-p-bg.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\map.png" />
+    <Content Include="images\newlogo.jpg" />
+    <Content Include="images\offer.png" />
+    <Content Include="images\points.png" />
+    <Content Include="images\price.png" />
+    <Content Include="images\Private-Guide.png" />
+    <Content Include="images\ribbon_.png" />
+    <Content Include="images\searchicon.png" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\tips1.png" />
+    <Content Include="images\tips2.png" />
+    <Content Include="images\tips3.png" />
+    <Content Include="images\umbrella.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\jquery-latest.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\mail.js" />
+    <Content Include="js\materialize.min.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="BusinessLogic\ValidateData.ashx" />
+    <None Include="Service References\BlogServiceReference\BlogService.wsdl" />
+    <None Include="Service References\BlogServiceReference\BlogService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BlogServiceReference\BlogService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BlogServiceReference\BlogService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BlogServiceReference\BlogService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\BlogServiceReference\JustStay.Web.BlogServiceReference.BlogWithDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CommonServiceReference\CommonService.disco" />
+    <None Include="Service References\CommonServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CommonServiceReference\configuration.svcinfo" />
+    <None Include="Service References\BlogServiceReference\BlogService.disco" />
+    <None Include="Service References\BlogServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\BlogServiceReference\configuration.svcinfo" />
+    <None Include="Service References\BlogServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\CommonServiceReference\JustStay.Web.CommonServiceReference.ATRCCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonServiceReference\JustStay.Web.CommonServiceReference.ATRCSubCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonServiceReference\JustStay.Web.CommonServiceReference.ATRCType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonServiceReference\JustStay.Web.CommonServiceReference.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonServiceReference\JustStay.Web.CommonServiceReference.Localities.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonServiceReference\JustStay.Web.CommonServiceReference.Location.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CommonServiceReference\JustStay.Web.CommonServiceReference.State.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CommonServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CustomerServiceReference\CustomerService.disco" />
+    <None Include="Service References\CustomerServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CustomerServiceReference\configuration.svcinfo" />
+    <Content Include="Service References\CustomerServiceReference\JustStay.Web.CustomerServiceReference.CustomerDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CustomerServiceReference\JustStay.Web.CustomerServiceReference.CustomerRequestDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CustomerServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserServiceReference\UserService.disco" />
+    <None Include="Service References\UserServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\UserServiceReference\configuration.svcinfo" />
+    <None Include="Service References\UserServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="termsconditions.aspx" />
+    <Content Include="Web.config" />
+    <None Include="Service References\CommonServiceReference\CommonService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerServiceReference\CustomerService.wsdl" />
+    <None Include="Service References\CustomerServiceReference\CustomerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerServiceReference\CustomerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerServiceReference\CustomerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerServiceReference\CustomerService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserService.wsdl" />
+    <None Include="Service References\UserServiceReference\UserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allbooking.aspx.cs">
+      <DependentUpon>allbooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allbooking.aspx.designer.cs">
+      <DependentUpon>allbooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Andro-aboutus.aspx.cs">
+      <DependentUpon>Andro-aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Andro-aboutus.aspx.designer.cs">
+      <DependentUpon>Andro-aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Andro-Faq.aspx.cs">
+      <DependentUpon>Andro-Faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Andro-Faq.aspx.designer.cs">
+      <DependentUpon>Andro-Faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Antro-PrivacyPolicy.aspx.cs">
+      <DependentUpon>Antro-PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Antro-PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>Antro-PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="atrc.aspx.cs">
+      <DependentUpon>atrc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="atrc.aspx.designer.cs">
+      <DependentUpon>atrc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog.aspx.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blog.aspx.designer.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="book.aspx.cs">
+      <DependentUpon>book.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="book.aspx.designer.cs">
+      <DependentUpon>book.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogic\Authenticate.cs" />
+    <Compile Include="BusinessLogic\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusinessLogic\Common.cs" />
+    <Compile Include="BusinessLogic\GoogleToken.cs" />
+    <Compile Include="BusinessLogic\RC4.cs" />
+    <Compile Include="BusinessLogic\searchDto.cs" />
+    <Compile Include="BusinessLogic\ValidateData.ashx.cs">
+      <DependentUpon>ValidateData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="cancelbooking.aspx.cs">
+      <DependentUpon>cancelbooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cancelbooking.aspx.designer.cs">
+      <DependentUpon>cancelbooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commingsoon.aspx.cs">
+      <DependentUpon>commingsoon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commingsoon.aspx.designer.cs">
+      <DependentUpon>commingsoon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit-profile.aspx.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit-profile.aspx.designer.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EV-Home.aspx.cs">
+      <DependentUpon>EV-Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EV-Home.aspx.designer.cs">
+      <DependentUpon>EV-Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="faq.aspx.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="faq.aspx.designer.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forgotpassword.aspx.cs">
+      <DependentUpon>Forgotpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forgotpassword.aspx.designer.cs">
+      <DependentUpon>Forgotpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fullblog.aspx.cs">
+      <DependentUpon>fullblog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fullblog.aspx.designer.cs">
+      <DependentUpon>fullblog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="joinus.aspx.cs">
+      <DependentUpon>joinus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="joinus.aspx.designer.cs">
+      <DependentUpon>joinus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mypayment.aspx.cs">
+      <DependentUpon>mypayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mypayment.aspx.designer.cs">
+      <DependentUpon>mypayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myprofile.aspx.cs">
+      <DependentUpon>myprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myprofile.aspx.designer.cs">
+      <DependentUpon>myprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privacypolicy.aspx.cs">
+      <DependentUpon>privacypolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacypolicy.aspx.designer.cs">
+      <DependentUpon>privacypolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ATRCServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BlogServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CancellationPolicyServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CommonServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CompanyServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustomerServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ErrorLogServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FAQServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MasterServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MessageServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RCBookingServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RCRefundServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="termsconditions.aspx.cs">
+      <DependentUpon>termsconditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="termsconditions.aspx.designer.cs">
+      <DependentUpon>termsconditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userMenuBar.ascx.cs">
+      <DependentUpon>userMenuBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userMenuBar.ascx.designer.cs">
+      <DependentUpon>userMenuBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="view-booking.aspx.cs">
+      <DependentUpon>view-booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-booking.aspx.designer.cs">
+      <DependentUpon>view-booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ATRCServiceReference\" />
+    <WCFMetadataStorage Include="Service References\BlogServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CancellationPolicyServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CommonServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CompanyServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CustomerServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ErrorLogServiceReference\" />
+    <WCFMetadataStorage Include="Service References\FAQServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MasterServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MessageServiceReference\" />
+    <WCFMetadataStorage Include="Service References\RCBookingServiceReference\" />
+    <WCFMetadataStorage Include="Service References\RCRefundServiceReference\" />
+    <WCFMetadataStorage Include="Service References\UserServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="logbackup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JustStay.Services\JustStay.Services.csproj">
+      <Project>{1531532A-5D98-4BDD-8401-F1BF67C6A83D}</Project>
+      <Name>JustStay.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54943</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54943/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1531532A-5D98-4BDD-8401-F1BF67C6A83D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JustStay.Services</RootNamespace>
+    <AssemblyName>JustStay.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JustStay.Repo\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\JustStay.Repo\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="JustStay.CommonHub">
+      <HintPath>..\JustStay.CommonHub\bin\Debug\JustStay.CommonHub.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Razorpay">
+      <HintPath>..\JustStayWeb\bin\Razorpay.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net46\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net46\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AndroATRCService.svc" />
+    <Content Include="AndroCommonService.svc" />
+    <Content Include="AndroMastersService.svc" />
+    <Content Include="AndroRestChairBookingService.svc" />
+    <Content Include="AndroUserService.svc" />
+    <Content Include="ATRCBookingService.svc" />
+    <Content Include="ATRCService.svc" />
+    <Content Include="BannerService.svc" />
+    <Content Include="BlogService.svc" />
+    <Content Include="CancellationPolicyService.svc" />
+    <Content Include="CityService.svc" />
+    <Content Include="CommonService.svc" />
+    <Content Include="CompanyService.svc" />
+    <Content Include="CustomerService.svc" />
+    <Content Include="DashboardService.svc" />
+    <Content Include="ErrorLogService.svc" />
+    <Content Include="FAQService.svc" />
+    <Content Include="Global.asax" />
+    <Content Include="LocationService.svc" />
+    <Content Include="MastersService.svc" />
+    <Content Include="MessageService.svc" />
+    <Content Include="OfferService.svc" />
+    <Content Include="RCPaymentService.svc" />
+    <Content Include="RCRefundService.svc" />
+    <Content Include="ReportService.svc" />
+    <Content Include="RestChairBookingService.svc" />
+    <Content Include="RestChairProfileService.svc" />
+    <Content Include="TaxService.svc" />
+    <Content Include="UserService.svc" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AndroATRCService.svc.cs">
+      <DependentUpon>AndroATRCService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="AndroCommonService.svc.cs">
+      <DependentUpon>AndroCommonService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="AndroMastersService.svc.cs">
+      <DependentUpon>AndroMastersService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="AndroRestChairBookingService.svc.cs">
+      <DependentUpon>AndroRestChairBookingService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="AndroUserService.svc.cs">
+      <DependentUpon>AndroUserService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCBookingService.svc.cs">
+      <DependentUpon>ATRCBookingService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCService.svc.cs">
+      <DependentUpon>ATRCService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCMapper.cs" />
+    <Compile Include="BannerService.svc.cs">
+      <DependentUpon>BannerService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="BlogService.svc.cs">
+      <DependentUpon>BlogService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CancellationPolicyService.svc.cs">
+      <DependentUpon>CancellationPolicyService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CityService.svc.cs">
+      <DependentUpon>CityService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CommonService.svc.cs">
+      <DependentUpon>CommonService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyService.svc.cs">
+      <DependentUpon>CompanyService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerService.svc.cs">
+      <DependentUpon>CustomerService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardService.svc.cs">
+      <DependentUpon>DashboardService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\AmenityDto.cs" />
+    <Compile Include="DTO\ATRCAccountDto.cs" />
+    <Compile Include="DTO\ATRCAmenityDto.cs" />
+    <Compile Include="DTO\atrcbillDto.cs" />
+    <Compile Include="DTO\ATRCBookingDto.cs" />
+    <Compile Include="DTO\ATRCChairDto.cs" />
+    <Compile Include="DTO\ATRCDto.cs" />
+    <Compile Include="DTO\ATRCImageDto.cs" />
+    <Compile Include="DTO\ATRCRestChairDTO.cs" />
+    <Compile Include="DTO\AttachmentDto.cs" />
+    <Compile Include="DTO\BannerDto.cs" />
+    <Compile Include="DTO\BlogDto.cs" />
+    <Compile Include="DTO\CancellationPolicyDto.cs" />
+    <Compile Include="DTO\CityDto.cs" />
+    <Compile Include="DTO\CompanyDto.cs" />
+    <Compile Include="DTO\CuisineDto.cs" />
+    <Compile Include="DTO\CustomerDto.cs" />
+    <Compile Include="DTO\CustomerRequestDTO.cs" />
+    <Compile Include="DTO\ErrorLogDto.cs" />
+    <Compile Include="DTO\FAQDto.cs" />
+    <Compile Include="DTO\HighlightDto.cs" />
+    <Compile Include="DTO\jsbillDto.cs" />
+    <Compile Include="DTO\LocationDto.cs" />
+    <Compile Include="DTO\MessageDto.cs" />
+    <Compile Include="DTO\MessageRecipientDto.cs" />
+    <Compile Include="DTO\OfferDto.cs" />
+    <Compile Include="DTO\PrivacyPolicyDto.cs" />
+    <Compile Include="DTO\RatingDto.cs" />
+    <Compile Include="DTO\RCBDDto.cs" />
+    <Compile Include="DTO\RCBDto.cs" />
+    <Compile Include="DTO\RCPDto.cs" />
+    <Compile Include="DTO\RefundDto.cs" />
+    <Compile Include="DTO\RestChairProfileDto.cs" />
+    <Compile Include="DTO\RoomLabelDto.cs" />
+    <Compile Include="DTO\SettingDto.cs" />
+    <Compile Include="DTO\SMSTemplateDto.cs" />
+    <Compile Include="DTO\TaxDto.cs" />
+    <Compile Include="DTO\TypeDto.cs" />
+    <Compile Include="DTO\UserDto.cs" />
+    <Compile Include="ErrorLogService.svc.cs">
+      <DependentUpon>ErrorLogService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="FAQService.svc.cs">
+      <DependentUpon>FAQService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IATRCBookingService.cs" />
+    <Compile Include="IATRCService.cs" />
+    <Compile Include="IBannerService.cs" />
+    <Compile Include="IBlogService.cs" />
+    <Compile Include="ICancellationPolicyService.cs" />
+    <Compile Include="ICityService.cs" />
+    <Compile Include="ICommonService.cs" />
+    <Compile Include="ICompanyService.cs" />
+    <Compile Include="ICustomerService.cs" />
+    <Compile Include="IDashboardService.cs" />
+    <Compile Include="IErrorLogService.cs" />
+    <Compile Include="IFAQService.cs" />
+    <Compile Include="ILocationService.cs" />
+    <Compile Include="IMastersService.cs" />
+    <Compile Include="IMessageService.cs" />
+    <Compile Include="IOfferService.cs" />
+    <Compile Include="IRCPaymentService.cs" />
+    <Compile Include="IRCRefundService.cs" />
+    <Compile Include="IReportService.cs" />
+    <Compile Include="IRestChairBookingService.cs" />
+    <Compile Include="IRestChairProfileService.cs" />
+    <Compile Include="ITaxService.cs" />
+    <Compile Include="IUserService.cs" />
+    <Compile Include="LocationService.svc.cs">
+      <DependentUpon>LocationService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="MastersService.svc.cs">
+      <DependentUpon>MastersService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="MessageService.svc.cs">
+      <DependentUpon>MessageService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="OfferService.svc.cs">
+      <DependentUpon>OfferService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RCPaymentService.svc.cs">
+      <DependentUpon>RCPaymentService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="RCRefundService.svc.cs">
+      <DependentUpon>RCRefundService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ReportService.svc.cs">
+      <DependentUpon>ReportService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="RestChairBookingService.svc.cs">
+      <DependentUpon>RestChairBookingService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="RestChairProfileService.svc.cs">
+      <DependentUpon>RestChairProfileService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TaxService.svc.cs">
+      <DependentUpon>TaxService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="UserService.svc.cs">
+      <DependentUpon>UserService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\services.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="web_messages.svclog" />
+    <Content Include="web_tracelog.svclog" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JustStay.Repo\JustStay.Repo.csproj">
+      <Project>{23a7fc08-9b8d-4031-ab39-60f89f61d970}</Project>
+      <Name>JustStay.Repo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56178</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56178/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RestChairBookingService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56178/RestChairBookingService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56178/RestChairBookingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56178/RestChairBookingService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+      <xsd:import schemaLocation="http://localhost:56178/RestChairBookingService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRestChairBookingService_InsertRestChairBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRestChairBooking" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_InsertRestChairBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRestChairBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_InsertRestChair_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRestChair" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_InsertRestChair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRestChairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_InsertRestChairPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRestChairPayment" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_InsertRestChairPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRestChairPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetBookingDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookingDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetBookingDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookingDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetRestChairBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestChairBooking" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetRestChairBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestChairBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetRestChairBookingByATRC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestChairBookingByATRC" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetRestChairBookingByATRC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestChairBookingByATRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetAllCustomerByATRC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCustomerByATRC" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetAllCustomerByATRC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCustomerByATRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetCustomerBookingsByATRC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerBookingsByATRC" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetCustomerBookingsByATRC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerBookingsByATRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdatePaymentSuccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentSuccess" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdatePaymentSuccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentSuccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetAllPaymentByCustomerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPaymentByCustomerId" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetAllPaymentByCustomerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPaymentByCustomerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetAllBookingByCustomerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBookingByCustomerId" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetAllBookingByCustomerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBookingByCustomerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdateIsCancelBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIsCancelBooking" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdateIsCancelBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIsCancelBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdateIsDeleted_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIsDeleted" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdateIsDeleted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIsDeletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetBookingForCancelByCustomerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookingForCancelByCustomerId" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_GetBookingForCancelByCustomerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookingForCancelByCustomerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdatePayStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePayStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRestChairBookingService_UpdatePayStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePayStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRestChairBookingService">
+    <wsdl:operation name="InsertRestChairBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/InsertRestChairBooking" message="tns:IRestChairBookingService_InsertRestChairBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/InsertRestChairBookingResponse" message="tns:IRestChairBookingService_InsertRestChairBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRestChair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/InsertRestChair" message="tns:IRestChairBookingService_InsertRestChair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/InsertRestChairResponse" message="tns:IRestChairBookingService_InsertRestChair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRestChairPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/InsertRestChairPayment" message="tns:IRestChairBookingService_InsertRestChairPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/InsertRestChairPaymentResponse" message="tns:IRestChairBookingService_InsertRestChairPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookingDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/GetBookingDetails" message="tns:IRestChairBookingService_GetBookingDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/GetBookingDetailsResponse" message="tns:IRestChairBookingService_GetBookingDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestChairBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/GetRestChairBooking" message="tns:IRestChairBookingService_GetRestChairBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/GetRestChairBookingResponse" message="tns:IRestChairBookingService_GetRestChairBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestChairBookingByATRC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/GetRestChairBookingByATRC" message="tns:IRestChairBookingService_GetRestChairBookingByATRC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/GetRestChairBookingByATRCResponse" message="tns:IRestChairBookingService_GetRestChairBookingByATRC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCustomerByATRC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/GetAllCustomerByATRC" message="tns:IRestChairBookingService_GetAllCustomerByATRC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/GetAllCustomerByATRCResponse" message="tns:IRestChairBookingService_GetAllCustomerByATRC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBookingsByATRC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/GetCustomerBookingsByATRC" message="tns:IRestChairBookingService_GetCustomerBookingsByATRC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/GetCustomerBookingsByATRCResponse" message="tns:IRestChairBookingService_GetCustomerBookingsByATRC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdateOrder" message="tns:IRestChairBookingService_UpdateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdateOrderResponse" message="tns:IRestChairBookingService_UpdateOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentSuccess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdatePaymentSuccess" message="tns:IRestChairBookingService_UpdatePaymentSuccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdatePaymentSuccessResponse" message="tns:IRestChairBookingService_UpdatePaymentSuccess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPaymentByCustomerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/GetAllPaymentByCustomerId" message="tns:IRestChairBookingService_GetAllPaymentByCustomerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/GetAllPaymentByCustomerIdResponse" message="tns:IRestChairBookingService_GetAllPaymentByCustomerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBookingByCustomerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/GetAllBookingByCustomerId" message="tns:IRestChairBookingService_GetAllBookingByCustomerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/GetAllBookingByCustomerIdResponse" message="tns:IRestChairBookingService_GetAllBookingByCustomerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsCancelBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdateIsCancelBooking" message="tns:IRestChairBookingService_UpdateIsCancelBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdateIsCancelBookingResponse" message="tns:IRestChairBookingService_UpdateIsCancelBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsDeleted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdateIsDeleted" message="tns:IRestChairBookingService_UpdateIsDeleted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdateIsDeletedResponse" message="tns:IRestChairBookingService_UpdateIsDeleted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookingForCancelByCustomerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/GetBookingForCancelByCustomerId" message="tns:IRestChairBookingService_GetBookingForCancelByCustomerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/GetBookingForCancelByCustomerIdResponse" message="tns:IRestChairBookingService_GetBookingForCancelByCustomerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdatePayStatus" message="tns:IRestChairBookingService_UpdatePayStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRestChairBookingService/UpdatePayStatusResponse" message="tns:IRestChairBookingService_UpdatePayStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRestChairBookingService" type="tns:IRestChairBookingService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertRestChairBooking">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/InsertRestChairBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRestChair">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/InsertRestChair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRestChairPayment">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/InsertRestChairPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookingDetails">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/GetBookingDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestChairBooking">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/GetRestChairBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestChairBookingByATRC">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/GetRestChairBookingByATRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCustomerByATRC">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/GetAllCustomerByATRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBookingsByATRC">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/GetCustomerBookingsByATRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/UpdateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentSuccess">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/UpdatePaymentSuccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPaymentByCustomerId">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/GetAllPaymentByCustomerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBookingByCustomerId">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/GetAllBookingByCustomerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsCancelBooking">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/UpdateIsCancelBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsDeleted">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/UpdateIsDeleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookingForCancelByCustomerId">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/GetBookingForCancelByCustomerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayStatus">
+      <soap:operation soapAction="http://tempuri.org/IRestChairBookingService/UpdatePayStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RestChairBookingService">
+    <wsdl:port name="BasicHttpBinding_IRestChairBookingService" binding="tns:BasicHttpBinding_IRestChairBookingService">
+      <soap:address location="http://localhost:56178/RestChairBookingService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ATRCService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+      <xsd:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IATRCService_InsertATRC_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertATRC" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_InsertATRC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertATRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCIdByProfileID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCIdByProfileID" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCIdByProfileID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCIdByProfileIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCById" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCByIds" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_getAllATRC_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllATRC" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_getAllATRC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllATRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_SearchATRCCenters_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchATRCCenters" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_SearchATRCCenters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchATRCCentersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateATRCStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCStatus" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateATRCStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateATRC_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRC" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateATRC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateProfileImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfileImage" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateProfileImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfileImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetAllATRCImagesById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCImagesById" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetAllATRCImagesById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCImagesByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_InsertATRCImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertATRCImage" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_InsertATRCImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertATRCImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_DeleteATRCImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteATRCImage" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_DeleteATRCImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteATRCImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateATRCImageSD_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCImageSD" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateATRCImageSD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCImageSDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateATRCProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCProfile" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_UpdateATRCProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCSDImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCSDImages" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetATRCSDImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCSDImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetRestChairDetailsByAtrcId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestChairDetailsByAtrcId" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetRestChairDetailsByAtrcId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestChairDetailsByAtrcIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetRestchair_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestchair" />
+  </wsdl:message>
+  <wsdl:message name="IATRCService_GetRestchair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestchairResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IATRCService">
+    <wsdl:operation name="InsertATRC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/InsertATRC" message="tns:IATRCService_InsertATRC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/InsertATRCResponse" message="tns:IATRCService_InsertATRC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCIdByProfileID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetATRCIdByProfileID" message="tns:IATRCService_GetATRCIdByProfileID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetATRCIdByProfileIDResponse" message="tns:IATRCService_GetATRCIdByProfileID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetATRCById" message="tns:IATRCService_GetATRCById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetATRCByIdResponse" message="tns:IATRCService_GetATRCById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetATRCByUserId" message="tns:IATRCService_GetATRCByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetATRCByUserIdResponse" message="tns:IATRCService_GetATRCByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCByIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetATRCByIds" message="tns:IATRCService_GetATRCByIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetATRCByIdsResponse" message="tns:IATRCService_GetATRCByIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllATRC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/getAllATRC" message="tns:IATRCService_getAllATRC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/getAllATRCResponse" message="tns:IATRCService_getAllATRC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCProfileById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetATRCProfileById" message="tns:IATRCService_GetATRCProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetATRCProfileByIdResponse" message="tns:IATRCService_GetATRCProfileById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchATRCCenters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/SearchATRCCenters" message="tns:IATRCService_SearchATRCCenters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/SearchATRCCentersResponse" message="tns:IATRCService_SearchATRCCenters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/UpdateATRCStatus" message="tns:IATRCService_UpdateATRCStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/UpdateATRCStatusResponse" message="tns:IATRCService_UpdateATRCStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/UpdateATRC" message="tns:IATRCService_UpdateATRC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/UpdateATRCResponse" message="tns:IATRCService_UpdateATRC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/UpdateProfileImage" message="tns:IATRCService_UpdateProfileImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/UpdateProfileImageResponse" message="tns:IATRCService_UpdateProfileImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCImagesById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetAllATRCImagesById" message="tns:IATRCService_GetAllATRCImagesById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetAllATRCImagesByIdResponse" message="tns:IATRCService_GetAllATRCImagesById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertATRCImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/InsertATRCImage" message="tns:IATRCService_InsertATRCImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/InsertATRCImageResponse" message="tns:IATRCService_InsertATRCImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteATRCImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/DeleteATRCImage" message="tns:IATRCService_DeleteATRCImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/DeleteATRCImageResponse" message="tns:IATRCService_DeleteATRCImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCImageSD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/UpdateATRCImageSD" message="tns:IATRCService_UpdateATRCImageSD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/UpdateATRCImageSDResponse" message="tns:IATRCService_UpdateATRCImageSD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/UpdateATRCProfile" message="tns:IATRCService_UpdateATRCProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/UpdateATRCProfileResponse" message="tns:IATRCService_UpdateATRCProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCSDImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetATRCSDImages" message="tns:IATRCService_GetATRCSDImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetATRCSDImagesResponse" message="tns:IATRCService_GetATRCSDImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestChairDetailsByAtrcId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetRestChairDetailsByAtrcId" message="tns:IATRCService_GetRestChairDetailsByAtrcId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetRestChairDetailsByAtrcIdResponse" message="tns:IATRCService_GetRestChairDetailsByAtrcId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestchair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATRCService/GetRestchair" message="tns:IATRCService_GetRestchair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATRCService/GetRestchairResponse" message="tns:IATRCService_GetRestchair_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IATRCService" type="tns:IATRCService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertATRC">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/InsertATRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCIdByProfileID">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetATRCIdByProfileID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCById">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetATRCById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCByUserId">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetATRCByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCByIds">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetATRCByIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllATRC">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/getAllATRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCProfileById">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetATRCProfileById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchATRCCenters">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/SearchATRCCenters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCStatus">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/UpdateATRCStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRC">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/UpdateATRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileImage">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/UpdateProfileImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCImagesById">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetAllATRCImagesById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertATRCImage">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/InsertATRCImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteATRCImage">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/DeleteATRCImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCImageSD">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/UpdateATRCImageSD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCProfile">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/UpdateATRCProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCSDImages">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetATRCSDImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestChairDetailsByAtrcId">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetRestChairDetailsByAtrcId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestchair">
+      <soap:operation soapAction="http://tempuri.org/IATRCService/GetRestchair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ATRCService">
+    <wsdl:port name="BasicHttpBinding_IATRCService" binding="tns:BasicHttpBinding_IATRCService">
+      <soap:address location="http://localhost:56178/ATRCService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

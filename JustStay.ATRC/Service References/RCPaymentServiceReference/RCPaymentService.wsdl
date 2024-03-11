@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RCPaymentService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56178/RCPaymentService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56178/RCPaymentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56178/RCPaymentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+      <xsd:import schemaLocation="http://localhost:56178/RCPaymentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRCPaymentService_GetOnlinePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlinePayment" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetOnlinePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlinePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetOfflinePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfflinePayment" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetOfflinePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfflinePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_ATRCOnlineBillingFromJuststay_InputMessage">
+    <wsdl:part name="parameters" element="tns:ATRCOnlineBillingFromJuststay" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_ATRCOnlineBillingFromJuststay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ATRCOnlineBillingFromJuststayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_InsertATRCBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertATRCBill" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_InsertATRCBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertATRCBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_UpdateATRCBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCBill" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_UpdateATRCBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATRCBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetAllATRCBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCBill" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetAllATRCBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllATRCBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_DeleteATRCBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteATRCBill" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_DeleteATRCBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteATRCBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetATRCDetailsById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCDetailsById" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetATRCDetailsById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetATRCDetailsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_InsertJSBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJSBill" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_InsertJSBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJSBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_UpdateJSBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSBill" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_UpdateJSBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetAllJSBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJSBill" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetAllJSBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJSBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_DeleteJSBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJSBill" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_DeleteJSBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJSBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetJSBillById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSBillById" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_GetJSBillById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSBillByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_PayAtATRCBillingToJuststay_InputMessage">
+    <wsdl:part name="parameters" element="tns:PayAtATRCBillingToJuststay" />
+  </wsdl:message>
+  <wsdl:message name="IRCPaymentService_PayAtATRCBillingToJuststay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PayAtATRCBillingToJuststayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRCPaymentService">
+    <wsdl:operation name="GetOnlinePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/GetOnlinePayment" message="tns:IRCPaymentService_GetOnlinePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/GetOnlinePaymentResponse" message="tns:IRCPaymentService_GetOnlinePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfflinePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/GetOfflinePayment" message="tns:IRCPaymentService_GetOfflinePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/GetOfflinePaymentResponse" message="tns:IRCPaymentService_GetOfflinePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ATRCOnlineBillingFromJuststay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/ATRCOnlineBillingFromJuststay" message="tns:IRCPaymentService_ATRCOnlineBillingFromJuststay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/ATRCOnlineBillingFromJuststayResponse" message="tns:IRCPaymentService_ATRCOnlineBillingFromJuststay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertATRCBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/InsertATRCBill" message="tns:IRCPaymentService_InsertATRCBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/InsertATRCBillResponse" message="tns:IRCPaymentService_InsertATRCBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/UpdateATRCBill" message="tns:IRCPaymentService_UpdateATRCBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/UpdateATRCBillResponse" message="tns:IRCPaymentService_UpdateATRCBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/GetAllATRCBill" message="tns:IRCPaymentService_GetAllATRCBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/GetAllATRCBillResponse" message="tns:IRCPaymentService_GetAllATRCBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteATRCBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/DeleteATRCBill" message="tns:IRCPaymentService_DeleteATRCBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/DeleteATRCBillResponse" message="tns:IRCPaymentService_DeleteATRCBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCDetailsById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/GetATRCDetailsById" message="tns:IRCPaymentService_GetATRCDetailsById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/GetATRCDetailsByIdResponse" message="tns:IRCPaymentService_GetATRCDetailsById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertJSBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/InsertJSBill" message="tns:IRCPaymentService_InsertJSBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/InsertJSBillResponse" message="tns:IRCPaymentService_InsertJSBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/UpdateJSBill" message="tns:IRCPaymentService_UpdateJSBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/UpdateJSBillResponse" message="tns:IRCPaymentService_UpdateJSBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJSBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/GetAllJSBill" message="tns:IRCPaymentService_GetAllJSBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/GetAllJSBillResponse" message="tns:IRCPaymentService_GetAllJSBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJSBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/DeleteJSBill" message="tns:IRCPaymentService_DeleteJSBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/DeleteJSBillResponse" message="tns:IRCPaymentService_DeleteJSBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSBillById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/GetJSBillById" message="tns:IRCPaymentService_GetJSBillById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/GetJSBillByIdResponse" message="tns:IRCPaymentService_GetJSBillById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PayAtATRCBillingToJuststay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCPaymentService/PayAtATRCBillingToJuststay" message="tns:IRCPaymentService_PayAtATRCBillingToJuststay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCPaymentService/PayAtATRCBillingToJuststayResponse" message="tns:IRCPaymentService_PayAtATRCBillingToJuststay_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRCPaymentService" type="tns:IRCPaymentService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOnlinePayment">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/GetOnlinePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfflinePayment">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/GetOfflinePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ATRCOnlineBillingFromJuststay">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/ATRCOnlineBillingFromJuststay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertATRCBill">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/InsertATRCBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATRCBill">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/UpdateATRCBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllATRCBill">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/GetAllATRCBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteATRCBill">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/DeleteATRCBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetATRCDetailsById">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/GetATRCDetailsById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertJSBill">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/InsertJSBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSBill">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/UpdateJSBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJSBill">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/GetAllJSBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJSBill">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/DeleteJSBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSBillById">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/GetJSBillById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayAtATRCBillingToJuststay">
+      <soap:operation soapAction="http://tempuri.org/IRCPaymentService/PayAtATRCBillingToJuststay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RCPaymentService">
+    <wsdl:port name="BasicHttpBinding_IRCPaymentService" binding="tns:BasicHttpBinding_IRCPaymentService">
+      <soap:address location="http://localhost:56178/RCPaymentService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

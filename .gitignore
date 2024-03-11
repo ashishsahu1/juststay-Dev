@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/JustStay.ATRC/bin
+/JustStay.CommonHub/obj/Debug
+/JustStay.CommonHub/bin/Debug
+/JustStay.ATRC/obj/Debug
+/JustStay.Repo/obj/Debug
+/JustStay.Repo/bin/Debug
+/JustStay.Services/obj/Debug
+/JustStay.Services/bin
+/JustStayAdmin/obj/Debug
+/JustStayAdmin/bin
+/JustStayWeb/obj/Debug
+/JustStayWeb/bin
+
+
+test commit oct

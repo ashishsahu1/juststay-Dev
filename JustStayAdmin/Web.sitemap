@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Dashboard.aspx" title="Dashboard"> 
+     <siteMapNode url="ATRC.aspx" title="ATRC">
+       <siteMapNode url="CreateATRCProfile.aspx" title="ATRC Profile" />
+        <siteMapNode url="RestChairHourlyBased.aspx" title="Rest Chair (Hourly)" />
+       <siteMapNode url="ManageRestChair.aspx" title="Add or Mange Rest chair" />
+       <siteMapNode url="UpdateATRC.aspx" title="Update ATRC" />
+       <siteMapNode url="Bookings.aspx" title="ATRC Bookings"/>
+     </siteMapNode>
+    <siteMapNode url="Customer.aspx" title="Customer" >
+      <siteMapNode url="ATRCBookings.aspx" title="Customer Bookings"/>
+    </siteMapNode>
+    <siteMapNode url="Inbox.aspx" title="Inbox"/>
+    <siteMapNode url="Compose.aspx" title="Compose Message"></siteMapNode>
+    <siteMapNode url="Inbox.aspx?Sent=1" title="Sent Mail"></siteMapNode>
+    <siteMapNode url="ViewMail.aspx" title="View Message"></siteMapNode>
+    <siteMapNode url="ListFAQ.aspx" title="FAQ">
+      <siteMapNode url="ManageFAQ.aspx" title="Add/Edit FAQ"/>
+    </siteMapNode>
+    <siteMapNode url="ListBlog.aspx" title="Blog">
+      <siteMapNode url="ManageBlog.aspx" title="Add/Edit Blog"/>
+    </siteMapNode>
+   <siteMapNode url="ListBanner.aspx" title="Banner">
+      <siteMapNode url="ManageBanner.aspx" title="Add/Edit Banner"/>
+    </siteMapNode>
+   <siteMapNode url="ListOffer.aspx" title="Offer">
+      <siteMapNode url="ManageOffer.aspx" title="Add/Edit Offer"/>
+   </siteMapNode>
+   <siteMapNode url="ListCity.aspx" title="City">
+      <siteMapNode url="ManageCity.aspx" title="Add/Edit City"/>
+    </siteMapNode>
+    <siteMapNode url="ManageLocation.aspx" title="Location"/>
+   <siteMapNode url="ListUser.aspx" title="User">
+      <siteMapNode url="ManageUser.aspx" title="Add/Edit User"/>
+    </siteMapNode>
+   <siteMapNode url="ListSupportRequests.aspx" title="Support Request">      
+    </siteMapNode>
+  <siteMapNode url="ManageShortDestination.aspx" title="Manage ATRC Images"/>
+    <siteMapNode url="ListAmenities.aspx" title="ListAmenities.aspx">
+      <siteMapNode url="ManageAmenity.aspx" title="Add/Edit Amenity"/>
+    </siteMapNode>
+    <siteMapNode url="ListCuisines.aspx" title="List Cuisines"/>
+  </siteMapNode>
+</siteMap>

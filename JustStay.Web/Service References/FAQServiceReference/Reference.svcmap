@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="72fe4404-f435-4c82-898d-1eedc0f19ba0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56178/FAQService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FAQService.xsd" MetadataType="Schema" ID="6042a662-b59c-49df-afc8-bc91b32388d7" SourceId="1" SourceUrl="http://localhost:56178/FAQService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FAQService1.xsd" MetadataType="Schema" ID="53ae7aba-25a1-4c6c-b20e-cc2f45a06de7" SourceId="1" SourceUrl="http://localhost:56178/FAQService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FAQService2.xsd" MetadataType="Schema" ID="da3bdea5-828e-4f50-9103-4d3523b2c45a" SourceId="1" SourceUrl="http://localhost:56178/FAQService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FAQService.disco" MetadataType="Disco" ID="a44436fd-23b8-4e92-8abe-63fa7a2382d4" SourceId="1" SourceUrl="http://localhost:56178/FAQService.svc?disco" />
+    <MetadataFile FileName="FAQService.wsdl" MetadataType="Wsdl" ID="0be69809-203e-4559-89a5-3451b5fb042d" SourceId="1" SourceUrl="http://localhost:56178/FAQService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

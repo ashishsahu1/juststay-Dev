@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/CommonService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+  <xs:import schemaLocation="http://localhost:56178/CommonService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+  <xs:element name="GetAllStates">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllStatesResult" nillable="true" type="q1:ArrayOfState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCities">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllCitiesResult" nillable="true" type="q2:ArrayOfCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCitiesBySearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCitiesBySearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllCitiesBySearchResult" nillable="true" type="q3:ArrayOfCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlLocationsByCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cityId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlLocationsByCityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAlLocationsByCityResult" nillable="true" type="q4:ArrayOfLocation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllATRCCategory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllATRCCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllATRCCategoryResult" nillable="true" type="q5:ArrayOfATRCCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllATRCSubCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoryid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllATRCSubCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllATRCSubCategoryResult" nillable="true" type="q6:ArrayOfATRCSubCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettings">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetSettingsResult" nillable="true" type="q7:SettingDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSMSTemplateByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSMSTemplateByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetSMSTemplateByNameResult" nillable="true" type="q8:SMSTemplateDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoLocalities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoLocalitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAutoLocalitiesResult" nillable="true" type="q9:ArrayOfLocalities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetATRCTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetATRCTypesResult" nillable="true" type="q10:ArrayOfATRCType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttachementsByMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masterId" type="xs:int" />
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttachementsByMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetAttachementsByMasterResult" nillable="true" type="q11:ArrayOfAttachmentDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAttachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="dto" nillable="true" type="q12:AttachmentDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAttachmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAttachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attchmentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAttachmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRating">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="rate" nillable="true" type="q13:RatingDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRatingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRating">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRatingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="GetAllRatingResult" nillable="true" type="q14:ArrayOfRatingDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Encrypt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncryptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EncryptResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Decrypt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecryptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DecryptResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

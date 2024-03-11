@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CancellationPolicyService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56178/CancellationPolicyService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56178/CancellationPolicyService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56178/CancellationPolicyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICancellationPolicyService_GetAllCancellationPolicies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCancellationPolicies" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_GetAllCancellationPolicies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCancellationPoliciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_GetCancellationPolicyById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCancellationPolicyById" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_GetCancellationPolicyById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCancellationPolicyByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_InsertPolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPolicy" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_InsertPolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_UpdatePolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePolicy" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_UpdatePolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_DeletePolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePolicy" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_DeletePolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_UpdatePrivacyPolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrivacyPolicy" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_UpdatePrivacyPolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrivacyPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_GetPrivacyPolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrivacyPolicy" />
+  </wsdl:message>
+  <wsdl:message name="ICancellationPolicyService_GetPrivacyPolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrivacyPolicyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICancellationPolicyService">
+    <wsdl:operation name="GetAllCancellationPolicies">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICancellationPolicyService/GetAllCancellationPolicies" message="tns:ICancellationPolicyService_GetAllCancellationPolicies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICancellationPolicyService/GetAllCancellationPoliciesResponse" message="tns:ICancellationPolicyService_GetAllCancellationPolicies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCancellationPolicyById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICancellationPolicyService/GetCancellationPolicyById" message="tns:ICancellationPolicyService_GetCancellationPolicyById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICancellationPolicyService/GetCancellationPolicyByIdResponse" message="tns:ICancellationPolicyService_GetCancellationPolicyById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPolicy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICancellationPolicyService/InsertPolicy" message="tns:ICancellationPolicyService_InsertPolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICancellationPolicyService/InsertPolicyResponse" message="tns:ICancellationPolicyService_InsertPolicy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePolicy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICancellationPolicyService/UpdatePolicy" message="tns:ICancellationPolicyService_UpdatePolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICancellationPolicyService/UpdatePolicyResponse" message="tns:ICancellationPolicyService_UpdatePolicy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePolicy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICancellationPolicyService/DeletePolicy" message="tns:ICancellationPolicyService_DeletePolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICancellationPolicyService/DeletePolicyResponse" message="tns:ICancellationPolicyService_DeletePolicy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrivacyPolicy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICancellationPolicyService/UpdatePrivacyPolicy" message="tns:ICancellationPolicyService_UpdatePrivacyPolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICancellationPolicyService/UpdatePrivacyPolicyResponse" message="tns:ICancellationPolicyService_UpdatePrivacyPolicy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrivacyPolicy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICancellationPolicyService/GetPrivacyPolicy" message="tns:ICancellationPolicyService_GetPrivacyPolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICancellationPolicyService/GetPrivacyPolicyResponse" message="tns:ICancellationPolicyService_GetPrivacyPolicy_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICancellationPolicyService" type="tns:ICancellationPolicyService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllCancellationPolicies">
+      <soap:operation soapAction="http://tempuri.org/ICancellationPolicyService/GetAllCancellationPolicies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCancellationPolicyById">
+      <soap:operation soapAction="http://tempuri.org/ICancellationPolicyService/GetCancellationPolicyById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPolicy">
+      <soap:operation soapAction="http://tempuri.org/ICancellationPolicyService/InsertPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePolicy">
+      <soap:operation soapAction="http://tempuri.org/ICancellationPolicyService/UpdatePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePolicy">
+      <soap:operation soapAction="http://tempuri.org/ICancellationPolicyService/DeletePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrivacyPolicy">
+      <soap:operation soapAction="http://tempuri.org/ICancellationPolicyService/UpdatePrivacyPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrivacyPolicy">
+      <soap:operation soapAction="http://tempuri.org/ICancellationPolicyService/GetPrivacyPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CancellationPolicyService">
+    <wsdl:port name="BasicHttpBinding_ICancellationPolicyService" binding="tns:BasicHttpBinding_ICancellationPolicyService">
+      <soap:address location="http://localhost:56178/CancellationPolicyService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

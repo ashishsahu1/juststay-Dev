@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCuisineDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CuisineDto" nillable="true" type="tns:CuisineDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCuisineDto" nillable="true" type="tns:ArrayOfCuisineDto" />
+  <xs:complexType name="CuisineDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CuisineId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CuisineDto" nillable="true" type="tns:CuisineDto" />
+  <xs:complexType name="ArrayOfAmenityDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AmenityDto" nillable="true" type="tns:AmenityDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAmenityDto" nillable="true" type="tns:ArrayOfAmenityDto" />
+  <xs:complexType name="AmenityDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmenityId" type="xs:int" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="IconFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IconFileUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IconName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AmenityDto" nillable="true" type="tns:AmenityDto" />
+  <xs:complexType name="ArrayOfHighlightDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HighlightDto" nillable="true" type="tns:HighlightDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHighlightDto" nillable="true" type="tns:ArrayOfHighlightDto" />
+  <xs:complexType name="HighlightDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HighlightId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HighlightDto" nillable="true" type="tns:HighlightDto" />
+  <xs:complexType name="ArrayOfTypeDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeDto" nillable="true" type="tns:TypeDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypeDto" nillable="true" type="tns:ArrayOfTypeDto" />
+  <xs:complexType name="TypeDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TypeDto" nillable="true" type="tns:TypeDto" />
+  <xs:complexType name="ArrayOfRoomLabelDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoomLabelDto" nillable="true" type="tns:RoomLabelDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoomLabelDto" nillable="true" type="tns:ArrayOfRoomLabelDto" />
+  <xs:complexType name="RoomLabelDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IconFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IconFileUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IconName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomLabelId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoomLabelDto" nillable="true" type="tns:RoomLabelDto" />
+</xs:schema>

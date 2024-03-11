@@ -1,0 +1,133 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 17/10/2018 18:53
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-map-of-roads:before { content: "\f100"; }
+.flaticon-automobile:before { content: "\f101"; }
+.flaticon-plane-ticket:before { content: "\f102"; }
+.flaticon-travel:before { content: "\f103"; }
+.flaticon-hotel:before { content: "\f104"; }
+.flaticon-hotel-1:before { content: "\f105"; }
+.flaticon-shield:before { content: "\f106"; }
+.flaticon-pin:before { content: "\f107"; }
+.flaticon-photography:before { content: "\f108"; }
+.flaticon-play-button:before { content: "\f109"; }
+.flaticon-mail:before { content: "\f10a"; }
+.flaticon-call:before { content: "\f10b"; }
+.flaticon-twitter:before { content: "\f10c"; }
+.flaticon-facebook-logo:before { content: "\f10d"; }
+.flaticon-google-plus:before { content: "\f10e"; }
+.flaticon-linkedin:before { content: "\f10f"; }
+.flaticon-yelp:before { content: "\f110"; }
+.flaticon-weather:before { content: "\f111"; }
+.flaticon-wind:before { content: "\f112"; }
+.flaticon-instagram:before { content: "\f113"; }
+.flaticon-chat:before { content: "\f114"; }
+.flaticon-view:before { content: "\f115"; }
+.flaticon-share:before { content: "\f116"; }
+.flaticon-quote:before { content: "\f117"; }
+.flaticon-circular:before { content: "\f118"; }
+.flaticon-round-speech-bubbles:before { content: "\f119"; }
+.flaticon-like:before { content: "\f11a"; }
+.flaticon-cityscape:before { content: "\f11b"; }
+.flaticon-plane:before { content: "\f11c"; }
+.flaticon-employee:before { content: "\f11d"; }
+.flaticon-alcohol:before { content: "\f11e"; }
+.flaticon-travel-1:before { content: "\f11f"; }
+.flaticon-swim:before { content: "\f120"; }
+.flaticon-doctor:before { content: "\f121"; }
+.flaticon-gym:before { content: "\f122"; }
+.flaticon-parking:before { content: "\f123"; }
+.flaticon-swing:before { content: "\f124"; }
+.flaticon-visa-pay-logo:before { content: "\f125"; }
+.flaticon-american-express-logo:before { content: "\f126"; }
+.flaticon-paypal-logo-in-rectangular-black-card:before { content: "\f127"; }
+.flaticon-discover-paying-card:before { content: "\f128"; }
+.flaticon-western-union-pay-card:before { content: "\f129"; }
+.flaticon-plane-1:before { content: "\f12a"; }
+.flaticon-plane-2:before { content: "\f12b"; }
+.flaticon-computer-screen:before { content: "\f12c"; }
+.flaticon-envelope:before { content: "\f12d"; }
+.flaticon-phone:before { content: "\f12e"; }
+    
+    $font-Flaticon-map-of-roads: "\f100";
+    $font-Flaticon-automobile: "\f101";
+    $font-Flaticon-plane-ticket: "\f102";
+    $font-Flaticon-travel: "\f103";
+    $font-Flaticon-hotel: "\f104";
+    $font-Flaticon-hotel-1: "\f105";
+    $font-Flaticon-shield: "\f106";
+    $font-Flaticon-pin: "\f107";
+    $font-Flaticon-photography: "\f108";
+    $font-Flaticon-play-button: "\f109";
+    $font-Flaticon-mail: "\f10a";
+    $font-Flaticon-call: "\f10b";
+    $font-Flaticon-twitter: "\f10c";
+    $font-Flaticon-facebook-logo: "\f10d";
+    $font-Flaticon-google-plus: "\f10e";
+    $font-Flaticon-linkedin: "\f10f";
+    $font-Flaticon-yelp: "\f110";
+    $font-Flaticon-weather: "\f111";
+    $font-Flaticon-wind: "\f112";
+    $font-Flaticon-instagram: "\f113";
+    $font-Flaticon-chat: "\f114";
+    $font-Flaticon-view: "\f115";
+    $font-Flaticon-share: "\f116";
+    $font-Flaticon-quote: "\f117";
+    $font-Flaticon-circular: "\f118";
+    $font-Flaticon-round-speech-bubbles: "\f119";
+    $font-Flaticon-like: "\f11a";
+    $font-Flaticon-cityscape: "\f11b";
+    $font-Flaticon-plane: "\f11c";
+    $font-Flaticon-employee: "\f11d";
+    $font-Flaticon-alcohol: "\f11e";
+    $font-Flaticon-travel-1: "\f11f";
+    $font-Flaticon-swim: "\f120";
+    $font-Flaticon-doctor: "\f121";
+    $font-Flaticon-gym: "\f122";
+    $font-Flaticon-parking: "\f123";
+    $font-Flaticon-swing: "\f124";
+    $font-Flaticon-visa-pay-logo: "\f125";
+    $font-Flaticon-american-express-logo: "\f126";
+    $font-Flaticon-paypal-logo-in-rectangular-black-card: "\f127";
+    $font-Flaticon-discover-paying-card: "\f128";
+    $font-Flaticon-western-union-pay-card: "\f129";
+    $font-Flaticon-plane-1: "\f12a";
+    $font-Flaticon-plane-2: "\f12b";
+    $font-Flaticon-computer-screen: "\f12c";
+    $font-Flaticon-envelope: "\f12d";
+    $font-Flaticon-phone: "\f12e";

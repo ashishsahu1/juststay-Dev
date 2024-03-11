@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23A7FC08-9B8D-4031-AB39-60F89F61D970}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JustStay.Repo</RootNamespace>
+    <AssemblyName>JustStay.Repo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Amenity.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AndroGetATRCProfile.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRC.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCAccount.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCAmenity.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCBill.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCBookingRepository.cs" />
+    <Compile Include="ATRCCategory.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCCenter.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCChair.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCDetail.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCImage.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCOnlineBillingFromJuststay.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCProfile.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCRepository.cs" />
+    <Compile Include="ATRCRestChair.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCSubCategory.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATRCType.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Attachment.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttachmentRepository.cs" />
+    <Compile Include="Banner.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BannerRepository.cs" />
+    <Compile Include="Blog.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BlogCategory.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BlogRepository.cs" />
+    <Compile Include="BlogWithDetail.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CancellationPolicy.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CancelPolicyRepository.cs" />
+    <Compile Include="City.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CityRepository.cs" />
+    <Compile Include="CommonRepository.cs" />
+    <Compile Include="Company.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyAccount.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyRepository.cs" />
+    <Compile Include="Cuisine.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetail.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="CustomerRequest.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerRequestDetail.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cust_ATRCBooking.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardRepository.cs" />
+    <Compile Include="DTO\SDImageDto.cs" />
+    <Compile Include="EmailInfo.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLog.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLogRepository.cs" />
+    <Compile Include="FAQ.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAQRepository.cs" />
+    <Compile Include="GetAdminDashboardDetails.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllATRCBills.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllATRCBills_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllATRC_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllBooking.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllBookingByCustomerId.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllBookingByCustomerIdAndroid.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllBooking_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllCancelBookings_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllCancelledBooking.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllCustomerByATRC.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllCustomersDetails.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllCustomer_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllJSBills.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllJSBills_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllOfflinePayment.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllOnlinePayment.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllPaymentByCustomerId.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllPaymentByCustomerIdAndroid.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllRefunds.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllRefundTrasactions_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllRestChairProfile.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllRestChairsByATRCProfile.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllTrasaction_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllUserDetail_Report.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetATRCBillById.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetATRCDashboardDetails.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetATRCTodaysBooking.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetBookingDetailsByBookingId.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetBookingForCancelByCustomerId.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetBookingReceipt.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCustomerBookingsByATRC.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCustomerBookingsByATRC_Result.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetJSBillById.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetLocationDetails.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestChairBookingByATRC.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestChairByAtrcId.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestChairByAtrcId_Result.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestChairbyId.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTodaysBooking.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Highlight.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InboxMail.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JSBill.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JustStayModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JustStayModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JustStayModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JustStayModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JustStayModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Localities.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Location.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LocationRepository.cs" />
+    <Compile Include="MastersRepository.cs" />
+    <Compile Include="Message.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MessageRecipient.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MessageRepository.cs" />
+    <Compile Include="MessgeInfo.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Offer.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfferRepository.cs" />
+    <Compile Include="PayAtATRCBillingToJuststay.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentRepository.cs" />
+    <Compile Include="PrivacyPolicy.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rating.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RatingRepository.cs" />
+    <Compile Include="RCBookingDetail.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RCBookingRepository.cs" />
+    <Compile Include="RCPayment.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RCProfileRepository.cs" />
+    <Compile Include="RCRefund.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefundRepository.cs" />
+    <Compile Include="ReportRepository.cs" />
+    <Compile Include="RestChairBooking.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RestChairProfile.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RestChairType.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomLabel.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomType.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchATRCCenters_Result.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SMSTemplate.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupportRequestDetail.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tax.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxRepository.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserDetail.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRepository.cs" />
+    <Compile Include="UserType.cs">
+      <DependentUpon>JustStayModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="JustStayModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JustStayModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="JustStayModel.edmx.diagram">
+      <DependentUpon>JustStayModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JustStayModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JustStayModel.edmx</DependentUpon>
+      <LastGenOutput>JustStayModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="JustStayModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JustStayModel.edmx</DependentUpon>
+      <LastGenOutput>JustStayModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

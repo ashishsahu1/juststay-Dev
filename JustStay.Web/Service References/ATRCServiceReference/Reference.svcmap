@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="13b7e7a5-e128-49ed-b59d-664ec9f56238" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56178/ATRCService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ATRCService.wsdl" MetadataType="Wsdl" ID="8d83e4a9-4fbe-4f1c-945d-874ab5b5e345" SourceId="1" SourceUrl="http://localhost:56178/ATRCService.svc?wsdl" />
+    <MetadataFile FileName="ATRCService.xsd" MetadataType="Schema" ID="1cf3db62-f194-4a80-88fe-77ff52c8730f" SourceId="1" SourceUrl="http://localhost:56178/ATRCService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ATRCService1.xsd" MetadataType="Schema" ID="3ce226ae-9253-4329-96cc-09d20c8ecd67" SourceId="1" SourceUrl="http://localhost:56178/ATRCService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ATRCService2.xsd" MetadataType="Schema" ID="ecabf774-5d2a-49e6-9222-7532aadff885" SourceId="1" SourceUrl="http://localhost:56178/ATRCService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ATRCService.disco" MetadataType="Disco" ID="c6b4a04c-bd95-4dd4-9263-beb8af396340" SourceId="1" SourceUrl="http://localhost:56178/ATRCService.svc?disco" />
+    <MetadataFile FileName="ATRCService3.xsd" MetadataType="Schema" ID="1b45483a-02b9-46a6-82c6-f6335b16f00c" SourceId="1" SourceUrl="http://localhost:56178/ATRCService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ATRCService4.xsd" MetadataType="Schema" ID="0eed386d-0d4d-49b0-9b3f-8207f11e1b0d" SourceId="1" SourceUrl="http://localhost:56178/ATRCService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

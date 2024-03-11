@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ATRCDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amenities" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookingCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CATEGORYNAMES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CITY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CityId" type="xs:int" />
+      <xs:element minOccurs="0" name="Cuisines" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningFacility" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiningFromTime" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="DiningToTime" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeoLocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOCATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAMEWITHCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileImageNewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REFERRALNAMES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateId" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="highlights" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRCDto" nillable="true" type="tns:ATRCDto" />
+  <xs:complexType name="ArrayOfATRCDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATRCDto" nillable="true" type="tns:ATRCDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATRCDto" nillable="true" type="tns:ArrayOfATRCDto" />
+  <xs:complexType name="ArrayOfATRCImageDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATRCImageDto" nillable="true" type="tns:ATRCImageDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATRCImageDto" nillable="true" type="tns:ArrayOfATRCImageDto" />
+  <xs:complexType name="ATRCImageDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCImageId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningFromTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningToTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsProfile" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSD" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NewImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SDDec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SDName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRCImageDto" nillable="true" type="tns:ATRCImageDto" />
+</xs:schema>

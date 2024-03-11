@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Repo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/ATRCService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ATRCProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amenities" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AmenitiesNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CityId" type="xs:int" />
+      <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cuisines" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CuisinesNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningEndsOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningFacility" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiningFacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningFromTime" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="DiningStartsOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningToTime" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeoLocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HighlightNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewAmenities" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileImageNewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ratings" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Referral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RestChairProfileId" type="xs:int" />
+      <xs:element minOccurs="0" name="StateId" type="xs:int" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="highlights" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRCProfile" nillable="true" type="tns:ATRCProfile" />
+  <xs:complexType name="ArrayOfATRCCenter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATRCCenter" nillable="true" type="tns:ATRCCenter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATRCCenter" nillable="true" type="tns:ArrayOfATRCCenter" />
+  <xs:complexType name="ATRCCenter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCTypeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amenities" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AmenitiesNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AmtForFilter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AvailableChair" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BasicPrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookedChair" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CityId" type="xs:int" />
+      <xs:element minOccurs="0" name="Cuisines" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiningFacility" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiningFromTime" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="DiningToTime" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeoLocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileImageNewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ratings" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Referral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateId" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="highlights" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRCCenter" nillable="true" type="tns:ATRCCenter" />
+  <xs:complexType name="ArrayOfGetRestChairByAtrcId">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetRestChairByAtrcId" nillable="true" type="tns:GetRestChairByAtrcId" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetRestChairByAtrcId" nillable="true" type="tns:ArrayOfGetRestChairByAtrcId" />
+  <xs:complexType name="GetRestChairByAtrcId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="ATRCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCPolicy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRCRestChairId" type="xs:int" />
+      <xs:element minOccurs="0" name="AmenitiesNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CancellationPolicy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChairCount" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckInTime" type="ser:duration" />
+      <xs:element minOccurs="0" name="CheckOutTime" type="ser:duration" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Restchair" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRestChairByAtrcId" nillable="true" type="tns:GetRestChairByAtrcId" />
+  <xs:complexType name="ArrayOfGetRestChairbyId">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetRestChairbyId" nillable="true" type="tns:GetRestChairbyId" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetRestChairbyId" nillable="true" type="tns:ArrayOfGetRestChairbyId" />
+  <xs:complexType name="GetRestChairbyId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCRestChairId" type="xs:int" />
+      <xs:element minOccurs="0" name="ChairId" type="xs:int" />
+      <xs:element minOccurs="0" name="ChairNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRestChairbyId" nillable="true" type="tns:GetRestChairbyId" />
+</xs:schema>

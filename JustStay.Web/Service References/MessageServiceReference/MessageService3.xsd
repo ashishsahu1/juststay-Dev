@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/MessageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+  <xs:import schemaLocation="http://localhost:56178/MessageService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+  <xs:element name="GetInboxMails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInboxMailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetInboxMailsResult" nillable="true" type="q1:ArrayOfInboxMail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessageById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="messageId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessageByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetMessageByIdResult" nillable="true" type="q2:MessgeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="msg" nillable="true" type="q3:MessageDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertMessageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateReferenceId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="newMsgId" type="xs:int" />
+        <xs:element minOccurs="0" name="refMsgId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateReferenceIdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMessageRecipient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="rec" nillable="true" type="q4:MessageRecipientDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMessageRecipientResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveUserMessageToTrash">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="messageId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveUserMessageToTrashResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkMailAsRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msgId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkMailAsReadResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminSupportRequests">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminSupportRequestsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAdminSupportRequestsResult" nillable="true" type="q5:ArrayOfSupportRequestDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

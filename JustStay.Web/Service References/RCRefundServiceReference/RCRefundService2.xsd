@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56178/RCRefundService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+  <xs:import schemaLocation="http://localhost:56178/RCRefundService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+  <xs:element name="InsertRCRefund">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" minOccurs="0" name="refddto" nillable="true" type="q1:RefundDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRCRefundResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertRCRefundResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCancelledBooking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCancelledBookingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllCancelledBookingResult" nillable="true" type="q2:ArrayOfGetAllCancelledBooking" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRefunds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="atrcid" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRefundsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JustStay.Repo" minOccurs="0" name="GetAllRefundsResult" nillable="true" type="q3:ArrayOfGetAllRefunds" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

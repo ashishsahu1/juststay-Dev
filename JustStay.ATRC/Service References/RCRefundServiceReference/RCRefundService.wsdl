@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RCRefundService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56178/RCRefundService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56178/RCRefundService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56178/RCRefundService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+      <xsd:import schemaLocation="http://localhost:56178/RCRefundService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRCRefundService_InsertRCRefund_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRCRefund" />
+  </wsdl:message>
+  <wsdl:message name="IRCRefundService_InsertRCRefund_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRCRefundResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCRefundService_GetAllCancelledBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCancelledBooking" />
+  </wsdl:message>
+  <wsdl:message name="IRCRefundService_GetAllCancelledBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCancelledBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRCRefundService_GetAllRefunds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRefunds" />
+  </wsdl:message>
+  <wsdl:message name="IRCRefundService_GetAllRefunds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRefundsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRCRefundService">
+    <wsdl:operation name="InsertRCRefund">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCRefundService/InsertRCRefund" message="tns:IRCRefundService_InsertRCRefund_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCRefundService/InsertRCRefundResponse" message="tns:IRCRefundService_InsertRCRefund_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCancelledBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCRefundService/GetAllCancelledBooking" message="tns:IRCRefundService_GetAllCancelledBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCRefundService/GetAllCancelledBookingResponse" message="tns:IRCRefundService_GetAllCancelledBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRefunds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRCRefundService/GetAllRefunds" message="tns:IRCRefundService_GetAllRefunds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRCRefundService/GetAllRefundsResponse" message="tns:IRCRefundService_GetAllRefunds_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRCRefundService" type="tns:IRCRefundService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertRCRefund">
+      <soap:operation soapAction="http://tempuri.org/IRCRefundService/InsertRCRefund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCancelledBooking">
+      <soap:operation soapAction="http://tempuri.org/IRCRefundService/GetAllCancelledBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRefunds">
+      <soap:operation soapAction="http://tempuri.org/IRCRefundService/GetAllRefunds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RCRefundService">
+    <wsdl:port name="BasicHttpBinding_IRCRefundService" binding="tns:BasicHttpBinding_IRCRefundService">
+      <soap:address location="http://localhost:56178/RCRefundService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

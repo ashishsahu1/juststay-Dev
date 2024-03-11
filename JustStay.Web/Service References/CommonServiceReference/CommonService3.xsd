@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SettingDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SMSBalanceUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SettingId" type="xs:int" />
+      <xs:element minOccurs="0" name="SmsPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SmsSenderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SmsUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SmsUsername" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="privacy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SettingDto" nillable="true" type="tns:SettingDto" />
+  <xs:complexType name="SMSTemplateDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InsertedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Template" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateId" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SMSTemplateDto" nillable="true" type="tns:SMSTemplateDto" />
+  <xs:complexType name="ArrayOfAttachmentDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttachmentDto" nillable="true" type="tns:AttachmentDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttachmentDto" nillable="true" type="tns:ArrayOfAttachmentDto" />
+  <xs:complexType name="AttachmentDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttachmentId" type="xs:int" />
+      <xs:element minOccurs="0" name="DocName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocNewName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterTableId" type="xs:int" />
+      <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AttachmentDto" nillable="true" type="tns:AttachmentDto" />
+  <xs:complexType name="RatingDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRCId" type="xs:int" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RatingId" type="xs:int" />
+      <xs:element minOccurs="0" name="Star" type="xs:float" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RatingDto" nillable="true" type="tns:RatingDto" />
+  <xs:complexType name="ArrayOfRatingDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatingDto" nillable="true" type="tns:RatingDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRatingDto" nillable="true" type="tns:ArrayOfRatingDto" />
+</xs:schema>

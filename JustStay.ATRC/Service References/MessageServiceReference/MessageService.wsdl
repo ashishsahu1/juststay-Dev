@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MessageService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56178/MessageService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56178/MessageService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56178/MessageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JustStay.Repo" />
+      <xsd:import schemaLocation="http://localhost:56178/MessageService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JustStay.Services.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMessageService_GetInboxMails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboxMails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_GetInboxMails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboxMailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_GetMessageById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageById" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_GetMessageById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_InsertMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessage" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_InsertMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_UpdateReferenceId_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReferenceId" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_UpdateReferenceId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReferenceIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_InsertMessageRecipient_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageRecipient" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_InsertMessageRecipient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageRecipientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_MoveUserMessageToTrash_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveUserMessageToTrash" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_MoveUserMessageToTrash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveUserMessageToTrashResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_MarkMailAsRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkMailAsRead" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_MarkMailAsRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkMailAsReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_GetAdminSupportRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdminSupportRequests" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_GetAdminSupportRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdminSupportRequestsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMessageService">
+    <wsdl:operation name="GetInboxMails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/GetInboxMails" message="tns:IMessageService_GetInboxMails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/GetInboxMailsResponse" message="tns:IMessageService_GetInboxMails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/GetMessageById" message="tns:IMessageService_GetMessageById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/GetMessageByIdResponse" message="tns:IMessageService_GetMessageById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/InsertMessage" message="tns:IMessageService_InsertMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/InsertMessageResponse" message="tns:IMessageService_InsertMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReferenceId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/UpdateReferenceId" message="tns:IMessageService_UpdateReferenceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/UpdateReferenceIdResponse" message="tns:IMessageService_UpdateReferenceId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageRecipient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/InsertMessageRecipient" message="tns:IMessageService_InsertMessageRecipient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/InsertMessageRecipientResponse" message="tns:IMessageService_InsertMessageRecipient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveUserMessageToTrash">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/MoveUserMessageToTrash" message="tns:IMessageService_MoveUserMessageToTrash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/MoveUserMessageToTrashResponse" message="tns:IMessageService_MoveUserMessageToTrash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkMailAsRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/MarkMailAsRead" message="tns:IMessageService_MarkMailAsRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/MarkMailAsReadResponse" message="tns:IMessageService_MarkMailAsRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdminSupportRequests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/GetAdminSupportRequests" message="tns:IMessageService_GetAdminSupportRequests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/GetAdminSupportRequestsResponse" message="tns:IMessageService_GetAdminSupportRequests_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMessageService" type="tns:IMessageService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInboxMails">
+      <soap:operation soapAction="http://tempuri.org/IMessageService/GetInboxMails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageById">
+      <soap:operation soapAction="http://tempuri.org/IMessageService/GetMessageById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessage">
+      <soap:operation soapAction="http://tempuri.org/IMessageService/InsertMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReferenceId">
+      <soap:operation soapAction="http://tempuri.org/IMessageService/UpdateReferenceId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageRecipient">
+      <soap:operation soapAction="http://tempuri.org/IMessageService/InsertMessageRecipient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveUserMessageToTrash">
+      <soap:operation soapAction="http://tempuri.org/IMessageService/MoveUserMessageToTrash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkMailAsRead">
+      <soap:operation soapAction="http://tempuri.org/IMessageService/MarkMailAsRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdminSupportRequests">
+      <soap:operation soapAction="http://tempuri.org/IMessageService/GetAdminSupportRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessageService">
+    <wsdl:port name="BasicHttpBinding_IMessageService" binding="tns:BasicHttpBinding_IMessageService">
+      <soap:address location="http://localhost:56178/MessageService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
